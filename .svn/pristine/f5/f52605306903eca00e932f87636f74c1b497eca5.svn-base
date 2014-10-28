@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+	<title>模拟炒股WAP个股行情页</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../styles/common.css" />
+	<link rel="stylesheet" href="../styles/kline.css">
+	<link rel="stylesheet" href="../styles/stockinfo.css" />
+	<script src="../scripts/jquery-1.7.2.min.js"></script>
+	<script src="../scripts/galhttprequest.js"></script>
+	<script src="../scripts/market_canvas.js"></script>
+	<script src="../scripts/common.js"></script>
+	<script src="../scripts/stockinfo_tt.js"></script>
+	<script src="../scripts/klinechart.js"></script>
+</head>
+
+<body>
+	<div class="main">
+		<!--头部共用搜索框 begin-->
+		<div class="header">&nbsp;</div>
+		<!--头部共用搜索框 end-->
+		<!--面包屑 begin-->
+		<div class="crumbs">
+			<p><a href="index.html">首页</a>&gt;<a href="market.html">行情</a>&gt;
+				<a href="javascript:void (0)"></a>
+			</p>
+		</div>
+		<!--面包屑 end-->
+		<!--个股行情 begin-->
+		<div class="m_content" id="bigbox">
+			<ul class="marketindex_list_title" id="title_list">
+				<li class="currect" style="width: 50%"><a href="#"><span>行情</span></a>
+				</li>
+				<li class="mid" style="width: 50%"><a href="#"><span>资讯</span></a>
+				</li>
+				<li style="display: none"><a href="#"><span>F10资料</span></a>
+				</li>
+			</ul>
+			<div class="marketindex_list tip_1" id="ul_list">
+				<div class="info_1">
+					<p id="para1"><em></em>
+						<span></span>
+						<span></span>
+					</p>
+					<p id="para2">
+						<span>今开：<em></em></span>
+						<span>总量：<em></em></span>
+						<span>最高：<em></em></span>
+						<span>总额：<em></em></span>
+                        <span>最低：<em></em></span>
+                        <span>昨收：<em></em></span>
+					</p>
+				</div>
+                <div class="tubiaotipbox">
+                    <ul>
+                        <li class="currect">分时</li>
+                        <li>日线</li>
+                        <li>周线</li>
+                        <li>月线</li>
+                    </ul>
+                </div>
+
+			</div>
+			<div class="tip_2" id="tip_2">
+				<div>
+					<ul id="title_list_2">
+						<li class="currect">新闻</li>
+						<li class="mid">公告</li>
+						<li>行业</li>
+					</ul>
+				</div>
+				<div>
+					<ul id="stocknewslist" class="listdemo">
+						<!--<li><p>了开始减肥离开教室东方丽景桑德菲杰桑德菲杰<span>07月03日 05:21</span></p></li>-->
+					</ul>
+				</div>
+			</div>
+			<div class="tip_3" id="tip_3">
+				<div>
+					<ul id="title_list_3">
+						<li class="currect">简况</li>
+						<li class="mid">财务</li>
+						<li>股东</li>
+					</ul>
+				</div>
+				<div class="f10list">
+					<div id="f10list">
+						<iframe name="ifrmname" src="" width="100%" height="1000px" frameborder="0"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--个股行情 end-->
+	</div>
+    <!--图表开始begin-->
+
+    <div class="tubiaobox">
+
+        <!--分时图表-->
+        <div id="fenshitu">
+            <canvas id="minute" style="width:100%;height:300px">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+            <div id="minutedetail" class="detail_left">
+                <div class="keyrow">
+                    <span class="normal">时间:</span>
+                    <br />
+                    <span class="normal">现价:</span>
+                    <br />
+                    <span class="normal">涨幅:</span>
+                    <br />
+                    <span class="normal">均价:</span>
+                    <br />
+                    <span class="normal">现量:</span>
+                </div>
+                <div class="valuerow">
+                    <span id="time" class="normal">--</span>
+                    <br />
+                    <span id="price" class="down">--</span>
+                    <br />
+                    <span id="minuteflu" class="up">--</span>
+                    <br />
+                    <span id="avg" class="down">--</span>
+                    <br />
+                    <span id="amount" class="normal">--</span>
+                </div>
+            </div>
+        </div>
+        <!-- K线图标 -->
+        <div id="kxiantu" style="display:none;">
+            <canvas id="kline" style="width:100%;height:200px;">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+            <canvas id="date" style="width:100%;height:20px;"></canvas>
+            <canvas id="index" style="width:100%;height:100px;"></canvas>
+            <div id="klinedetail" class="detail_left">
+                <div class="keyrow">
+                    <span class="normal">日期:</span>
+                    <br />
+                    <span class="normal">开盘:</span>
+                    <br />
+                    <span class="normal">最高:</span>
+                    <br />
+                    <span class="normal">最低:</span>
+                    <br />
+                    <span class="normal">收盘:</span>
+                    <br />
+                    <span class="normal">涨跌幅:</span>
+                </div>
+                <div class="valuerow">
+                    <span id="enddate" class="normal">--/--/--</span>
+                    <br />
+                    <span id="open" class="down">--</span>
+                    <br />
+                    <span id="high" class="up">--</span>
+                    <br />
+                    <span id="low" class="down">--</span>
+                    <br />
+                    <span id="close" class="up">--</span>
+                    <br />
+                    <span id="flu" class="up">--%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--图表开始end-->
+    <div class="btnbox">
+        <ul>
+            <li><a href="javascript:void(0)">买入</a></li>
+            <li><a href="javascript:void(0)">卖出</a></li>
+            <li><a href="javascript:void(0)">添加自选</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

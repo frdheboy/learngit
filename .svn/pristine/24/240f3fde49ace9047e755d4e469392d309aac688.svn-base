@@ -1,0 +1,138 @@
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    .newdetail {
+        width: 100%;
+        float: left;
+        border-top: 2px solid #086dae;
+    }
+
+    .newdetail header {
+        width: 100%;
+        float: left;
+    }
+
+    .newdetail header p {
+        width: 95%;
+        float: left;
+        text-align: left;
+        font-size: 18px;
+        line-height: 35px;
+        margin-left: 4%;
+    }
+
+    .newdetail header div {
+        width: 100%;
+        float: left;
+        margin-top: 5px;
+    }
+
+    .newdetail header span {
+        width: 45%;
+        float: left;
+        text-align: left;
+        margin-left: 5%;
+        color: #939393;
+        font-size: 12px;
+    }
+
+    .newdetail header time {
+        width: 45%;
+        float: left;
+        text-align: right;
+        margin-right: 5%;
+        color: #939393;
+        font-size: 12px;
+    }
+
+    .newdetail section {
+        display: block;
+        width: 92%;
+        margin-left: 4%;
+        float: left;
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #5a5a5a;
+        margin-bottom: 15px;
+    }
+    .newdetail section p {
+        float: left;
+        text-align: left;
+        text-indent: 28px;
+    }
+}
+
+/*宽度在大于480（包括480）的样式*/
+@media all and (min-width: 480px) {
+    .newdetail {
+        width: 100%;
+        float: left;
+        border-top: 3px solid #086dae;
+    }
+
+    .newdetail header {
+        width: 100%;
+        float: left;
+    }
+
+    .newdetail header p {
+        width: 95%;
+        float: left;
+        text-align: left;
+        font-size: 28px;
+        line-height: 35px;
+        margin-left: 4%;
+        margin-top: 20px;
+    }
+
+    .newdetail header div {
+        width: 100%;
+        float: left;
+        margin-top: 15px;
+    }
+
+    .newdetail header span {
+        width: 45%;
+        float: left;
+        text-align: left;
+        margin-left: 5%;
+        color: #939393;
+        font-size: 16px;
+    }
+
+    .newdetail header time {
+        width: 45%;
+        float: left;
+        text-align: right;
+        margin-right: 5%;
+        color: #939393;
+        font-size: 16px;
+    }
+
+    .newdetail section {
+        width: 93%;
+        float: left;
+        margin-left: 4%;
+        margin-top: 20px;
+        font-size: 22px;
+        line-height: 35px;
+        color: #5a5a5a;
+        margin-bottom: 15px;
+    }
+    .newdetail section p {
+        text-align: left;
+        text-indent: 44px;
+    }
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+

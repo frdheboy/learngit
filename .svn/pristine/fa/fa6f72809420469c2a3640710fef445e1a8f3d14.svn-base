@@ -1,0 +1,407 @@
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    .gold_big {
+        width: 100%;
+        float: left;
+    }
+
+    .gold_total {
+        width: 100%;
+        height: 45px;
+        border-top: 1px solid #eeedee;
+        border-bottom: 1px solid #eeedee;
+        float: left;
+    }
+
+    .gold_total i {
+        display: block;
+        float: left;
+        height: 45px;
+        line-height: 45px;
+        font-size: 16px;
+        font-style: normal;
+        width: 42%;
+        text-align: center;
+    }
+
+    .gold_total i span {
+        color: #f78d05;
+    }
+
+    .gold_total p {
+        width: 55%;
+        float: right;
+        font-size: 12px;
+        text-align: left;
+        margin-top: 8px;
+        color: #6e6e6e;
+        margin-right: 3%;
+
+    }
+
+    .gold_chart {
+        width: 100%;
+        float: left;
+        border-top: 1px solid #FFFFFF;
+    }
+
+    .gold_chart p {
+        width: 100%;
+        font-size: 14px;
+        color: #6e6e6e;
+        text-align: left;
+        text-indent: 10px;
+    }
+
+    .gold_chart p span {
+        color: #f78d05;
+        font-size: 16px;
+    }
+
+    .gold_chart div {
+        width: 100%;
+        height: 40px;
+        position: relative;
+    }
+
+    .gold_chart div ul {
+        width: 90%;
+        height: 40px;
+
+        margin-left: 5%;
+    }
+
+    .gold_chart div ul li {
+        width: 20%;
+        height: 25px;
+        float: left;
+        margin-top: 15px;
+        color: #FFFFFF;
+        font-size: 12px;
+        line-height: 25px;
+    }
+
+    .gold_chart div ol {
+        width: 90%;
+        height: 25px;
+
+        margin-left: 5%;
+    }
+
+    .gold_chart div ol li {
+        width: 20%;
+        height: 25px;
+        float: left;
+        color: #FFFFFF;
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .briefs {
+        position: absolute;
+        left: 30%;
+        top: 11px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 10px solid #086dae;
+
+    }
+
+    .checkin {
+        float: left;
+        width: 100%;
+    }
+
+    .checkin ul {
+        float: left;
+        width: 100%;
+    }
+
+    .checkin ul li {
+        float: left;
+        width: 100%;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .checkin ul li section {
+        float: left;
+        width: 15%;
+        margin-left: 3%;
+    }
+
+    .checkin ul li section img {
+        float: left;
+        margin-top: 7px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .checkin ul li section em {
+        display: block;
+        float: left;
+        font-style: normal;
+        width: 35px;
+        line-height: 14px;
+        font-size: 14px;
+        color: #f78d05;
+    }
+
+    .checkin ul li p {
+        float: left;
+        width: 80%;
+    }
+
+    .checkin ul li p b {
+        display: block;
+        font-size: 16px;
+        float: left;
+        width: 100%;
+        text-align: left;
+        font-weight: normal;
+        margin-top: 7px;
+    }
+
+    .checkin ul li p span {
+        display: block;
+        font-size: 12px;
+        color: #6e6e6e;
+        float: left;
+        width: 65%;
+        text-align: left;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .checkin ul li p i {
+        display: block;
+        float: left;
+        width: 35%;
+        text-align: left;
+        margin-bottom: 25px;
+    }
+
+    .checkin ul li p i a {
+        display: block;
+        font-size: 15px;
+        color: #50b0f1;
+        float: left;
+        width: 85%;
+        text-align: center;
+        border: 1px solid #50b0f1;
+        font-style: normal;
+        padding: 5px 0px;
+    }
+}
+
+/*宽度在480（包括480）到640之间的样式*/
+@media all and (min-width: 480px) {
+    .gold_big {
+        width: 100%;
+        float: left;
+    }
+
+    .gold_total {
+        width: 100%;
+        height: 65px;
+        border-top: 2px solid #eeedee;
+        border-bottom: 2px solid #eeedee;
+        float: left;
+    }
+
+    .gold_total i {
+        display: block;
+        float: left;
+        height: 65px;
+        line-height: 65px;
+        font-size: 26px;
+        font-style: normal;
+        width: 42%;
+        text-align: center;
+    }
+
+    .gold_total i span {
+        color: #f78d05;
+    }
+
+    .gold_total p {
+        width: 55%;
+        float: right;
+        font-size: 20px;
+        text-align: left;
+        margin-top: 8px;
+        color: #6e6e6e;
+        margin-right: 2%;
+        line-height: 24px;
+    }
+
+    .gold_chart {
+        width: 100%;
+        float: left;
+        border-top: 1px solid #FFFFFF;
+    }
+
+    .gold_chart p {
+        width: 100%;
+        font-size: 20px;
+        color: #6e6e6e;
+        text-align: left;
+        text-indent: 20px;
+        margin-top: 15px;
+    }
+
+    .gold_chart p span {
+        color: #f78d05;
+        font-size: 24px;
+    }
+
+    .gold_chart div {
+        width: 100%;
+        height: 60px;
+        position: relative;
+    }
+
+    .gold_chart div ul {
+        width: 90%;
+        height: 65px;
+        margin-left: 5%;
+    }
+
+    .gold_chart div ul li {
+        width: 20%;
+        height: 45px;
+        float: left;
+        margin-top: 20px;
+        color: #FFFFFF;
+        font-size: 20px;
+        line-height: 45px;
+    }
+
+    .gold_chart div ol {
+        width: 90%;
+        height: 35px;
+        margin-left: 5%;
+    }
+
+    .gold_chart div ol li {
+        width: 20%;
+        height: 35px;
+        float: left;
+        color: #FFFFFF;
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    .briefs {
+        position: absolute;
+        left: 30%;
+        top: 14px;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 16px solid #086dae;
+
+    }
+
+    .checkin {
+        float: left;
+        width: 100%;
+    }
+
+    .checkin ul {
+        float: left;
+        width: 100%;
+    }
+
+    .checkin ul li {
+        float: left;
+        width: 100%;
+        border-bottom: 2px solid #eaeaea;
+    }
+
+    .checkin ul li section {
+        float: left;
+        width: 13%;
+        margin-left: 3%;
+    }
+
+    .checkin ul li section img {
+        float: left;
+        margin-top: 12px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .checkin ul li section em {
+        display: block;
+        float: left;
+        font-style: normal;
+        width: 50px;
+        line-height: 24px;
+        font-size: 24px;
+        color: #f78d05;
+    }
+
+    .checkin ul li p {
+        float: left;
+        width: 84%;
+    }
+
+    .checkin ul li p b {
+        display: block;
+        font-size: 26px;
+        float: left;
+        width: 100%;
+        text-align: left;
+        font-weight: normal;
+        margin-top: 12px;
+    }
+
+    .checkin ul li p span {
+        display: block;
+        font-size: 20px;
+        color: #6e6e6e;
+        float: left;
+        width: 60%;
+        text-align: left;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .checkin ul li p i {
+        display: block;
+        float: right;
+        width: 35%;
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .checkin ul li p i a {
+        display: block;
+        font-size: 26px;
+        color: #50b0f1;
+        float: left;
+        width: 85%;
+        text-align: center;
+        border: 2px solid #50b0f1;
+        font-style: normal;
+        padding: 8px 0px;
+    }
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+
+
+
+

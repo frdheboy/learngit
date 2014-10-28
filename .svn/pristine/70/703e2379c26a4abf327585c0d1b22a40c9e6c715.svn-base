@@ -1,0 +1,230 @@
+.m_content {
+	float: left;
+	width: 100%;
+	border-top: 2px solid #086dae;
+}
+.buy_main {
+	float: left;
+	width: 100%;
+}
+.buyinfolist ul li span.down {
+	color: green;
+}
+.buyinfolist ul li span.up {
+	color: #d62829;
+}
+#buyinfolistlast {
+	border: none;
+}
+#buyinfolistlast p {
+	width: 100%;
+}
+.slider-wrapper {
+	margin: 0 auto;
+	margin-top: 40px;
+	position: relative;
+	width: 80%;
+}
+.buy_button {
+	margin: 0 auto;
+	width: 92%;
+	height: 50px;
+	line-height: 50px;
+	background-color: #006FA9;
+	font-size: 24px;
+	margin-top: 40px;
+	vertical-align: middle;
+	color: #fff;
+	cursor: pointer;
+}
+#stockinfo {
+	cursor: pointer;
+}
+/*CSS3判断响应式布局*/
+
+/*宽度小于480的样式*/
+
+@media all and (max-width: 480px) {
+	.buy_main_01 {
+		float: left;
+		width: 100%;
+		margin-top: 10px;
+	}
+	.buy_main_01 p {
+		float: left;
+		width: 25%;
+		font-size: 16px;
+		line-height: 35px;
+	}
+	.buy_main_01 div {
+		float: left;
+		width: 70%;
+		font-size: 16px;
+		border: 1px solid #e1e1e1;
+		height: 35px;
+		line-height: 35px;
+		background-color: #FFFFFF;
+	}
+	.buy_main_01 div span {
+		float: left;
+		color: #d77e0a;
+		text-indent: 15px;
+		font-weight: bold;
+		font-size: 18px;
+	}
+	.buy_main_01 div span.proname {
+		float: left;
+		margin-left: 40px;
+		color: #000000;
+		font-weight: normal;
+		font-size: 16px;
+	}
+	.buy_main_02 {
+		float: left;
+		width: 100%;
+		margin-top: 10px;
+	}
+	.buy_main_02 p {
+		float: left;
+		width: 25%;
+		font-size: 16px;
+		line-height: 35px;
+	}
+	.buy_main_02 input {
+		float: left;
+		width: 70%;
+		font-size: 18px;
+		border: 1px solid #e1e1e1;
+		height: 35px;
+		line-height: 35px;
+		background-color: #FFFFFF;
+		text-indent: 15px;
+	}
+	.buy_slider {
+		float: left;
+		width: 100%;
+		height: 100px;
+	}
+	.buyinfolist {
+		float: left;
+		width: 100%;
+	}
+	.buyinfolist ul {
+		float: left;
+		width: 100%;
+	}
+	.buyinfolist ul li {
+		float: left;
+		width: 75%;
+		text-align: left;
+		font-size: 16px;
+		border-bottom: 1px solid #e3e3e3;
+		line-height: 35px;
+		margin-left: 10%;
+		color: #454545;
+	}
+	.buyinfolist ul li p {
+		float: left;
+		width: 45%;
+		margin-left: 5%;
+	}
+}
+/*宽度在480（包括480）到640之间的样式*/
+
+@media all and (min-width: 480px) {
+	.m_content {
+		border-top: 4px solid #086dae;
+	}
+	.buy_main_01 {
+		float: left;
+		width: 100%;
+		margin-top: 10px;
+	}
+	.buy_main_01 p {
+		float: left;
+		width: 25%;
+		font-size: 24px;
+		line-height: 45px;
+	}
+	.buy_main_01 div {
+		float: left;
+		width: 70%;
+		font-size: 24px;
+		border: 1px solid #e1e1e1;
+		height: 45px;
+		line-height: 45px;
+		background-color: #FFFFFF;
+	}
+	.buy_main_01 div span {
+		float: left;
+		color: #d77e0a;
+		text-indent: 15px;
+		font-weight: bold;
+		font-size: 26px;
+	}
+	.buy_main_01 div span.proname {
+		float: right;
+		margin-right: 30px;
+		color: #000000;
+		font-weight: normal;
+		font-size: 24px;
+	}
+	.buy_main_02 {
+		float: left;
+		width: 100%;
+		margin-top: 10px;
+	}
+	.buy_main_02 p {
+		float: left;
+		width: 25%;
+		font-size: 24px;
+		line-height: 45px;
+	}
+	.buy_main_02 input {
+		float: left;
+		width: 70%;
+		font-size: 26px;
+		border: 1px solid #e1e1e1;
+		height: 45px;
+		line-height: 45px;
+		background-color: #FFFFFF;
+		text-indent: 15px;
+	}
+	.buy_slider {
+		float: left;
+		width: 100%;
+		height: 200px;
+	}
+	.buyinfolist {
+		float: left;
+		width: 100%;
+	}
+	.buyinfolist ul {
+		float: left;
+		width: 100%;
+	}
+	.buyinfolist ul li {
+		float: left;
+		width: 75%;
+		text-align: left;
+		font-size: 24px;
+		border-bottom: 1px solid #e3e3e3;
+		line-height: 50px;
+		margin-left: 10%;
+		color: #454545;
+	}
+	.buyinfolist ul li p {
+		float: left;
+		width: 45%;
+		margin-left: 5%;
+	}
+}
+/*宽度大于640（包括640）样式*/
+
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+
+@media screen and (orientation: landscape) {}

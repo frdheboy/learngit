@@ -1,0 +1,360 @@
+.m_content {
+    float: left;
+    width: 100%;
+    border-top: 2px solid #086dae;
+}
+
+.m_content header {
+    float: left;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    .m_content header h1 {
+        float: left;
+        width: 33%;
+        line-height: 40px;
+        height: 40px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    .m_content header h1.currect {
+        border-bottom: 3px solid #086dae;
+    }
+
+    .m_content header h1.currect a {
+        color: #086dae;
+    }
+
+    .m_content header h1:nth-child(2) {
+        border-right: 1px solid #d9d9d9;
+        border-left: 1px solid #d9d9d9;
+    }
+
+    .inshareinfo {
+        float: left;
+        width: 100%;
+        background-color: #f7f7f7
+    }
+
+    .inshareinfo > div:first-child {
+        float: left;
+        width: 40%;
+    }
+
+    .inshareinfo > div:first-child h1 {
+        float: left;
+        width: 100%;
+        display: block;
+        font-size: 34px;
+        color: #d62829;
+        line-height: 55px;
+        height: 45px;
+        font-weight: bold;
+    }
+
+    .inshareinfo > div:first-child p {
+        float: left;
+        width: 100%;
+    }
+
+    .inshareinfo > div:first-child p span {
+        float: left;
+        width: 50%;
+        display: block;
+        font-size: 12px;
+        color: #d62829;
+        line-height: 20px;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+
+    .inshareinfo > div:nth-child(2) {
+        float: left;
+        width: 60%;
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+    .inshareinfo > div:nth-child(2) p {
+        float: left;
+        width: 50%;
+    }
+
+    .inshareinfo > div:nth-child(2) p span {
+        float: left;
+        color: #939393;
+        text-align: left;
+        letter-spacing: -1px;
+    }
+
+    .inshareinfo > div:nth-child(2) p b {
+        float: left;
+        display: block;
+        text-align: left;
+        letter-spacing: -1px;
+    }
+
+    .inshareinfo > div:nth-child(3) {
+        float: left;
+        width: 100%;
+        font-size: 12px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .inshareinfo > div:nth-child(3) p {
+        float: left;
+        width: 28%;
+        text-align: center;
+    }
+
+    .inshareinfo > div:nth-child(3) p:nth-child(1), .inshareinfo > div:nth-child(3) p:nth-child(4) {
+        margin-left: 4%;
+    }
+
+    .inshareinfo > div:nth-child(3) p:nth-child(3), .inshareinfo > div:nth-child(3) p:nth-child(6) {
+        float: left;
+        width: 40%;
+    }
+
+    .inshareinfo > div:nth-child(3) p span {
+        float: left;
+        display: block;
+        color: #939393;
+        letter-spacing: -1px;
+        height: 18px;
+    }
+
+    .inshareinfo > div:nth-child(3) p b {
+        float: left;
+        display: block;
+        text-align: left;
+        letter-spacing: -1px;
+        height: 18px;
+    }
+
+    .chart {
+        float: left;
+        width: 90%;
+        margin-left: 5%;
+        border: 1px solid #abb2b6;
+    }
+
+    .chart header {
+        float: left;
+        width: 100%;
+        border-bottom: 1px solid #abb2b6;
+    }
+
+    .chart header h2 {
+        display: block;
+        float: left;
+        width: 25%;
+        background-color: #78b7e2;
+        color: #FFFFFF;
+        font-size: 14px;
+        height: 32px;
+        line-height: 32px;
+    }
+
+    .chart header h2 a {
+        display: block;
+        float: right;
+        border-right: 1px solid #4d8cbb;
+        text-align: center;
+        width: 99%;
+        padding-right: 1%
+    }
+
+    .chart header h2.currect {
+        background-color: #4d8cbb;
+    }
+}
+
+/*宽度在480（包括480）到640之间的样式*/
+@media all and (min-width: 480px) {
+    .m_content header h1 {
+        float: left;
+        width: 33%;
+        line-height: 60px;
+        height: 60px;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    .m_content header h1.currect {
+        border-bottom: 4px solid #086dae;
+    }
+
+    .m_content header h1.currect a {
+        color: #086dae;
+    }
+
+    .m_content header h1:nth-child(2) {
+        border-right: 1px solid #d9d9d9;
+        border-left: 1px solid #d9d9d9;
+    }
+
+    .inshareinfo {
+        float: left;
+        width: 100%;
+        background-color: #f7f7f7;
+        margin-top: 10px;
+    }
+
+    .inshareinfo > div:first-child {
+        float: left;
+        width: 40%;
+    }
+
+    .inshareinfo > div:first-child h1 {
+        float: left;
+        width: 100%;
+        display: block;
+        font-size: 62px;
+        color: #d62829;
+        line-height: 70px;
+        height: 60px;
+        font-weight: bold;
+    }
+
+    .inshareinfo > div:first-child p {
+        float: left;
+        width: 100%;
+    }
+
+    .inshareinfo > div:first-child p span {
+        float: left;
+        width: 50%;
+        display: block;
+        font-size: 20px;
+        color: #d62829;
+        line-height: 25px;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+
+    .inshareinfo > div:nth-child(2) {
+        float: left;
+        width: 60%;
+        margin-top: 15px;
+        font-size: 20px;
+    }
+
+    .inshareinfo > div:nth-child(2) p {
+        float: left;
+        width: 50%;
+    }
+
+    .inshareinfo > div:nth-child(2) p span {
+        float: left;
+        color: #939393;
+        text-align: left;
+        letter-spacing: -1px;
+    }
+
+    .inshareinfo > div:nth-child(2) p b {
+        float: left;
+        display: block;
+        text-align: left;
+        letter-spacing: -1px;
+    }
+
+    .inshareinfo > div:nth-child(3) {
+        float: left;
+        width: 100%;
+        font-size: 20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        line-height: 30px;
+    }
+
+    .inshareinfo > div:nth-child(3) p {
+        float: left;
+        width: 28%;
+        text-align: center;
+    }
+
+    .inshareinfo > div:nth-child(3) p:nth-child(1), .inshareinfo > div:nth-child(3) p:nth-child(4) {
+        margin-left: 4%;
+    }
+
+    .inshareinfo > div:nth-child(3) p:nth-child(3), .inshareinfo > div:nth-child(3) p:nth-child(6) {
+        float: left;
+        width: 40%;
+    }
+
+    .inshareinfo > div:nth-child(3) p span {
+        float: left;
+        display: block;
+        color: #939393;
+        letter-spacing: -1px;
+        height: 30px;
+    }
+
+    .inshareinfo > div:nth-child(3) p b {
+        float: left;
+        display: block;
+        text-align: left;
+        letter-spacing: -1px;
+        height: 30px;
+    }
+
+    .chart {
+        float: left;
+        width: 90%;
+        margin-left: 5%;
+        border: 1px solid #abb2b6;
+    }
+
+    .chart header {
+        float: left;
+        width: 100%;
+        border-bottom: 2px solid #abb2b6;
+    }
+
+    .chart header h2 {
+        display: block;
+        float: left;
+        width: 25%;
+        background-color: #78b7e2;
+
+        font-size: 22px;
+        height: 45px;
+        line-height: 45px;
+    }
+
+    .chart header h2 a {
+        display: block;
+        float: right;
+        border-right: 1px solid #4d8cbb;
+        text-align: center;
+        width: 99%;
+        padding-right: 1%;
+        color: #FFFFFF;
+    }
+
+    .chart header h2.currect {
+        background-color: #4d8cbb;
+    }
+
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}

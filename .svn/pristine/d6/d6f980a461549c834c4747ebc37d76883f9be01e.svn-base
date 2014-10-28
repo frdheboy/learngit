@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP股市学堂TAB页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/schooltabbg.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/galhttprequest.js"></script>   	
+    <script src="../scripts/schooltabgs.js"></script>
+    <!--<script src="../scripts/common.js"></script>-->
+    <script>
+ /*   $(document).ready(function(){
+		jQuery.scrollto = function(scrolldom,scrolltime) {
+		$(scrolldom).click( function(){ 
+			var scrolltodom = $(this).attr("date-scroll");//获取date-scroll属性的值
+			
+			$(this).addClass("thisscroll").siblings().removeClass("thisscroll");			
+			var a=$('html,body').width();
+			if(a<480){
+				$('html,body').animate({//让点击scrolldom元素，最先显示对应的元素
+				scrollTop:$(scrolltodom).offset().top-70},scrolltime
+			);	
+			}else{
+				$('html,body').animate({//
+				scrollTop:$(scrolltodom).offset().top-114},scrolltime
+				);
+			}
+			return false;
+			
+		}); 	
+	};
+    $.scrollto("#sortkeys li",100);
+
+});*/
+$(document).ready(function() {
+		$("#sortkeys").find("li").on("click",function(){
+			var _index = $(this).index();
+			var scrolltodom=$(".mcontent").find("ul:eq("+_index+")");
+			var a=$("html,body").width();
+			if(a<480){
+				$('html,body').animate({//让点击scrolldom元素，最先显示对应的元素
+				scrollTop:$(scrolltodom).offset().top-70},100
+			);
+			}else{
+			$('html,body').animate({//让点击scrolldom元素，最先显示对应的元素
+				scrollTop:$(scrolltodom).offset().top-114},100
+			);
+			}
+		})
+	
+});
+   </script> 
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header hh">
+        <div class="header_logo">
+            <div></div>
+            <p>优顾</p>
+        </div>
+        <div class="header_input">
+            <input type="text" name="search" id="" maxlength="100" autocomplete="off" placeholder="搜索框">
+            <div><a href="javascript:void (0)"><img src="../images/magnifyingglass30.jpg"></a></div>
+        </div>
+    </div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs hc">
+        <p><a href="javascript:void (0)">首页</a>&gt;<a href="school.html">股市学堂</a>&gt;<a id="title" href="javascript:void (0)">证券词典</a></p>
+    </div>
+    <!--面包屑 end-->
+   
+    <!--股市学堂TAB页 begin-->
+   
+    <div class="mcon" >
+    	<div class="mcon_l" >
+        	  <div class="mcontent" id="newtitl">
+        			<ul class="newtitl" id="scrollto1">             
+                     <p class="nw">A</p> 
+                      <li><a href="http://www.baidu.com/"><span class="circle"></span><p>ADL</p></a></li>
+                      <li><a href=""><span class="circle"></span><p>ADR</p></a></li>
+                      <li><a href=""><span class="circle"></span><p>A股</p></a></li>
+                      <li><a href=""><span class="circle"></span><p>安防概念</p></a></li>
+                      <li><a href=""><span class="circle"></span><p>AR指标</p></a></li>
+                      <li><a href=""><span class="circle"></span><p>A字账户</p></a></li>
+               	 </ul>
+                 <ul class="newtitl" id="scrollto2">
+                  	<p class="nw" >B</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                 </ul>     
+                 <ul class="newtitl" id="scrollto3">
+                  	 <p class="nw" >c</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                 </ul>        
+                 <ul class="newtitl"  id="scrollto4">      
+                  	 <p class="nw">d</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                 </ul>    
+                 <ul class="newtitl" id="scrollto5"> 
+                  		<p class="nw">e</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                 </ul>		
+                 <ul class="newtitl" id="scrollto6"> 
+                  	<p class="nw">f</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                 </ul>    
+                 <ul class="newtitl" id="scrollto7">
+                    	 <p class="nw" >g</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                 </ul>    
+                 <ul class="newtitl" id="scrollto8"> 
+                        <p class="nw" >h</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                  </ul>
+                  <ul class="newtitl" id="scrollto9">
+                         <p class="nw">i</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                  </ul>
+                  <ul class="newtitl" id="scrollto10">
+                         <p class="nw" >j</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                  </ul>
+                  <ul class="newtitl" id="scrollto11">
+                         <p class="nw" >k</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                   </ul>
+                   <ul class="newtitl" id="scrollto12">
+                         <p class="nw" >l</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                   </ul>
+                   <ul class="newtitl" id="scrollto13">
+                         <p class="nw" >m</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                    </ul>
+                    <ul class="newtitl" id="scrollto14">
+                         <p class="nw" >n</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                    </ul>
+                   <ul class="newtitl" id="scrollto15">
+                         <p class="nw" >o</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                    </ul>
+                    <ul class="newtitl" id="scrollto16">
+                         <p class="nw" >p</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                    </ul>
+                    <ul class="newtitl" id="scrollto17">
+                         <p class="nw" >q</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                    </ul>
+                    <ul class="newtitl" id="scrollto18">
+                         <p class="nw" >r</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                    </ul>
+                    <ul class="newtitl" id="scrollto19">
+                         <p class="nw" >s</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                    </ul>
+                    <ul class="newtitl" id="scrollto20">
+                         <p class="nw" >t</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                    </ul>
+                    <ul class="newtitl" id="scrollto21">
+                         <p class="nw" >u</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                    </ul>
+                    <ul class="newtitl" id="scrollto22">
+                         <p class="nw" >v</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                    </ul>
+                    <ul class="newtitl" id="scrollto23">
+                         <p class="nw" >w</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                     </ul>
+                     <ul class="newtitl" id="scrollto24">
+                         <p class="nw" >x</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                     </ul>
+                     <ul class="newtitl" id="scrollto25">
+                         <p class="nw" >y</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                     </ul>
+                    <ul class="newtitl" id="scrollto26">
+                         <p class="nw" >z</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+       				 </ul>
+			</div>
+        </div>
+      <div class="mcon_r" id="sortkeys">
+        	<ul>
+            	<li date-scroll="#scrollto1">A</li>
+                <li date-scroll="#scrollto2">B</li>
+                <li date-scroll="#scrollto3">C</li>
+                <li date-scroll="#scrollto4">D</li>
+               	<li date-scroll="#scrollto5">E</li>
+                <li date-scroll="#scrollto6">F</li>
+                <li date-scroll="#scrollto7">G</li>
+                <li date-scroll="#scrollto8">H</li>
+                <li date-scroll="#scrollto9">I</li>
+                <li date-scroll="#scrollto10">J</li>
+                <li date-scroll="#scrollto11">K</li>
+                <li date-scroll="#scrollto12">L</li>
+                <li date-scroll="#scrollto13">M</li>
+                <li date-scroll="#scrollto14">N</li>
+                <li date-scroll="#scrollto15">O</li>
+                <li date-scroll="#scrollto16">P</li>
+                <li date-scroll="#scrollto17">Q</li>
+                <li date-scroll="#scrollto18">R</li>
+                <li date-scroll="#scrollto19">S</li>
+                <li date-scroll="#scrollto20">T</li>
+                <li date-scroll="#scrollto21">U</li>
+                <li date-scroll="#scrollto22">V</li>
+                <li date-scroll="#scrollto23">W</li>
+                <li date-scroll="#scrollto24">X</li>
+                <li date-scroll="#scrollto25">Y</li>
+                <li date-scroll="#scrollto26">Z</li>
+            </ul>     
+        </div>
+         <div id="keytoast"></div>
+    </div>   
+    <!--股市学堂TAB页 end-->
+</div>
+
+</body>
+</html>

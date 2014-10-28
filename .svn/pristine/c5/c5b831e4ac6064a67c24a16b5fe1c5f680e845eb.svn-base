@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Demo For Trade</title>
+	<script src="../scripts/jquery-1.7.2.min.js"></script>
+	<script src="../scripts/galhttprequest.js"></script>
+	<script src="../scripts/trade.js"></script>
+	<script>
+		$(document).ready(function () {
+			var s = new StockMarketPriceTrade();
+
+			$('#queryhold').click(function () {
+				s.queryHoldStocks(function (stocks) {
+					var i = 0,
+						text = '';
+					if (!stocks) {
+						text = '没有持仓股票';
+					} else {
+						text = '您有以下持仓股票:';
+						for (; i < stocks.length; i++) {
+							text += ('[' + stocks[i].stockCode + ']' + stocks[i].stockName + ',');
+						}
+					}
+					$('#hold').text(text);
+				});
+			});
+
+			$('#querybuy').click(function () {
+				var stockcode = $('#stockcodebuy').val();
+				s.queryStockInfo4buy(stockcode);
+			});
+
+			$('#querysell').click(function () {
+				var stockcode = $('#stockcodesell').val();
+				s.queryStockInfo4sell(stockcode);
+			});
+
+			$('#buy').click(function () {
+				s.buy(100);
+			});
+
+			$('#sell').click(function () {
+				s.sell(100);
+			});
+
+
+		});
+	</script>
+</head>
+
+<body>
+	<div>
+		<input id="queryhold" type="button" value="查询持仓">
+		<p id="hold"></p>
+	</div>
+	<div>
+		<input id="stockcodebuy" type="text" value="11600000">
+		<input id="querybuy" type="button" value="查询">
+		<input id="buy" type="button" value="买入">
+	</div>
+	<div>
+		<input id="stockcodesell" type="text" value="11600000">
+		<input id="querysell" type="button" value="查询">
+		<input id="sell" type="button" value="卖出">
+	</div>
+	<input id="range" type="range" min="0" max="500" value="100">
+
+</body>
+
+</html>

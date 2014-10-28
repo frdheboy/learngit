@@ -1,0 +1,216 @@
+.mcon {
+	width: 100%;
+	height: 86%;
+	clear: both;
+	position: relative;
+}
+.mcon_l {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 75px;
+}
+.mcon_r {
+	width: 10%;
+	position: fixed;
+	top: 75px;
+	right: 0;
+	float: right;
+	padding-top: 0px;
+	color: #78b7e2;
+	z-index: 100;
+}
+.mcon_r ul {
+	height: 100%;
+	background: rgba(255,255,255,0.70);
+}
+.mcon_r ul li {
+	width: 100%;
+	height: 3.8461%;
+	font: 1.2em/1em "微软雅黑";
+	text-align: center;
+	
+}
+.mcon_r ul li a {
+	width: 100%;
+	focus-ring-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-focus-ring-color: rgba(0, 0, 0, 0);
+}
+.mcon_r ul li a:hover {
+	background: none;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-user-select: none;
+	tap-highlight-color: rgba(0,0,0,0);
+}
+#keytoast {
+	display: none;
+	position: fixed;
+	bottom: 180px;
+	left: 125px;
+	width: 90px;
+	height: 90px;
+	background-color: #78b7e2;
+	border: 2px solid #78b7e2;
+	border-radius: 10%;
+	font: bold 2em/2.7em "微软雅黑";
+	color: #FFFFFF;
+}
+.mcontent {
+	float: left;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border-right: 1px solid #e5e5e5;
+}
+.newtitl {
+	float: left;
+	width: 100%;
+}
+.hr {
+	height: 8%;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 100;
+}
+.hc {
+	height: 6%;
+	position: fixed;
+	top: 40px;
+	width: 100%;
+	z-index: 100;
+	border-bottom: 2px solid #086dae;
+}
+
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+.newtitl li {
+	width: 100%;
+	float: left;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #e5e5e5;
+	height: 40px;
+	position: relative;
+	
+	padding: 5px 0px;
+	background-color:#FFFFFF;
+}
+.newtitl P {
+	display: block;
+	text-align: left;
+	font: 1.5em/1.2em "微软雅黑";
+	text-indent: 11px;
+	color: #989898;
+}
+.nw {
+	border-bottom: 1px solid #e5e5e5;
+}
+.newtitl li a {
+	width: 100%;
+	float: left;
+	height: 40px;
+	display: block;
+	color: #5a5a5a;
+	line-height: 40px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.newtitl li a p {
+	float: left;
+	font: 1.2em/40px "微软雅黑";
+	width: 80%;
+	text-align: left;
+	padding-right: 5%;
+}
+.newtitl li a span {
+	/*width: 10%;*/
+	margin-left: 12px;
+	margin-top: 14px;
+	margin-right: 10px;
+	float: left;
+}
+.circle {
+	display: block;
+	width: 10px;
+	height: 10px;
+	background-color: #0b6faf;
+	-webkit-border-radius: 5px;
+}
+}
+
+/*宽度在大于480（包括480）的样式*/
+@media all and (min-width: 480px) {
+.mcontent {
+	border-top: 4px solid #086dae;
+}
+.newtitl li {
+	width: 100%;
+	float: left;
+	border-top: 2px solid #FFFFFF;
+	border-bottom: 2px solid #e5e5e5;
+	line-height: 40px;
+	position: relative;
+	padding: 15px 0px;
+	background-color:#FFFFFF;
+}
+.newtitl li a {
+	width: 100%;
+	float: left;
+	height: 40px;
+	display: block;
+	color: #5a5a5a;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.newtitl li a p {
+	float: left;
+	font-size: 26px;
+	line-height: 40px;
+	width: 87%;
+	text-align: left;
+	padding-right: 3%;
+}
+.newtitl li a span {
+	/*width: 10%;*/
+	margin-left: 12px;
+	margin-top: 12px;
+	margin-right: 10px;
+	float: left;
+}
+.circle {
+	display: block;
+	width: 16px;
+	height: 16px;
+	background-color: #0b6faf;
+	-webkit-border-radius: 8px;
+}
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+}
+.divScrollBar {
+	background-color: #ddd;
+	position: absolute;
+	opacity: 0.5;
+	filter: Alpha(opacity=50);
+}
+.divScrollBar:hover {
+	opacity: 1;
+	filter: Alpha(opacity=100);
+}
+.divScrollBar div {
+	background-color: #aaa;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}

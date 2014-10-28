@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP股市学堂详情页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/schooldetail.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/common.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs">
+        <p><a href="javascript:void (0)">首页</a>&gt;<a href="javascript:void (0)">股市学堂</a>&gt;<a
+                href="javascript:void (0)">新手入门</a></p>
+    </div>
+    <!--面包屑 end-->
+    <!--股市学堂TAB页 begin-->
+    <div class="m_content">
+        <!--引入页面 begin-->
+        <iframe align="center" width=100% height="400px" id="ifm" name="ifm" onLoad="javascript:dyniframesize('ifm');"
+                src="http://www.youguu.com/opms/html/article/5/2014/0221/783.html"
+                frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+        <!--引入页面 end-->
+    </div>
+    <!--股市学堂TAB页 end-->
+</div>
+<script>
+    //iframe高度自适应，跨域情况下不可用
+    function dyniframesize(down) {
+        var pTar = null;
+        if (document.getElementById) {
+            pTar = document.getElementById(down);
+        }
+        else {
+            eval('pTar = ' + down + ';');
+        }
+        if (pTar && !window.opera) {
+            pTar.style.display = "block";
+            pTar.height = Math.max(pTar.contentDocument.body.offsetHeight, pTar.contentDocument.body.scrollHeight) + 20;
+        }
+    }
+</script>
+</body>
+</html>

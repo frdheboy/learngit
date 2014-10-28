@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="bcbed6d7-efcc-42b6-9cc2-780ad433836c" name="!changes.default.changelist.name!" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/search.js" afterPath="$PROJECT_DIR$/scripts/search.js" />
+    </list>
+    <list id="816df593-a705-45d0-8401-47922b165fa9" name="提交失败： !changes.default.changelist.name!" comment="注册登录（动态）" />
+    <list id="21fa70ea-800c-4973-87e5-44bd12531d92" name="提交失败： !changes.default.changelist.name! (2)" comment="行情二级页面添加链接，跳到详情页&#10;" />
+    <ignored path="Simulated stock trading.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Simulated stock trading" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="stockinfo.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/stockinfo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="484" max-vertical-offset="5632">
+              <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="market.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/market.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.43087557" vertical-offset="66" max-vertical-offset="3366">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/聊股正文页分享wap页/styles/tweet.css" />
+        <option value="$PROJECT_DIR$/html/supmandetal_reco.html" />
+        <option value="$PROJECT_DIR$/scripts/superman_page.js" />
+        <option value="$PROJECT_DIR$/html/supmandetal_fever.html" />
+        <option value="$PROJECT_DIR$/html/supmandetal_gaintt.html" />
+        <option value="$PROJECT_DIR$/scripts/superman_gainttpage.js" />
+        <option value="$PROJECT_DIR$/scripts/superman_succpage.js" />
+        <option value="$PROJECT_DIR$/html/supmandetal_succ.html" />
+        <option value="$PROJECT_DIR$/html/supmandetal_monthgain.html" />
+        <option value="$PROJECT_DIR$/scripts/superman_monthgainpage.js" />
+        <option value="$PROJECT_DIR$/html/supmandetal_weekgain.html" />
+        <option value="$PROJECT_DIR$/html/mycenter.html" />
+        <option value="$PROJECT_DIR$/styles/mycenter.css" />
+        <option value="$PROJECT_DIR$/styles/supermandetal.css" />
+        <option value="$PROJECT_DIR$/html/superman.html" />
+        <option value="$PROJECT_DIR$/styles/supermanrank.css" />
+        <option value="$PROJECT_DIR$/html/supmandetal_report.html" />
+        <option value="$PROJECT_DIR$/scripts/superman_weekgainpage.js" />
+        <option value="$PROJECT_DIR$/html/supmandetal_reportlist.html" />
+        <option value="$PROJECT_DIR$/scripts/supermanrank.js" />
+        <option value="$PROJECT_DIR$/html/competition.html" />
+        <option value="$PROJECT_DIR$/scripts/superman_report.js" />
+        <option value="$PROJECT_DIR$/scripts/competition.js" />
+        <option value="$PROJECT_DIR$/scripts/superman_reportlist.js" />
+        <option value="$PROJECT_DIR$/styles/competitiondetail.css" />
+        <option value="$PROJECT_DIR$/html/competitiondetail.html" />
+        <option value="$PROJECT_DIR$/scripts/superman_feverpage.js" />
+        <option value="$PROJECT_DIR$/scripts/competitiondetail.js" />
+        <option value="$PROJECT_DIR$/styles/marketindex.css" />
+        <option value="$PROJECT_DIR$/styles/market.css" />
+        <option value="$PROJECT_DIR$/html/marketindex.html" />
+        <option value="$PROJECT_DIR$/html/industrymarket.html" />
+        <option value="$PROJECT_DIR$/scripts/industrymarket.js" />
+        <option value="$PROJECT_DIR$/scripts/market.js" />
+        <option value="$PROJECT_DIR$/html/navdemo.html" />
+        <option value="$PROJECT_DIR$/scripts/marketindex.js" />
+        <option value="$PROJECT_DIR$/styles/simulate.css" />
+        <option value="$PROJECT_DIR$/html/simulate.html" />
+        <option value="$PROJECT_DIR$/scripts/simulate.js" />
+        <option value="$PROJECT_DIR$/scripts/common.js" />
+        <option value="$PROJECT_DIR$/scripts/galhttprequest.js" />
+        <option value="$PROJECT_DIR$/scripts/database.js" />
+        <option value="$PROJECT_DIR$/html/search.html" />
+        <option value="$PROJECT_DIR$/scripts/search.js" />
+        <option value="$PROJECT_DIR$/styles/kline.css" />
+        <option value="$PROJECT_DIR$/scripts/market_canvas.js" />
+        <option value="$PROJECT_DIR$/styles/stockinfo.css" />
+        <option value="$PROJECT_DIR$/html/stockinfo.html" />
+        <option value="$PROJECT_DIR$/scripts/klinechart.js" />
+        <option value="$PROJECT_DIR$/scripts/stockinfo.js" />
+        <option value="$PROJECT_DIR$/html/market.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBowerSettings">
+    <exe-path />
+    <config-path />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="添加" />
+    <OptionsSetting value="true" id="移除" />
+    <OptionsSetting value="true" id="检出" />
+    <OptionsSetting value="true" id="更新" />
+    <OptionsSetting value="true" id="状态" />
+    <OptionsSetting value="true" id="编辑" />
+    <ConfirmationsSetting value="0" id="添加" />
+    <ConfirmationsSetting value="0" id="移除" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="提交失败： !changes.default.changelist.name!" />
+        <subPane subId="!changes.default.changelist.name!">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Simulated stock trading" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Simulated stock trading" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stockmarketsimulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Simulated stock trading" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stockmarketsimulation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="last_opened_file_path" value="D:/nodejsdemo" />
+    <property name="options.lastSelected" value="editing.templates" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="214" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="219" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="220" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="75" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="127" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="1000" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder5" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="176" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="183" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="182" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="176" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="177" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth5" value="961" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
+    <property name="FullScreen" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="GetQuery&#9;null&#9;null" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\html" />
+      <recent name="D:\workspace\scripts" />
+      <recent name="D:\workspace\scripts\yemianqiehuan" />
+      <recent name="D:\workspace\styles\yemianqiehuan" />
+      <recent name="C:\Users\XA-0301031A\Desktop" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\wap\mncg_wap\html" />
+      <recent name="D:\workspace\wap\mncg_wap\scripts" />
+      <recent name="D:\workspace\Simulated stock trading\html" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.common.js">
+    <configuration default="false" name="superman.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" uri="http://localhost:63340/Simulated stock trading/html/superman.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="common.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="common.js" working-dir="$PROJECT_DIR$/scripts">
+      <RunnerSettings RunnerId="NodeJS.run" />
+      <ConfigurationWrapper RunnerId="NodeJS.run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="name" value="Dart" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSRemoteDebug" factoryName="Node.js Remote Debug">
+      <node-js-remote-debug />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeWebKit" factoryName="Node-webkit">
+      <option name="name" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="XSLT" factoryName="XSLT">
+      <option name="myOutputFile" />
+      <option name="myOpenOutputFile" value="false" />
+      <option name="myOpenInBrowser" value="false" />
+      <option name="mySmartErrorHandling" value="true" />
+      <option name="myRunnerPort" value="34873" />
+      <option name="myVmArguments" />
+      <option name="myWorkingDirectory" />
+      <option name="myModule" />
+      <option name="myJdk" />
+      <parameters />
+      <OutputType value="CONSOLE" save-to-file="false" />
+      <FileType name="XML" />
+      <JdkChoice value="FROM_MODULE" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="false" name="superman.html" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="false" uri="http://localhost:63342/Simulated stock trading/html/superman.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="loginin.html" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63342/Simulated stock trading/html/index.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unnamed" type="NodeJSRemoteDebug" factoryName="Node.js Remote Debug">
+      <node-js-remote-debug />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.superman.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.loginin.html" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js Remote Debug.Unnamed" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.superman.html (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.common.js" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.common.js" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.superman.html (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\workspace\stockmarketsimulation" />
+          <option name="myCopyRoot" value="D:\workspace\stockmarketsimulation" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\workspace\stockmarketsimulation\.idea" />
+          <option name="myCopyRoot" value="D:\workspace\stockmarketsimulation\.idea" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\workspace\stockmarketsimulation" />
+          <option name="myCopyRoot" value="D:\workspace\stockmarketsimulation" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bcbed6d7-efcc-42b6-9cc2-780ad433836c" name="!changes.default.changelist.name!" comment="" />
+      <created>1405391804607</created>
+      <updated>1405391804607</updated>
+    </task>
+    <task id="LOCAL-00001">
+      <created>1405566215723</created>
+      <updated>1405566215723</updated>
+    </task>
+    <task id="LOCAL-00002" summary="'">
+      <created>1405649281262</created>
+      <updated>1405649281262</updated>
+    </task>
+    <task id="LOCAL-00003" summary="'">
+      <created>1405653975792</created>
+      <updated>1405653975792</updated>
+    </task>
+    <task id="LOCAL-00004" summary="'">
+      <created>1405659942982</created>
+      <updated>1405659942982</updated>
+    </task>
+    <task id="LOCAL-00005" summary="'">
+      <created>1405674678202</created>
+      <updated>1405674678202</updated>
+    </task>
+    <task id="LOCAL-00006" summary="'模拟炒股首页">
+      <created>1405925452872</created>
+      <updated>1405925452872</updated>
+    </task>
+    <task id="LOCAL-00007" summary="买入卖出">
+      <created>1405934667565</created>
+      <updated>1405934667565</updated>
+    </task>
+    <task id="LOCAL-00008" summary="行情首页">
+      <created>1405939613527</created>
+      <updated>1405939613527</updated>
+    </task>
+    <task id="LOCAL-00009" summary="委托撤单">
+      <created>1405941925967</created>
+      <updated>1405941925967</updated>
+    </task>
+    <task id="LOCAL-00010" summary="委托撤单">
+      <created>1406096457363</created>
+      <updated>1406096457363</updated>
+    </task>
+    <task id="LOCAL-00011" summary="委托撤单">
+      <created>1406101831484</created>
+      <updated>1406101831484</updated>
+    </task>
+    <task id="LOCAL-00012" summary="委托撤单">
+      <created>1406107810597</created>
+      <updated>1406107810597</updated>
+    </task>
+    <task id="LOCAL-00013" summary="委托撤单">
+      <created>1406107826046</created>
+      <updated>1406107826046</updated>
+    </task>
+    <task id="LOCAL-00014" summary="注册登录（差大尺寸分辨率下的样式表）">
+      <created>1406199829274</created>
+      <updated>1406199829274</updated>
+    </task>
+    <task id="LOCAL-00015" summary="注册登录（差大尺寸分辨率下的样式表）">
+      <created>1406199899767</created>
+      <updated>1406199899767</updated>
+    </task>
+    <task id="LOCAL-00016" summary="注册登录（动态）">
+      <created>1406537130081</created>
+      <updated>1406537130081</updated>
+    </task>
+    <task id="LOCAL-00017" summary="注册登录（动态）">
+      <created>1406546827059</created>
+      <updated>1406546827059</updated>
+    </task>
+    <task id="LOCAL-00018" summary="注册登录（动态）">
+      <created>1406806317035</created>
+      <updated>1406806317035</updated>
+    </task>
+    <task id="LOCAL-00019" summary="注册登录（动态）">
+      <created>1406888398071</created>
+      <updated>1406888398071</updated>
+    </task>
+    <task id="LOCAL-00020" summary="注册登录（动态）">
+      <created>1407221734042</created>
+      <updated>1407221734042</updated>
+    </task>
+    <task id="LOCAL-00021" summary="注册登录（动态）">
+      <created>1407222288034</created>
+      <updated>1407222288034</updated>
+    </task>
+    <task id="LOCAL-00022" summary="注册登录（动态）">
+      <created>1407293098069</created>
+      <updated>1407293098069</updated>
+    </task>
+    <task id="LOCAL-00023" summary="注册登录（动态）">
+      <created>1407408619052</created>
+      <updated>1407408619052</updated>
+    </task>
+    <task id="LOCAL-00024" summary="注册登录（动态）">
+      <created>1407409411049</created>
+      <updated>1407409411049</updated>
+    </task>
+    <task id="LOCAL-00025" summary="注册登录（动态）">
+      <created>1407460380061</created>
+      <updated>1407460380061</updated>
+    </task>
+    <task id="LOCAL-00026" summary="比赛">
+      <created>1407671207062</created>
+      <updated>1407671207062</updated>
+    </task>
+    <task id="LOCAL-00027" summary="牛人">
+      <created>1407751551050</created>
+      <updated>1407751551050</updated>
+    </task>
+    <task id="LOCAL-00028" summary="牛人">
+      <created>1407807965093</created>
+      <updated>1407807965093</updated>
+    </task>
+    <task id="LOCAL-00029" summary="牛人">
+      <created>1407831247058</created>
+      <updated>1407831247058</updated>
+    </task>
+    <task id="LOCAL-00030" summary="牛人">
+      <created>1407837302053</created>
+      <updated>1407837302053</updated>
+    </task>
+    <task id="LOCAL-00031" summary="牛人">
+      <created>1407919078068</created>
+      <updated>1407919078068</updated>
+    </task>
+    <task id="LOCAL-00032" summary="牛人">
+      <created>1408007387060</created>
+      <updated>1408007387060</updated>
+    </task>
+    <task id="LOCAL-00033" summary="牛人">
+      <created>1408011633059</created>
+      <updated>1408011633059</updated>
+    </task>
+    <task id="LOCAL-00034" summary="牛人">
+      <created>1408012600057</created>
+      <updated>1408012600057</updated>
+    </task>
+    <task id="LOCAL-00035" summary="牛人">
+      <created>1408068956064</created>
+      <updated>1408068956064</updated>
+    </task>
+    <task id="LOCAL-00036" summary="牛人">
+      <created>1408345333063</created>
+      <updated>1408345333063</updated>
+    </task>
+    <task id="LOCAL-00037" summary="if (info.status.status == '0000'||info.status[0] .status == '0000') {&#10;&#9;&#9;&#9;callback.succeed(info);&#10;&#9;&#9;} else {&#10;&#9;&#9;&#9;callback.error(info);&#10;&#9;&#9;}">
+      <created>1408349244058</created>
+      <updated>1408349244058</updated>
+    </task>
+    <task id="LOCAL-00038" summary="if (info.status.status == '0000'||info.status[0].status == '0000') {&#10;&#9;&#9;&#9;callback.succeed(info);&#10;&#9;&#9;} else {&#10;&#9;&#9;&#9;callback.error(info);&#10;&#9;&#9;}">
+      <created>1408349283062</created>
+      <updated>1408349283062</updated>
+    </task>
+    <task id="LOCAL-00039" summary="行情首页和一级分页面">
+      <created>1408505572084</created>
+      <updated>1408505572084</updated>
+    </task>
+    <task id="LOCAL-00040" summary="行情首页换接口">
+      <created>1408505844050</created>
+      <updated>1408505844050</updated>
+    </task>
+    <task id="LOCAL-00041" summary="行业或概念股票列表">
+      <created>1408521885062</created>
+      <updated>1408521885062</updated>
+    </task>
+    <task id="LOCAL-00042" summary="行业或概念股票列表">
+      <created>1408702331039</created>
+      <updated>1408702331039</updated>
+    </task>
+    <task id="LOCAL-00043" summary="行情个股页（包含2个二级标签页面）&#10;暂未解决问题，lazyload和静态页面跨域&#10;还有晓伟的图表没合">
+      <created>1408964984826</created>
+      <updated>1408964984826</updated>
+    </task>
+    <task id="LOCAL-00044" summary="行情个股页（包含2个二级标签页面）&#10;暂未解决问题，lazyload和静态页面跨域，大屏幕分辨率样式没调&#10;还有晓伟的图表没合">
+      <created>1408965058381</created>
+      <updated>1408965058381</updated>
+    </task>
+    <task id="LOCAL-00045" summary="行情个股页（包含2个二级标签页面）&#10;         暂未解决问题，lazyload&#10;         还有晓伟的图表没合&#10;">
+      <created>1409737446398</created>
+      <updated>1409737446398</updated>
+    </task>
+    <task id="LOCAL-00046" summary="行情二级页面添加链接，跳到详情页&#10;">
+      <created>1409739252990</created>
+      <updated>1409739252990</updated>
+    </task>
+    <task id="LOCAL-00047" summary="行情二级页面添加链接，跳到详情页&#10;">
+      <created>1409739315710</created>
+      <updated>1409739315710</updated>
+    </task>
+    <task id="LOCAL-00048" summary="行情二级页面添加链接，跳到详情页&#10;">
+      <created>1410250201983</created>
+      <updated>1410250201983</updated>
+    </task>
+    <task id="LOCAL-00049" summary="&#10;">
+      <created>1410250738236</created>
+      <updated>1410250738236</updated>
+    </task>
+    <task id="LOCAL-00050" summary="行情二级页面添加链接，跳到详情页&#10;">
+      <created>1410250808896</created>
+      <updated>1410250808897</updated>
+    </task>
+    <task id="LOCAL-00051" summary="&#10;">
+      <created>1410489070311</created>
+      <updated>1410489070311</updated>
+    </task>
+    <task id="LOCAL-00052" summary="&#10;">
+      <created>1410489910233</created>
+      <updated>1410489910233</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="变化" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756758" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15595363" sideWeight="0.49838188" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14436248" sideWeight="0.6108108" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38870794" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14436248" sideWeight="0.38918918" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Properties" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32540542" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22810811" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Properties" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="变化" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13638757" sideWeight="0.21189189" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980973" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1569247" sideWeight="0.49945828" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12848867" sideWeight="0.787027" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="'" />
+    <MESSAGE value="'模拟炒股首页" />
+    <MESSAGE value="买入卖出" />
+    <MESSAGE value="行情首页" />
+    <MESSAGE value="委托撤单" />
+    <MESSAGE value="注册登录（差大尺寸分辨率下的样式表）" />
+    <MESSAGE value="注册登录（动态）" />
+    <MESSAGE value="比赛" />
+    <MESSAGE value="牛人" />
+    <MESSAGE value="if (info.status.status == '0000'||info.status[0] .status == '0000') {&#10;&#9;&#9;&#9;callback.succeed(info);&#10;&#9;&#9;} else {&#10;&#9;&#9;&#9;callback.error(info);&#10;&#9;&#9;}" />
+    <MESSAGE value="if (info.status.status == '0000'||info.status[0].status == '0000') {&#10;&#9;&#9;&#9;callback.succeed(info);&#10;&#9;&#9;} else {&#10;&#9;&#9;&#9;callback.error(info);&#10;&#9;&#9;}" />
+    <MESSAGE value="行情首页和一级分页面" />
+    <MESSAGE value="行情首页换接口" />
+    <MESSAGE value="行业或概念股票列表" />
+    <MESSAGE value="行情个股页（包含2个二级标签页面）&#10;暂未解决问题，lazyload和静态页面跨域" />
+    <MESSAGE value="行情个股页（包含2个二级标签页面）&#10;暂未解决问题，lazyload和静态页面跨域&#10;还有晓伟的图表没合" />
+    <MESSAGE value="行情个股页（包含2个二级标签页面）&#10;暂未解决问题，lazyload和静态页面跨域，大屏幕分辨率样式没调&#10;还有晓伟的图表没合" />
+    <MESSAGE value="行情个股页（包含2个二级标签页面）&#10;         暂未解决问题，lazyload&#10;         还有晓伟的图表没合&#10;" />
+    <MESSAGE value="行情二级页面添加链接，跳到详情页&#10;" />
+    <MESSAGE value="&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Simulated stock trading" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="workspace" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/html/stockinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="484" max-vertical-offset="5632">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9375697" vertical-offset="17341" max-vertical-offset="20614">
+          <caret line="750" column="25" selection-start-line="750" selection-start-column="25" selection-end-line="750" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/stockinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="484" max-vertical-offset="5632">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/market.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43087557" vertical-offset="66" max-vertical-offset="3366">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+

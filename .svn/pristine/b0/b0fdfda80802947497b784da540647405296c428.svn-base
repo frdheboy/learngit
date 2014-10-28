@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<title>模拟炒股WAP登录页</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="../styles/common.css"/>
+		<link rel="stylesheet" href="../styles/loginin.css"/>
+		<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="100530934" charset="utf-8"></script>
+		<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=687863162" type="text/javascript" charset="utf-8"></script>
+		<script src="../scripts/jquery-1.7.2.min.js"></script>
+		<script src="../scripts/galhttprequest.js"></script>
+		<script src="../scripts/common.js"></script>
+		<script src="../scripts/loginin.js"></script>
+	</head>
+	<body>
+		<div class="main">
+			<!--头部共用搜索框 begin-->
+			<div class="header">
+				&nbsp;
+			</div>
+			<!--头部共用搜索框 end-->
+			<!--面包屑 begin-->
+			<div class="crumbs">
+				<p>
+					<a href="javascript:void (0)">首页</a>&gt;<a href="javascript:void (0)">登录</a>
+				</p>
+			</div>
+			<!--面包屑 end-->
+			<!--注册登录 begin-->
+			<div class="content">
+				<p>
+					注册即领取10万模拟资金
+				</p>
+				<div id="qq_login">
+					<a href="javascript:;" onclick="return window.open('https://graph.qq.com/oauth2.0/authorize?client_id=100530934&amp;response_type=token&amp;scope=all&amp;redirect_uri=http%3A%2F%2Fqzonestyle.gtimg.cn%2Fqzone%2Fopenapi%2Fredirect-1.0.1.html', 'oauth2Login_10966' ,'height=525,width=585, toolbar=no, menubar=no, scrollbars=no, status=no, location=yes, resizable=yes');"> <img src="../images/QQlogo50.jpg"/> <span>QQ账号登录</span> </a>
+				</div>
+				<div id="weibo_login">
+					<a href="javascript:void (0)"><img src="../images/Sinalogo50.jpg"/><span>微博账号登录</span></a>
+				</div>
+				<div>
+					<a href="javascript:void (0)"><img src="../images/phone50.jpg"/><span>手机号&frasl;用户名登录</span></a>
+				</div>
+			</div>
+
+			<!--注册登录 end-->
+		</div>
+	</body>
+</html>

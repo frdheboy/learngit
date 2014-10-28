@@ -1,0 +1,438 @@
+.m_content {
+    float: left;
+    width: 100%;
+    border-top: 2px solid #086dae;
+}
+
+
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    .placeholder {
+        float: left;
+        width: 100%;
+        height: 30px;
+    }
+
+    .index_sse {
+        width: 100%;
+        float: left;
+    }
+
+    .index_sse li {
+        width: 33%;
+        float: left;
+    }
+
+    .index_sse li.leftrightborder {
+        border-left: 1px solid #d7d7d7;
+        border-right: 1px solid #d7d7d7;
+    }
+
+    .sse_01 {
+        width: 100%;
+        float: left;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .sse_02 {
+        float: left;
+        width: 80%;
+        margin-left: 10%;
+        font-weight: bold;
+
+    }
+
+    .sse_02 img {
+        float: left;
+        width: 20%;
+    }
+
+    .sse_02 span {
+        width: 100%;
+        display: block;
+        float: left;
+        line-height: 20px;
+        font-size: 18px;
+        color: #168816;
+        text-align: center;
+    }
+
+    .sse_03 {
+        float: left;
+        width: 100%;
+        line-height: 20px;
+    }
+
+    .sse_03_01 {
+        box-sizing: border-box;
+        float: left;
+        width: 50%;
+        text-align: right;
+        font-size: 10px;
+        padding-right: 4%;
+        -webkit-text-size-adjust: none;
+        -webkit-transform: scale(0.84, 0.84);
+        transform: scale(0.84, 0.84);
+        transform-origin:100%;
+    }
+
+    .sse_03_02 {
+        box-sizing: border-box;
+        float: left;
+        width: 50%;
+        text-align: left;
+        font-size: 10px;
+        padding-left: 4%;
+        -webkit-text-size-adjust: none;
+        -webkit-transform: scale(0.84, 0.84);
+        transform: scale(0.84, 0.84);
+        transform-origin:0;
+    }
+
+    .sse_04 {
+        float: left;
+        width: 100%;
+        font-size: 12px;
+        line-height: 18px;
+        line-height: 12px;
+        margin-top: 7px;
+    }
+
+    .markettitle {
+        float: left;
+        width: 100%;
+        background-color: #e9eaec;
+        height: 30px;
+        line-height: 32px;
+        font-size: 14px;
+        text-align: left;
+        text-indent: 15px;
+        position: relative;
+    }
+
+    .markettitle a {
+        display: block;
+        float: right;
+        width: 50px;
+        height: 30px;
+    }
+
+    .markettitle a p {
+        width: 5px;
+        height: 5px;
+        background-color: #adafb4;
+        border: 1px solid #bbbdc1;
+        float: left;
+        margin-top: 12px;
+        margin-right: 5px;
+    }
+
+    .stock_list_title {
+        float: left;
+        width: 100%;
+        border-bottom: 1px solid #e3e3e3;
+    }
+
+    .stock_list_title li {
+        float: left;
+        width: 33%;
+        line-height: 35px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .stock_list_title_01 {
+        float: left;
+        width: 100%;
+        background-color: #e9eaec;
+    }
+
+    .stock_list_title_01 li {
+        float: left;
+        width: 33%;
+        line-height: 35px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .stock_list {
+        float: left;
+        width: 100%;
+    }
+
+    .stock_list li {
+        float: left;
+        width: 100%;
+        font-size: 18px;
+        border-bottom: 1px solid #e3e3e3;
+        padding: 6px 0px;
+    }
+
+    .stock_list_style01 {
+        width: 33%;
+        float: left;
+    }
+
+    .stock_list_style01 span {
+        display: block;
+        width: 100%;
+        float: left;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .stock_list_style01 em {
+        font-style: normal;
+        display: block;
+        width: 100%;
+        float: left;
+        font-size: 14px;
+        line-height: 16px;
+        color: #f78d05;
+    }
+
+    .stock_list_style02 {
+        width: 33%;
+        float: left;
+        font-size: 20px;
+        line-height: 40px;
+        color: #d62829;
+        font-weight: bold;
+    }
+
+    .stock_list_style03 {
+        width: 33%;
+        float: left;
+        font-size: 20px;
+        line-height: 40px;
+        color: #d62829;
+        font-weight: bold;
+    }
+}
+
+/*宽度在480（包括480）到640之间的样式*/
+@media all and (min-width: 480px) {
+    .placeholder {
+        float: left;
+        width: 100%;
+        height: 45px;
+    }
+    .m_content {
+        border-top: 4px solid #086dae;
+    }
+
+    .index_sse {
+        width: 100%;
+        float: left;
+    }
+
+    .index_sse li {
+        width: 33%;
+        float: left;
+    }
+
+    .index_sse li.leftrightborder {
+        border-left: 1px solid #d7d7d7;
+        border-right: 1px solid #d7d7d7;
+    }
+
+    .sse_01 {
+        width: 100%;
+        float: left;
+        font-size: 24px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .sse_02 {
+        float: left;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .sse_02 img {
+        float: left;
+        width: 20%;
+        margin-top: 2px;
+    }
+
+    .sse_02 span {
+        width: 100%;
+        display: block;
+        float: left;
+        line-height: 30px;
+        font-size: 28px;
+        color: #168816;
+        text-align: center;
+    }
+
+    .sse_03 {
+        float: left;
+        width: 100%;
+        line-height: 20px;
+    }
+
+    .sse_03_01 {
+        float: left;
+        width: 45%;
+        text-align: right;
+        font-size: 16px;
+        margin-right: 5%;
+        line-height: 25px;
+    }
+
+    .sse_03_02 {
+        float: left;
+        width: 45%;
+        text-align: left;
+        font-size: 16px;
+        margin-left: 5%;
+        line-height: 25px;
+    }
+
+    .sse_04 {
+        float: left;
+        width: 100%;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .stock_list_title {
+        float: left;
+        width: 100%;
+    }
+
+    .stock_list_title li {
+        float: left;
+        width: 33%;
+        line-height: 50px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .stock_list_title_01 {
+        float: left;
+        width: 100%;
+        background-color: #e9eaec;
+    }
+
+    .stock_list_title_01 li {
+        float: left;
+        width: 33%;
+        line-height: 50px;
+        font-size: 24px;
+        text-align: center
+    }
+
+    .stock_list {
+        float: left;
+        width: 100%;
+    }
+
+    .stock_list li {
+        float: left;
+        width: 100%;
+        font-size: 18px;
+        border-bottom: 1px solid #e3e3e3;
+        padding: 6px 0px;
+    }
+
+    .markettitle {
+        float: left;
+        width: 100%;
+        background-color: #e9eaec;
+        height: 45px;
+        line-height: 45px;
+        font-size: 22px;
+        text-align: left;
+        text-indent: 20px;
+    }
+
+    .markettitle a {
+        display: block;
+        float: right;
+        width: 80px;
+        height: 45px;
+    }
+
+    .markettitle a p {
+        width: 8px;
+        height: 8px;
+        background-color: #adafb4;
+        border: 1px solid #bbbdc1;
+        float: left;
+        margin-top: 18px;
+        margin-right: 5px;
+    }
+
+    .stock_list {
+        float: left;
+        width: 100%;
+    }
+
+    .stock_list li {
+        float: left;
+        width: 100%;
+        font-size: 26px;
+        border-bottom: 1px solid #e3e3e3;
+        padding: 6px 0px;
+    }
+
+    .stock_list_style01 {
+        width: 33%;
+        float: left;
+    }
+
+    .stock_list_style01 span {
+        display: block;
+        width: 100%;
+        float: left;
+        font-size: 26px;
+        line-height: 26px;
+    }
+
+    .stock_list_style01 em {
+        font-style: normal;
+        display: block;
+        width: 100%;
+        float: left;
+        font-size: 22px;
+        line-height: 22px;
+        color: #f78d05;
+    }
+
+    .stock_list_style02 {
+        width: 33%;
+        float: left;
+        font-size: 26px;
+        line-height: 48px;
+        color: #d62829;
+        font-weight: bold;
+    }
+
+    .stock_list_style03 {
+        width: 33%;
+        float: left;
+        font-size: 26px;
+        line-height: 48px;
+        color: #d62829;
+        font-weight: bold;
+    }
+
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+
+
+
+

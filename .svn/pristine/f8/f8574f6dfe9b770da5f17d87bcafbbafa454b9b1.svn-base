@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+	<title>模拟炒股WAP登录页</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../styles/common.css" />
+	<link rel="stylesheet" href="../styles/loginin.css" />
+	<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="100530934" charset="utf-8"></script>
+	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=687863162" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/jquery-1.7.2.min.js"></script>
+	<script src="../scripts/jqueryform.js"></script>
+	<script src="../scripts/galhttprequest.js"></script>
+	<script src="../scripts/common.js"></script>
+	<script src="../scripts/loginin.js"></script>
+</head>
+
+<body>
+	<div class="main">
+		<!--头部共用搜索框 begin-->
+		<div class="header">&nbsp;</div>
+		<!--头部共用搜索框 end-->
+		<div class="m_wrap" style="float: left; width: 100%; background: #bebdbd;">
+			<div class="page" id="page_01">
+				<!--面包屑 begin-->
+				<div class="crumbs">
+					<p><a href="index.html">首页</a>&gt;<a href="loginin.html">登录</a>
+					</p>
+				</div>
+				<!--面包屑 end-->
+				<!--注册登录 begin-->
+				<div class="content">
+					<p>注册即领取10万模拟资金</p>
+					<div id="qq_login">
+						<a href="javascript:;" onclick="return window.open('https://graph.qq.com/oauth2.0/authorize?client_id=100530934&amp;response_type=token&amp;scope=all&amp;redirect_uri=http%3A%2F%2Fqzonestyle.gtimg.cn%2Fqzone%2Fopenapi%2Fredirect-1.0.1.html', 'oauth2Login_10966' ,'height=525,width=585, toolbar=no, menubar=no, scrollbars=no, status=no, location=yes, resizable=yes');">
+							<img src="../images/QQlogo50.jpg" /> <span>QQ账号登录</span> 
+						</a>
+					</div>
+					<div id="weibo_login">
+						<a href="javascript:void (0)">
+							<img src="../images/Sinalogo50.jpg" /><span>微博账号登录</span>
+						</a>
+					</div>
+					<div>
+						<a href="javascript:void (0)" id="loginin_letinbtn">
+							<img src="../images/phone50.jpg" /><span>手机号&frasl;用户名登录</span>
+						</a>
+					</div>
+				</div>
+				<!--注册登录 end-->
+			</div>
+			<div class="page" id="page_02">
+				<!--面包屑 begin-->
+				<div class="crumbs">
+					<p><a href="index.html">首页</a>&gt;<a href="loginin.html">登录</a>&gt;<a href="javascript:void (0)">手机号/用户名登录</a>
+					</p>
+				</div>
+				<!--面包屑 end-->
+				<!--手机号/用户登录 begin-->
+				<div class="content_1">
+					<div class="name_1">
+						<div id="username_2">
+							<label for="username_1">
+								<input type="text" autofocus="autofocus" id="username_1" placeholder="请输入用户名/手机号" required/>
+							</label>
+
+							<div class="sanjiaobtn"></div>
+							<div class="loginedname"></div>
+						</div>
+					</div>
+					<div class="pass_1">
+						<div>
+							<label for="password_1">
+								<input type="password" id="password_1" placeholder="请输入密码" required/>
+							</label>
+						</div>
+					</div>
+					<div class="login_01">
+						<p><a href="javascript:void(0)" id="loginin_newuser">注册新用户</a>
+						</p>
+
+						<p><a href="javascript:void(0)" id="forgetpassword">忘记密码</a>
+						</p>
+					</div>
+					<div class="loginbtn_01" id="loginin_btn1"><a href="javascript:void(0)">登录</a>
+					</div>
+				</div>
+				<!--手机号/用户登录 end-->
+			</div>
+			<div class="page" id="page_03">
+				<!--面包屑 begin-->
+				<div class="crumbs">
+					<p><a href="index.html">首页</a>&gt;<a href="loginin.html">登录</a>&gt;<a href="javascript:void (0)">手机快速注册</a>
+					</p>
+				</div>
+				<!--面包屑 end-->
+				<!--手机快速注册 begin-->
+				<div class="content_2">
+					<section class="tap_01" id="logintip_title">
+						<div class="tap_tt_currect">手机注册</div>
+						<div>普通注册</div>
+					</section>
+					<div class="m_wrap_1">
+						<div id="login_phone_tip">
+							<section class="phonenum_01">
+								<div id="phonenumdiv_1">
+									<input type="text" id="phonenum_1" placeholder="请输入手机号" required/><a href="javascript:void(0)">获取验证码</a>
+								</div>
+								<div id="verificationcodediv_1">
+									<input type="text" id="verificationcode_1" placeholder="请输入验证码" required/>
+								</div>
+							</section>
+							<section class="next_01">
+								<a href="javascript:void (0)" id="phonefastlogin_next">下一步</a>
+
+								<p>注：手机号仅用于登录或找回密码</p>
+							</section>
+						</div>
+						<!--普通注册begin-->
+						<form id="doFormRegister" action="http://220.181.47.36/jhss/member/doFormRegister" enctype="application/x-www-form-urlencoded" method="post">
+							<div id="login_normal_tip" style="display: none">
+								<div style="display: none">
+									<input type="text" name="ak" value="0170010010000" />
+								</div>
+								<div class="pass_2" id="norphonenum"><span>用户名：</span>
+									<input id="normal_username" type="text" name="username" placeholder="请输入用户名" autofocus="autofocus" required/>
+								</div>
+								<div class="pass_2" id="norpassw"><span>密码：</span>
+									<input id="normal_pwd" type="password" name="userpwd" placeholder="6-16位字母或数字" required/>
+								</div>
+								<div class="pass_2" id="norpasswagain"><span>确认密码：</span>
+									<input id="normal_pwd_ag" type="password" placeholder="请再次输入密码" required/>
+								</div>
+								<div class="pass_2" id="noremail"><span>邮箱：</span>
+									<input id="normal_email" type="email" name="email" placeholder="请输入常用邮箱" required/>
+								</div>
+								<!--<div class="pass_2" id="norreferrer"><span>邀请人：</span><input id="normal_ferrer" type="text" placeholder="请输入邀请人ID，选填" required/></div>-->
+								<div class="ok_01">
+									<input type="submit" id="norlogsubbtn" value="确定">
+								</div>
+							</div>
+						</form>
+					</div>
+					<!--普通注册end-->
+				</div>
+				<!--手机快速注册 end-->
+			</div>
+			<div class="page" id="page_04">
+				<!--面包屑 begin-->
+				<div class="crumbs">
+					<p><a href="index.html">首页</a>&gt;<a href="loginin.html">登录</a>&gt;<a href="javascript:void (0)">手机快速注册</a>
+					</p>
+				</div>
+				<!--面包屑 end-->
+				<!--手机快速注册成功 begin-->
+				<div class="content_3">
+					<section>
+						<p>验证成功，请设置您的密码</p>
+						<form id="phoneRegister" action="http://220.181.47.36/jhss/member/phoneRegister" enctype="application/x-www-form-urlencoded" method="post">
+							<div style="display: none">
+								<input type="text" name="ak" value="0170010010000" />
+							</div>
+							<div style="display: none">
+								<input type="text" name="phone" id="fastloginphoneinput" value="" />
+							</div>
+							<div style="display: none">
+								<input type="text" name="verifyCode" id="fastverfycodeinput" value="" />
+							</div>
+							<div class="pass_2" id="password_firstbox"><span>密码：</span>
+								<input type="password" id="password_first" name="userpwd" placeholder="6-16位字母或者数字" />
+							</div>
+							<div class="pass_2" id="password_againbox"><span>确认密码：</span>
+								<input type="password" id="password_again" placeholder="请再次输入密码" />
+							</div>
+							<div class="ok_01">
+								<input type="submit" id="password_confirm" value="确定">
+							</div>
+						</form>
+					</section>
+				</div>
+				<!--手机快速注册成功 end-->
+			</div>
+			<div class="page" id="page_05">
+				<!--面包屑 begin-->
+				<div class="crumbs">
+					<p><a href="index.html">首页</a>&gt;<a href="loginin.html">登录</a>&gt;<a href="javascript:void (0)">忘记密码</a>
+					</p>
+				</div>
+				<!--面包屑 end-->
+				<!--忘记密码 begin-->
+				<div class="content_2">
+					<section class="phonenum_01">
+						<div id="phonenumdiv_2">
+							<input type="text" id="phonenum_2" /><a href="javascript:void(0)" id="makeregisterpin">获取验证码</a>
+						</div>
+						<div id="verificationcodediv_2">
+							<input id="verificationcode_2" type="text" />
+						</div>
+					</section>
+					<section class="next_01">
+						<a href="javascript:void(0)" id="forgetpassword_next">下一步</a>
+
+						<p>温馨提示
+							<br/>只有手机注册或已绑定手机的用户可通过手机号码找回密码，其他情况请联系客服。
+							<br/>客服电话：010-53599702
+						</p>
+					</section>
+				</div>
+				<!--忘记密码 end-->
+			</div>
+			<div class="page" id="page_06">
+				<!--面包屑 begin-->
+				<div class="crumbs">
+					<p><a href="index.html">首页</a>&gt;<a href="loginin.html">登录</a>&gt;<a href="javascript:void (0)">忘记密码</a>
+					</p>
+				</div>
+				<!--面包屑 end-->
+				<!--手机快速注册成功 begin-->
+				<div class="content_3">
+					<section>
+						<p>验证成功，请设置您的密码</p>
+						<div class="pass_2" id="forget_pwddiv"><span>密码：</span>
+							<input id="forget_pwd" type="password" name="userpwd" placeholder="6-16位字母或数字" required/>
+						</div>
+						<div class="pass_2" id="forget_pwdagdiv"><span>确认密码：</span>
+							<input id="forget_pwdag" type="password" placeholder="请再次输入密码" required/>
+						</div>
+						<div class="ok_01">
+							<input type="submit" id="forgetpwd_confirm" value="确定">
+						</div>
+					</section>
+				</div>
+				<!--手机快速注册成功 end-->
+			</div>
+		</div>
+
+
+	</div>
+</body>
+
+</html>

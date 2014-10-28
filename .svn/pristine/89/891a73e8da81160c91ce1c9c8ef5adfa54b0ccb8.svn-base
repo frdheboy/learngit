@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP新闻资讯</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/newsinformation.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/common.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs">
+        <p><a href="javascript:void (0)">首页</a>&gt;<a href="javascript:void (0)">新闻资讯</a></p>
+    </div>
+    <!--面包屑 end-->
+    <!--新闻资讯标签 begin-->
+    <div class="newtabs">
+        <ul>
+            <li><a class="currect" href="javascript:void(0)">要闻</a></li>
+            <li><a href="javascript:void(0)">今日提示</a></li>
+            <li><a href="javascript:void(0)">个股点评</a></li>
+            <li><a href="javascript:void(0)">股市直播</a></li>
+            <li><a href="javascript:void(0)">股市研究</a></li>
+            <li><a href="javascript:void(0)">公司新闻</a></li>
+            <li><a href="javascript:void(0)">股市统计</a></li>
+            <li><a href="javascript:void(0)">行业分析</a></li>
+            <li><a href="javascript:void(0)">国际财经</a></li>
+        </ul>
+    </div>
+    <!--新闻资讯标签 end-->
+    <!--新闻资讯标题 begin-->
+    <div class="newtitle">
+        <ul>
+            <!--两行显示，标题过长的话JS截断-->
+            <li><a href=""><span class="circle"></span><p>四大证劵报纸内容精华三马结盟卖保险</p><i>14:52</i></a></li>
+            <li><a href=""><span class="circle"></span><p>四大证劵报纸内容精华三马结盟卖保险，金融保险打开互联网金融保险</p><i>14:52</i></a></li>
+            <li><a href=""><span class="circle"></span><p>四大证劵报纸内容精华三马结盟卖保险，金融保险打开互联网金融保险</p><i>14:52</i></a></li>
+            <li><a href=""><span class="circle"></span><p>四大证劵报纸内容精华三马结盟卖保险，金融保险打开互联网金融保险</p><i>14:52</i></a></li>
+            <li><a href=""><span class="circle"></span><p>四大证劵报纸内容精华三马结盟卖保险，金融保险打开互联网金融保险</p><i>14:52</i></a></li>
+            <li><a href=""><span class="circle"></span><p>四大证劵报纸内容精华三马结盟卖保险，金融保险打开互联网金融保险</p><i>14:52</i></a></li>
+            <li><a href=""><span class="circle"></span><p>四大证劵报纸内容精华三马结盟卖保险，金融保险打开互联网金融保险</p><i>14:52</i></a></li>
+            <li><a href=""><span class="circle"></span><p>四大证劵报纸内容精华三马结盟卖保险，金融保险打开互联网金融保险</p><i>14:52</i></a></li>
+            <li><a href=""><span class="circle"></span><p>四大证劵报纸内容精华三马结盟卖保险，金融保险打开互联网金融保险</p><i>14:52</i></a></li>
+            <li><a href=""><span class="circle"></span><p>四大证劵报纸内容精华三马结盟卖保险，金融保险打开互联网金融保险</p><i>14:52</i></a></li>
+            <li><a href=""><span class="circle"></span><p>四大证劵报纸内容精华三马结盟卖保险，金融保险打开互联网金融保险</p><i>14:52</i></a></li>
+        </ul>
+    </div>
+    <!--新闻资讯标题 end-->
+</div>
+</body>
+</html>

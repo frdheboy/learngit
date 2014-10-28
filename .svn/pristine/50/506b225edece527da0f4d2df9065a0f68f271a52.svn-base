@@ -1,0 +1,121 @@
+/**
+ * javascript for jhss mncg database
+ * @author Vivian
+ */
+window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange;
+window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction;
+
+var dbmanager = {
+	name : "jhss",
+	version : 1
+};
+
+function deleteDb() {
+	window.indexedDB.deleteDatabase(dbmanager.name);
+}
+
+/**
+ * 打开数据库
+ * */
+function openDb(callback) {
+	if (!callback) {
+		return;
+	}
+	if (openDb.db) {
+		callback(openDb.db);
+		return;
+	}
+	var request = window.indexedDB.open(dbmanager.name, dbmanager.version);
+	request.onsuccess = function(e) {
+		console.log("打开数据库成功");
+		openDb.db = e.target.result;
+		callback(openDb.db);
+	};
+	request.onerror = function(e) {
+		alert("打开数据库失败");
+		console.log("打开数据库失败:" + e.error.message);
+	};
+	//更新处理
+	request.onupgradeneeded = function(e) {
+		console.log("更新");
+		var _stocklistmanager = new StockListManager();
+		_stocklistmanager.create(e.target.result);
+	};
+}
+
+/**
+ * 股票列表数据库管理器
+ * */
+function StockListManager() {
+	this.storename = "stocklist";
+	this.index_pyjc = "ix_pyjc";
+	this.index_shortcode = "ix_shortcode";
+}
+
+StockListManager.prototype.create = function(db) {
+	if (!db.objectStoreNames.contains(this.storename)) {
+		var objectStore = db.createObjectStore(this.storename, {
+			keyPath : "code"
+		});
+		objectStore.createIndex(this.index_pyjc, "pyjc", {
+			unique : false
+		});
+		objectStore.createIndex(this.index_shortcode, "shortcode", {
+			unique : false
+		});
+	}
+};
+
+StockListManager.prototype.checkExist = function(callback){
+    if(!callback){return;}
+    openDb(function(db){
+        callback(db.objectStoreNames.contains(this.storename));
+    });
+
+}
+
+/**
+ * 股票列表更新
+ * */
+StockListManager.prototype.update = function(items) {
+	openDb();
+};
+
+StockListManager.prototype.addAll = function(items) {
+	var me = this;
+	openDb(function(db) {
+		var transaction = db.transaction(me.storename, 'readwrite');
+		var store = transaction.objectStore(me.storename);
+		for (var i = 0; i < items.length; i++) {
+			var item = items[i];
+			item.shortcode = item.code.substr(2);
+			store.put(item);
+		}
+	});
+};
+
+StockListManager.prototype.search = function(keyword, callback,limit) {
+	var me = this;
+    limit = limit ||20;
+	var index_name = !/^[0-9]*$/.test(keyword) ? this.index_pyjc : this.index_shortcode;
+	openDb(function(db) {
+		var transaction = db.transaction(me.storename, 'readonly');
+		var store = transaction.objectStore(me.storename);
+		console.log("关键字:" + keyword);
+		var searchObject = store.index(index_name);
+		var boundKeyRange = window.IDBKeyRange.bound(keyword, keyword + '\uffff', false, false);
+        var result = [];
+		searchObject.openCursor(boundKeyRange).onsuccess = function(e) {
+			var cursor = e.target.result;
+			do {
+				if (!cursor || result.length>limit) {
+                    callback(result);
+					break;
+				}
+				result.push(cursor.value);
+			} while(cursor.continue());
+		};
+	});
+};
+

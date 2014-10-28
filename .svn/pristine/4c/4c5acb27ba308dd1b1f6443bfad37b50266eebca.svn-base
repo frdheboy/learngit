@@ -1,0 +1,60 @@
+/**
+ * Created by XA-0301031A on 2014/7/23.
+ */
+$(document).ready(function () {
+    var _sid = 0;
+    var _time = 0;
+    if (isloginin) {
+        _sid = JSON.parse(localStorage.getItem("userinfo_currect")).sessionid;
+    }
+
+    var nowdate = new Date();
+    if(localStorage.getItem("serchtime")){
+        _time = localStorage.getItem("serchtime");
+        localStorage.setItem("serchtime", _time);
+    }else{
+        localStorage.setItem("serchtime", nowdate.getTime());
+    }
+
+    var opts = {
+        ak: "0170010010000",
+        sid: _sid,
+        time: _time,
+        type: "01,02,03,05"
+    };
+    var gal = new GalHttpRequest(config_url.stocklist, opts);
+    gal.requestFromNet({
+        succeed: function (data) {
+            console.log(data);
+            var adddata = new StockListManager();
+
+            adddata.addAll(data.result);
+
+            $("input[name='search']").on("keyup", function () {
+                $(this).attr("maxlength", "6");
+                adddata.search($(this).val(), indexedDBinquire, 15);
+                $("#resultbox").children("div:visible").remove();
+            });
+
+            var indexedDBinquire = function (a) {
+                if (a.length < 1) {
+                    $("#resultbox").append("<div>没有找到相关股票</div>");
+                    return false;
+                }
+                var clonediv = $("#resultbox").find("div:first");
+                $.each(a, function (i, n) {
+                    clonediv.clone(true).show().appendTo("#resultbox");
+                    i = i + 1;
+                    $("#resultbox").children("div:eq(" + i + ")").find("abbr").html(n.code.slice(2, 8));
+                    $("#resultbox").children("div:eq(" + i + ")").find("dfn").html(n.name);
+                })
+            };
+
+        },
+        error: function (error) {
+            console.log(error);//错误信息提示
+        }
+    });
+
+
+});

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP股市学堂首页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/school.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/common.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs">
+        <p><a href="javascript:void (0)">首页</a>&gt;<a href="javascript:void (0)">股市学堂</a></p>
+    </div>
+    <!--面包屑 end-->
+    <!--股市学堂首页内容 begin-->
+    <div class="m_content">
+        <div>
+            <p>新手入门</p>
+            <ul>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>基础知识</span></a></li>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>交易指南</span></a></li>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>政策法规</span></a></li>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>证劵词典</span></a></li>
+            </ul>
+        </div>
+        <div>
+            <p>基本面分析</p>
+            <ul>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>公司分析</span></a></li>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>财务分析</span></a></li>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>宏观分析</span></a></li>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>心里分析</span></a></li>
+            </ul>
+        </div>
+        <div>
+            <p>技术面分析</p>
+            <ul>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>K线形态</span></a></li>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>量价理论</span></a></li>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>成分分析</span></a></li>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>指标分析</span></a></li>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>波浪理论</span></a></li>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>道式理论</span></a></li>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>江恩理论</span></a></li>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>气态理论</span></a></li>
+            </ul>
+        </div>
+        <div>
+            <p>高手进阶</p>
+            <ul>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>看盘培训</span></a></li>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>操盘攻略</span></a></li>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>主力研判</span></a></li>
+                <li><a href="javascript:void (0)"><img src="../images/figure_008.jpg" alt=""/><span>股林秘籍</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--股市学堂首页内容 end-->
+</div>
+</body>
+</html>

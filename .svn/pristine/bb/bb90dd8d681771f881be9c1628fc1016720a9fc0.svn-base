@@ -1,0 +1,288 @@
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+.focusimg {
+    width: 100%;
+    border-top: 2px solid #086dae;
+    float: left;
+    position: relative;
+    font-size: 12px;
+}
+.focusimg>div.matchDescp {
+    float: left;
+    width: 60%;
+    position: absolute;
+    left: 5%;
+    bottom: 15px;
+    font-size: 12px;
+}
+.focusimg>div.matchDescp p {
+    text-align: left;
+    width: 100%;
+    word-break: break-all;
+    white-space:pre-wrap;
+    font-size: 12px;
+}
+
+.focusimg>div.matchTime {
+    float: left;
+    width: 30%;
+    position: absolute;
+    left: 70%;
+    bottom: 5px;
+    color: #f7f7f7;
+    font-size: 12px;
+}
+
+.focusimg>div.matchTime p {
+    box-sizing: border-box;
+    text-align: left;
+    width: 100%;
+    word-break: break-all;
+    white-space:pre-wrap;
+    font-size: 12px;
+    line-height: 12px;
+    padding:0 10px;
+}
+
+
+
+.focusimg img {
+    width: 100%;
+    float: left;
+
+}
+
+.comdetail_big {
+    float: left;
+    width: 100%;
+}
+
+@media all and (max-width: 480px) {
+    .focusimg {
+        font-size: 12px;
+    }
+    .focusimg>div.matchDescp {
+        left: 5%;
+        bottom: 15px;
+        font-size: 12px;
+    }
+    .focusimg>div.matchDescp p {
+        font-size: 12px;
+    }
+
+    .focusimg>div.matchTime {
+        bottom: 5px;
+        font-size: 12px;
+    }
+
+    .focusimg>div.matchTime p {
+        font-size: 12px;
+        line-height: 12px;
+        padding:0 10px;
+    }
+
+    .joinbtn {
+        width: 100%;
+        float: left;
+        margin-top: 10px;
+    }
+
+    .joinbtn p {
+        float: left;
+        line-height: 25px;
+        font-size: 14px;
+        margin-left: 12px;
+    }
+
+    .joinbtn p span {
+        color: #f5a60d;
+    }
+
+    .joinbtn a {
+        display: block;
+        float: right;
+        width: 75px;
+        height: 25px;
+        border-radius: 12px;
+        background-color: #31bce9;
+        color: #ffffff;
+        line-height: 25px;
+        margin-right: 10px;
+    }
+
+    .tabtitle, .tabtitle div, .tabtitle ul, .tabtitle ul li {
+        float: left;
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .tabtitle p {
+        width: 33%;
+        float: left;
+    }
+
+    .tabtitle p a {
+        display: block;
+        width: 100%;
+        float: left;
+        color: #939393;
+        line-height: 40px;
+    }
+
+    .tabtitle p.currect a {
+        color: #086dae;
+    }
+
+    .tabtitle ul li {
+        margin: 8px 0;
+    }
+
+    .tabtitle ul li p:nth-child(1) {
+        width: 30%;
+        float: left;
+    }
+
+    .tabtitle ul li p:nth-child(2) {
+        width: 40%;
+        float: left;
+    }
+
+    .tabtitle ul li p:nth-child(3) {
+        width: 30%;
+        float: left;
+    }
+
+    .tabtitle ul li:nth-child(2) p:nth-child(1) {
+        color: #d62829;
+    }
+
+    .tabtitle ul li:nth-child(3) p:nth-child(1) {
+        color: #f5a60d;
+    }
+
+    .tabtitle ul li:nth-child(4) p:nth-child(1) {
+        color: #086dae;
+    }
+
+}
+
+/*宽度在大于480（包括480）的样式*/
+@media all and (min-width: 480px) {
+    .focusimg {
+        font-size: 16px;
+    }
+    .focusimg>div.matchDescp {
+        left: 5%;
+        bottom: 35px;
+        font-size: 16px;
+    }
+    .focusimg>div.matchDescp p {
+        font-size: 16px;
+    }
+
+    .focusimg>div.matchTime {
+        bottom: 10px;
+        font-size: 16px;
+    }
+
+    .focusimg>div.matchTime p {
+        font-size: 16px;
+        line-height: 18px;
+        padding:0 30px;
+    }
+
+    .joinbtn {
+        width: 100%;
+        float: left;
+        margin:20px 0;
+    }
+
+    .joinbtn p {
+        float: left;
+        line-height: 35px;
+        font-size: 22px;
+        margin-left: 20px;
+    }
+
+    .joinbtn p span {
+        color: #f5a60d;
+    }
+
+    .joinbtn a {
+        display: block;
+        float: right;
+        width: 125px;
+        height: 35px;
+        border-radius: 17px;
+        background-color: #31bce9;
+        color: #ffffff;
+        line-height: 35px;
+        margin-right: 15px;
+        font-size: 20px;
+    }
+
+    .tabtitle, .tabtitle div, .tabtitle ul, .tabtitle ul li {
+        float: left;
+        width: 100%;
+        font-size: 22px;
+    }
+
+    .tabtitle p {
+        width: 33%;
+        float: left;
+    }
+
+    .tabtitle p a {
+        display: block;
+        width: 100%;
+        float: left;
+        color: #939393;
+        line-height: 40px;
+    }
+
+    .tabtitle p.currect a {
+        color: #086dae;
+    }
+
+    .tabtitle ul li {
+        margin: 12px 0;
+    }
+
+    .tabtitle ul li p:nth-child(1) {
+        width: 30%;
+        float: left;
+    }
+
+    .tabtitle ul li p:nth-child(2) {
+        width: 40%;
+        float: left;
+    }
+
+    .tabtitle ul li p:nth-child(3) {
+        width: 30%;
+        float: left;
+    }
+
+    .tabtitle ul li:nth-child(2) p:nth-child(1) {
+        color: #d62829;
+    }
+
+    .tabtitle ul li:nth-child(3) p:nth-child(1) {
+        color: #f5a60d;
+    }
+
+    .tabtitle ul li:nth-child(4) p:nth-child(1) {
+        color: #086dae;
+    }
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+

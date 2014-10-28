@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>模拟炒股WAP模拟炒股_持仓</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../styles/common.css">
+	<link rel="stylesheet" href="../styles/holdstock.css">
+	<link rel="stylesheet" href="../styles/marketindex.css">
+	<script src="../scripts/jquery-1.7.2.min.js"></script>
+	<script src="../scripts/common.js"></script>
+	<script src="../scripts/galhttprequest.js"></script>
+	<script src="../scripts/trade.js"></script>
+	<script>
+		$(document).ready(function () {
+			var s = new StockMarketPriceTrade();
+			s.queryHoldStocks(function (datas) {
+				var i = 0;
+				for (; i < datas.length; i++) {
+					bindData(datas[i]);
+				}
+				bindEvent();
+			});
+
+		});
+
+		function bindData(data) {
+			var style = parseFloat(data.yk, 10) >= 0 ? 'red' : 'green';
+			$('#ul_list').append(
+				'<li stockcode="' + data.stockCode + '"><p><span>' + data.stockName + '</span><em>' + data.stockCode + '</em></p><p class="' + style + '">' + data.ykl + '</p><p>' + data.kygf + '</p></li>'
+			);
+		}
+
+		function bindEvent() {
+			$('#ul_list li').click(function () {
+				location.href = ('sell.html?stockcode=' + $(this).attr('stockcode'));
+			})
+		}
+	</script>
+</head>
+
+<body>
+	<div class="main">
+		<!--头部共用搜索框 begin-->
+		<div class="header">&nbsp;</div>
+		<!--头部共用搜索框 end-->
+		<!--面包屑 begin-->
+		<div class="crumbs">
+			<p><a href="javascript:void (0)">首页</a>&gt;<a href="javascript:void (0)">模拟炒股</a>&gt;<a href="javascript:void (0)">持仓</a>
+			</p>
+		</div>
+		<!--面包屑 end-->
+		<!--模拟炒股 begin-->
+		<div class="m_content" id="bigbox">
+			<ul class="marketindex_list_title" id="title_list">
+				<li>股票名称</li>
+				<li>盈亏率</li>
+				<li>可卖股数</li>
+			</ul>
+			<ul class="marketindex_list" id="ul_list">
+
+			</ul>
+		</div>
+		<!--模拟炒股 end-->
+	</div>
+</body>
+
+</html>

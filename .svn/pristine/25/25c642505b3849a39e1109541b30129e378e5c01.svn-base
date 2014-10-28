@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<title>K线Demo</title>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="../styles/kline.css">
+	<script src="../scripts/galhttprequest.js"></script>
+	<script src="../scripts/market_canvas.js"></script>
+	<script src="../scripts/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function () {
+			//			var operator = new KLineOperator('11600000', 'kline', 'date', 'index', null, 'M');
+			//			operator.setDefualtTouchback();
+			var minute = new Minute('minute', '11600000');
+			minute.setDefualtTouchback();
+
+		});
+	</script>
+</head>
+
+<body>
+	<div style="display:none">
+		<canvas id="kline" style="width:100%;height:300px;">
+			Your browser does not support the HTML5 canvas tag.
+		</canvas>
+		<canvas id="date" style="width:100%;height:20px;"></canvas>
+		<canvas id="index" style="width:100%;height:150px;"></canvas>
+		<div id="klinedetail" class="detail_left">
+			<div class="keyrow">
+				<span class="normal">日期:</span>
+				<br />
+				<span class="normal">开盘:</span>
+				<br />
+				<span class="normal">最高:</span>
+				<br />
+				<span class="normal">最低:</span>
+				<br />
+				<span class="normal">收盘:</span>
+				<br />
+				<span class="normal">涨跌幅:</span>
+			</div>
+			<div class="valuerow">
+				<span id="enddate" class="normal">--/--/--</span>
+				<br />
+				<span id="open" class="down">--</span>
+				<br />
+				<span id="high" class="up">--</span>
+				<br />
+				<span id="low" class="down">--</span>
+				<br />
+				<span id="close" class="up">--</span>
+				<br />
+				<span id="flu" class="up">--%</span>
+			</div>
+		</div>
+	</div>
+
+
+	<div>
+		<canvas id="minute" style="width:100%;height:300px"></canvas>
+		<div id="minutedetail" class="detail_left">
+			<div class="keyrow">
+				<span class="normal">时间:</span>
+				<br />
+				<span class="normal">现价:</span>
+				<br />
+				<span class="normal">涨幅:</span>
+				<br />
+				<span class="normal">均价:</span>
+				<br />
+				<span class="normal">现量:</span>
+			</div>
+			<div class="valuerow">
+				<span id="time" class="normal">--</span>
+				<br />
+				<span id="price" class="down">--</span>
+				<br />
+				<span id="minuteflu" class="up">--</span>
+				<br />
+				<span id="avg" class="down">--</span>
+				<br />
+				<span id="amount" class="normal">--</span>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP热门概念和行业列表</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/hotlist.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/galhttprequest.js"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/hotlist.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs">
+        <p><a href="index.html">首页</a>&gt;<a href="market.html">行情</a>&gt;<a href="market.html">热门行业</a>&gt;<a href="javascript:void (0)"></a></p>
+    </div>
+    <!--面包屑 end-->
+    <!--行情一级分页 begin-->
+    <div class="m_content" id="bigbox">
+        <ul class="marketindex_list_title" id="title_list">
+
+        </ul>
+        <ul class="marketindex_list" id="ul_list">
+
+        </ul>
+    </div>
+    <!--行情一级分页 end-->
+</div>
+</body>
+</html>

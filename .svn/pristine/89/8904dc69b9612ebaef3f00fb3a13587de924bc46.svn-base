@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP个股</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/individualshare.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/common.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs">
+        <p><a href="javascript:void (0)">首页</a>&gt;<a href="javascript:void (0)">行情</a>&gt;<a
+                href="javascript:void (0)">招商银行(600360)</a></p>
+    </div>
+    <!--面包屑 end-->
+    <!--begin-->
+    <article class="m_content">
+        <header>
+            <h1 class="currect"><a href="javascript:void(0)">行情</a></h1>
+
+            <h1><a href="javascript:void(0)">资讯</a></h1>
+
+            <h1><a href="javascript:void(0)">F10资料</a></h1>
+        </header>
+        <section class="inshareinfo">
+            <div>
+                <h1>12.28</h1>
+                <p><span>+1.12</span><span>+10.04%</span></p>
+            </div>
+            <div>
+                <p><span>开盘:</span><b>12.28</b></p>
+
+                <p><span>成交量:</span><b>31手</b></p>
+
+                <p><span>昨收:</span><b>10.82</b></p>
+
+                <p><span>换手率:</span><b>11.17%</b></p>
+            </div>
+            <div>
+                <p><span>最高：</span><b>12.28</b></p>
+
+                <p><span>振幅：</span><b>9.32%</b></p>
+
+                <p><span>成交额：</span><b>93189万</b></p>
+
+                <p><span>最低：</span><b>10.82</b></p>
+
+                <p><span>市盈率：</span><b>25.45</b></p>
+
+                <p><span>流通市值：</span><b>931.12亿</b></p>
+            </div>
+        </section>
+        <!--图表 begin-->
+        <section class="chart">
+            <header>
+                <h2><a href=""> 分时</a></h2>
+
+                <h2 class="currect"><a href="">日线</a></h2>
+
+                <h2><a href="">周线</a></h2>
+
+                <h2><a href="">月线</a></h2>
+            </header>
+        </section>
+        <!--图表 begin-->
+    </article>
+    <!--end-->
+</div>
+</body>
+</html>

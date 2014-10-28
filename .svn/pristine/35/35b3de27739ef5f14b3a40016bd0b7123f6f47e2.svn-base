@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP模拟炒股</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/simulate.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/galhttprequest.js"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/simulate.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs">
+        <p><a href="index.html">首页</a>&gt;<a href="javascript:void (0)">模拟炒股</a></p>
+    </div>
+    <!--面包屑 end-->
+    <!--模拟炒股 begin-->
+    <div class="m_content">
+        <div id="infoblock">
+            <em>模拟账户信息</em>
+
+            <p id="info_1"><span>总盈利率:</span><b></b></p>
+
+            <p id="info_2"><span>总资产:</span><b></b></p>
+
+            <p id="info_3"><span>可用金额:</span><b></b></p>
+
+            <p id="info_4"><span>股票市值:</span><b></b></p>
+
+            <p id="info_5"><span>浮动盈亏:</span><b></b></p>
+
+        </div>
+        <div class="btnarea">
+            <div><a href="javascript:void(0)">买入</a></div>
+            <div><a href="javascript:void(0)">卖出</a></div>
+            <div><a href="javascript:void(0)">查委托</a></div>
+        </div>
+        <div class="simulateposition">模拟持仓股票<span></span></div>
+        <div style="width: 100%;float:left;display: none" id="positionlist">
+            <!--持仓股票 begin-->
+            <div class="takepositionlist">
+                <div class="sanjiao"></div>
+                <p class="suidongtiao" style="height: auto"></p>
+
+                <div class="listnum">
+                    <p class="listtitle"><span></span><em></em></p>
+
+                    <p><span>盈亏金额</span>&nbsp;:&nbsp;<b><i></i></b></p>
+
+                    <p><span>当前价</span>&nbsp;:&nbsp;<b><i></i></b></p>
+
+                    <div class="flexible" style="display: none"><p><span>成本价</span>&nbsp;:&nbsp;<b></b></p>
+
+                    <p><span>持股数量</span>&nbsp;:&nbsp;<b><i></i></b></p>
+
+                    <p><span>持股市值</span>&nbsp;:&nbsp;<b></b></p>
+
+                    <div class="listbtnarea">
+                        <div><a href="javascript:void(0)"><span class="circleleftbg"></span>买入</a></div>
+                        <div><a href="javascript:void(0)">卖出</a></div>
+                        <div><a href="javascript:void(0)">行情</a></div>
+                        <div><a href="javascript:void(0)">交易明细</a></div>
+                    </div></div>
+                </div>
+            </div>
+            <!--持仓股票 end-->
+        </div>
+    </div>
+    <!--模拟炒股 end-->
+</div>
+</body>
+</html>

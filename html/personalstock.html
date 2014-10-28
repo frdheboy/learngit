@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<title>模拟炒股WAP模拟炒股_自选股</title>
+	<link rel="stylesheet" href="../styles/common.css">
+	<link rel="stylesheet" href="../styles/marketindex.css">
+	<script src="../scripts/jquery-1.7.2.min.js"></script>
+	<script src="../scripts/common.js"></script>
+	<script src="../scripts/galhttprequest.js"></script>
+	<script src="../scripts/database.js"></script>
+	<script>
+		var userinfo = getUserInfo(),
+			stockinfos = [],
+			sortstate = 0;
+		$(document).ready(function () {
+			if (!isloginin) {
+				window.location.href = 'loginin.html';
+				return;
+			}
+			var d = new PersonalStockList();
+			d.queryPersonalStock(function (stocks) {
+				console.log(stocks.join());
+				var opt = {
+						ak: config_other.ak_new,
+						sid: userinfo.sessionid,
+						codes: stocks.join()
+					},
+					g = new GalHttpRequest(config_url.querycurstatusesbyte, opt);
+				g.requestFromNet({
+					succeed: function (data) {
+						stockinfos = data.result;
+						bindData();
+					},
+					error: function (error) {
+						console.log(error);
+					}
+				})
+			});
+
+			$('#sort').click(function () {
+				sortstate = (sortstate + 1) % 3;
+				bindData();
+			});
+
+		});
+
+
+		function bindData() {
+			$('#ul_list li').remove();
+			var i = 0,
+				tempstockinfos = stockinfos.slice(0),
+				stockinfo;
+			switch (sortstate) {
+			case 0:
+				$('#sort img').attr('src', '../images/figure006.jpg');
+				break;
+			case 1:
+				$('#sort img').attr('src', '../images/figure005.jpg');
+				tempstockinfos.sort(function (a, b) {
+					return parseFloat(b.changePercent) - parseFloat(a.changePercent);
+				});
+				break;
+			case 2:
+				$('#sort img').attr('src', '../images/figure004.jpg');
+				tempstockinfos.sort(function (a, b) {
+					return parseFloat(a.changePercent) - parseFloat(b.changePercent);
+				});
+				break;
+			default:
+				break;
+			}
+			console.log(tempstockinfos);
+			for (; i < tempstockinfos.length; i++) {
+				stockinfo = tempstockinfos[i];
+				$('#ul_list').append(formatString("<li stockcode='{code}' stockname='{name}'><p><span>{name}</span><em>{stockcode}</em></p><p class='{style}'><span class='nom'>{currentprice}</span></p><p class='{style}'><span class='nom'>{changePercent}</span></p></li>", {
+					code: stockinfo.code,
+					name: stockinfo.name,
+					stockcode: stockinfo.code.substr(2),
+					style: stockinfo.changePercent.indexOf('-') < 0 ? 'red' : 'green',
+					currentprice: stockinfo.curPrice,
+					changePercent: stockinfo.changePercent + '%'
+				}));
+			}
+			$('#ul_list li').click(function () {
+				var el = $(this);
+				window.location.href = formatString('stockinfo.html?codeid={code}&codename={name}', {
+					code: el.attr('stockcode'),
+					name: el.attr('stockname')
+				});
+			});
+		};
+	</script>
+</head>
+
+<body>
+	<div class="main">
+		<!--头部共用搜索框 begin-->
+		<div class="header">&nbsp;</div>
+		<!--头部共用搜索框 end-->
+		<!--面包屑 begin-->
+		<div class="crumbs">
+			<p><a href="index.html">首页</a>&gt;<a href="personalstock.html">自选股</a>
+				<a href="javascript:void (0)"></a>
+			</p>
+		</div>
+		<!--面包屑 end-->
+		<!--行情一级分页 begin-->
+		<div class="m_content" id="bigbox">
+			<ul class="marketindex_list_title" id="title_list">
+				<li>股票名称</li>
+				<li>最新价</li>
+				<li id="sort">涨跌幅
+					<img src='../images/figure006.jpg' />
+				</li>
+			</ul>
+			<ul class="marketindex_list" id="ul_list"></ul>
+		</div>
+		<!--行情一级分页 end-->
+	</div>
+</body>
+
+</html>

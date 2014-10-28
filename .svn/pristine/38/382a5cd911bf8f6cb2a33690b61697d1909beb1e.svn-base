@@ -1,0 +1,14 @@
+div#title ul {
+	list-style: none;
+	width: 100%;
+	border: 1px solid #BFCED2;
+	box-sizing: border-box;
+}
+div#title ul li {
+	width: 33.33333%;
+	background-color: #BFCED2;
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	float: left;
+}

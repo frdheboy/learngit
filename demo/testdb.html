@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../scripts/jquery-1.7.2.js"></script>
+	<script>
+		$(document).ready(function () {
+			try {
+				if (window.openDatabase) {
+					db = openDatabase("jhss", "2", "jhss", 200000);
+					if (!db) {
+						alert("Failed to open the database on disk.  This is probably because the version was bad or there is not enough space left in this domain's quota");
+					} else {
+						alert('Open succeed');
+					}
+				} else
+					alert("Couldn't open the database.  Please try with a WebKit nightly with this feature enabled");
+			} catch (e) {
+				db = null;
+				if (e == 2) {
+					// Version number mismatch.
+					alert("Invalid database version.");
+				} else {
+					alert("Unknown error " + e + ".");
+				}
+			}
+		})
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

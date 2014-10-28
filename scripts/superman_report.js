@@ -1,0 +1,61 @@
+/**
+ * Created by Administrator on 2014/8/15.
+ */
+$(document).ready(function () {
+    addloading("superman_big");
+    var id =[];
+    var title = [];
+    var fromid = 1;
+    var biaoshifu = true;
+    function buju(opt){
+        var opts = {
+            moduleid: 30,
+            start: opt,
+            limit: 20
+        };
+        var gal = new GalHttpRequest(config_url.moduleArticleList, opts);
+        gal.requestFromNet({
+            succeed: function (data) {
+                removeloading();
+                console.log(data);
+                $.each(data.result, function (i, n) {
+                    id[i] = n.id;
+                    title[i] = n.title;
+                    $(".superman_big").append("<div class='supermanreport_list' id="+id[i]+"><a href='javascript:void(0)'>"+title[i]+"</a></div> ");
+                });
+                $(".superman_big").find("a").on("click",function(){
+                    var canshu = $(this).parent("div").attr("id");
+                    window.location.href = "supmandetal_reportlist.html?id="+canshu;
+                });
+                if (opt != 1) {
+                    biaoshifu = true;
+                }
+
+            },
+            error: function (error) {
+                console.log(error.message);//错误信息提示
+                alert(error.message);
+            }
+        });
+    }
+
+    buju(fromid);
+    lazyload1(buju, fromid);
+
+    function lazyload1(fn, opt) {
+        $(window).scroll(function () {
+            var ttheight = $("body").height() > $(document).height() ? $("body").height() : $(document).height();
+            var scrollheight;
+            var lazyloadcoe = 0.9;
+            scrollheight = $(document).scrollTop() + $(window).height();
+            if (parseInt(scrollheight) > parseInt(ttheight * lazyloadcoe)) {
+                if (biaoshifu) {
+                    biaoshifu = false;
+                    opt = opt + 20;
+                    fn(opt);
+                    fromid = opt;
+                }
+            }
+        });
+    }
+});

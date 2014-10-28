@@ -1,0 +1,195 @@
+.m_content {
+    width: 100%;
+    float: left;
+    border-top: #006FA9 solid 2px;
+}
+
+.innerbox {
+    width: 100%;
+    float: left;
+}
+
+.innerbox > a {
+    width: 100%;
+    float: left;
+    display: block;
+    border-bottom: #e3e3e3 solid 1px;
+    position: relative;
+}
+
+.imgbox {
+    float: left;
+    width: 17%;
+    margin-right: 5%;
+}
+.imgbox img{
+    float: left;
+    width: 70%;
+    -webkit-border-radius: 70%;
+    border-radius: 70%;
+    margin-left: 30%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.infobox {
+    float: left;
+    width: 75%;
+    text-align: left;
+}
+
+.info_name {
+    float: left;
+    width: 100%;
+    margin-top: 5%;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.info_num {
+    float: left;
+    width: 100%;
+    color: #939393;
+    margin-top: 1%;
+    font-size: 12px;
+}
+.info_num span:nth-child(2).green {
+    color: #00933B;
+}
+.info_num span:nth-child(2).red {
+    color: #d62829;
+}
+
+
+
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    .heartbox {
+        width: 35px;
+        height: 35px;
+        -webkit-border-radius: 70%;
+        border-radius: 70%;
+        background: #d62829;
+        position: absolute;
+        right: 15px;
+        top: 14px;
+    }
+    .heart {
+        position: relative;
+        width:20px;
+        height:20px;
+        left: 7px;
+        top:9px;
+    }
+    .heart:before,.heart:after {
+        position: absolute;
+        content:"";
+        left:10px;
+        top:0;
+        width:10px;
+        height:20px;
+        background: #fff;
+        -moz-border-radius:10px 10px 0 0;
+        border-radius:10px 10px 0 0;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin:0 100%;
+        -moz-transform-origin:0 100%;
+        -ms-transform-origin:0 100%;
+        -o-transform-origin:0 100%;
+        transform-origin:0 100%;
+    }
+
+    .heart:after {
+        left:0;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transform-origin:100% 100%;
+        -moz-transform-origin:100% 100%;
+        -ms-transform-origin:100% 100%;
+        -o-transform-origin:100% 100%;
+        transform-origin :100% 100%;
+    }
+}
+
+/*宽度在480（包括480）到640之间的样式*/
+@media all and (min-width: 480px) {
+    .info_name {
+        font-size: 22px;
+    }
+
+    .info_num {
+        font-size: 18px;
+    }
+    .heartbox {
+        width: 65px;
+        height: 65px;
+        -webkit-border-radius: 70%;
+        border-radius: 70%;
+        background: #d62829;
+        position: absolute;
+        right: 25px;
+        top: 24px;
+    }
+    .heart {
+        position: relative;
+        width:20px;
+        height:20px;
+        left: 12px;
+        top:13px;
+    }
+    .heart:before,.heart:after {
+        position: absolute;
+        content:"";
+        left:20px;
+        top:0;
+        width:20px;
+        height:40px;
+        background: #fff;
+        -moz-border-radius:20px 20px 0 0;
+        border-radius:20px 20px 0 0;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin:0 100%;
+        -moz-transform-origin:0 100%;
+        -ms-transform-origin:0 100%;
+        -o-transform-origin:0 100%;
+        transform-origin:0 100%;
+    }
+
+    .heart:after {
+        left:0;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transform-origin:100% 100%;
+        -moz-transform-origin:100% 100%;
+        -ms-transform-origin:100% 100%;
+        -o-transform-origin:100% 100%;
+        transform-origin :100% 100%;
+    }
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP模拟炒股_卖出</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/buy.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/common.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs">
+        <p><a href="javascript:void (0)">首页</a>&gt;<a href="javascript:void (0)">模拟炒股</a>&gt;<a
+                href="javascript:void (0)">卖出</a></p>
+    </div>
+    <!--面包屑 end-->
+    <!--模拟炒股 begin-->
+    <div class="m_content">
+        <div class="buy_main">
+            <div class="buy_main_01">
+                <p>股票代码</p>
+
+                <div><span>000858</span><span class="proname">五粮液</span></div>
+            </div>
+            <div class="buy_main_02">
+                <p>卖出数量</p>
+                <input type="text" value="24.11"/></div>
+            <div class="buy_slider">
+                <div>
+                    <input type="range" name="range" min="0" max="300000" step="1" value=""/>
+                    <output name="result"></output>
+                </div>
+                <div>
+                    <a>买入</a>
+                </div>
+            </div>
+            <div class="buyinfolist">
+                <ul>
+                    <li><p>最新：<span>37.54</span></p>
+
+                        <p>涨停：<span>37.54</span></p></li>
+                    <li><p>最高：<span>37.54</span></p>
+
+                        <p>跌停：<span>37.54</span></p></li>
+                    <li><p>最低：<span>25.64</span></p>
+
+                        <p>可卖：<span>4000</span></p></li>
+                    <li id="buyinfolistlast"><p>持股数：<span>31321321</span></p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--模拟炒股 end-->
+</div>
+</body>
+</html>

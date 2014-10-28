@@ -1,0 +1,40 @@
+.m_content {
+	float: left;
+	width: 96%;
+	border-top: 2px solid #086dae; padding:0px 10px;
+}
+body {
+	color: #333333;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+.a3 {
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+.m_content p{ text-align:left; line-height:21px; padding-top:10px;}
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+}
+
+/*宽度在大于480（包括480）的样式*/
+@media all and (min-width: 480px) {
+.m_content {
+	border-top: 4px solid #086dae;
+}
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+}

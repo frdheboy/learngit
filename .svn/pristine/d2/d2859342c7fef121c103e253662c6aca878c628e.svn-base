@@ -1,0 +1,346 @@
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    section.search {
+        width: 100%;
+        float: left;
+        border-top: 2px solid #086dae;
+    }
+
+    .search > div {
+        width: 100%;
+        float: left;
+        border-bottom: 1px solid #e3e3e3;
+        height: 45px;
+        line-height: 45px;
+    }
+
+    .search > div abbr {
+        display: block;
+        float: left;
+        height: 45px;
+        line-height: 45px;
+        font-size: 20px;
+        color: #d77e0a;
+        margin: 0 10px;
+    }
+
+    .search > div dfn {
+        display: block;
+        float: left;
+        height: 45px;
+        line-height: 45px;
+        font-size: 18px;
+        margin: 0 10px;
+        font-style: normal;
+    }
+
+    .search > div > div {
+        float: right;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        background-color: #086dae;
+        margin-top: 8px;
+        margin-right: 15px;
+        position: relative;
+        box-shadow: 2px 2px 2px #bfbbbb ;
+    }
+
+    .search > div > div > i {
+        display: block;
+        width: 2px;
+        height: 2px;
+        border-top: 7px solid #FFFFFF;
+        border-bottom: 7px solid #FFFFFF;
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 14px;
+        top: 7px;
+    }
+
+    .search > div > div > b {
+        display: block;
+        width: 2px;
+        height: 2px;
+        border-left: 7px solid #FFFFFF;
+        border-right: 7px solid #FFFFFF;
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 7px;
+        top: 14px;
+    }
+
+    section.search {
+        width: 100%;
+        float: left;
+        border-top: 2px solid #086dae;
+    }
+
+    .liulanjilu > div {
+        width: 100%;
+        float: left;
+        border-bottom: 1px solid #e3e3e3;
+        height: 45px;
+        line-height: 45px;
+    }
+
+    .liulanjilu > div abbr {
+        display: block;
+        float: left;
+        height: 45px;
+        line-height: 45px;
+        font-size: 20px;
+        color: #d77e0a;
+        margin: 0 10px;
+    }
+
+    .liulanjilu > div dfn {
+        display: block;
+        float: left;
+        height: 45px;
+        line-height: 45px;
+        font-size: 18px;
+        margin: 0 10px;
+        font-style: normal;
+    }
+
+    .liulanjilu > div > div {
+        float: right;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        background-color: #086dae;
+        margin-top: 8px;
+        margin-right: 15px;
+        position: relative;
+        box-shadow: 2px 2px 2px #bfbbbb ;
+    }
+
+    .liulanjilu > div > div > i {
+        display: block;
+        width: 2px;
+        height: 2px;
+        border-top: 7px solid #FFFFFF;
+        border-bottom: 7px solid #FFFFFF;
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 14px;
+        top: 7px;
+    }
+
+    .liulanjilu > div > div > b {
+        display: block;
+        width: 2px;
+        height: 2px;
+        border-left: 7px solid #FFFFFF;
+        border-right: 7px solid #FFFFFF;
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 7px;
+        top: 14px;
+    }
+    .liulanjilu > div > p {
+        float: right;
+        margin-right: 10px;
+        display: inline;
+        border: 1px solid #bfbbbb;
+        border-radius: 15px;
+        padding: 2px 5px;
+        line-height: 25px;
+        margin-top: 8px;
+        color: #bfbbbb;
+    }
+    .search > div > p {
+        float: right;
+        margin-right: 10px;
+        display: inline;
+        border: 1px solid #bfbbbb;
+        border-radius: 15px;
+        padding: 2px 5px;
+        line-height: 25px;
+        margin-top: 8px;
+        color: #bfbbbb;
+    }
+}
+
+/*宽度在480（包括480）到640之间的样式*/
+@media all and (min-width: 480px) {
+    section.liulanjilu {
+        width: 100%;
+        float: left;
+        border-top: 4px solid #086dae;
+    }
+
+    .liulanjilu > div {
+        width: 100%;
+        float: left;
+        border-bottom: 2px solid #e3e3e3;
+        height: 70px;
+        line-height: 70px;
+    }
+
+    .liulanjilu > div abbr {
+        display: block;
+        float: left;
+        height: 70px;
+        line-height: 70px;
+        font-size: 32px;
+        color: #d77e0a;
+        margin: 0 20px;
+    }
+
+    .liulanjilu > div dfn {
+        display: block;
+        float: left;
+        height: 70px;
+        line-height: 70px;
+        font-size: 28px;
+        margin: 0 10px;
+        font-style: normal;
+    }
+
+    .liulanjilu > div > p {
+        float: right;
+        margin-right: 15px;
+        display: inline;
+        border: 1px solid #bfbbbb;
+        border-radius: 15px;
+        padding: 8px 15px;
+        line-height: 25px;
+        margin-top: 13px;
+        color: #bfbbbb;
+        font-size: 20px;
+    }
+    .search > div > p {
+        float: right;
+        margin-right: 15px;
+        display: inline;
+        border: 1px solid #bfbbbb;
+        border-radius: 15px;
+        padding: 8px 15px;
+        line-height: 25px;
+        margin-top: 13px;
+        color: #bfbbbb;
+        font-size: 20px;
+    }
+
+
+    .liulanjilu > div > div {
+        float: right;
+        width: 42px;
+        height: 42px;
+        border-radius: 21px;
+        background-color: #086dae;
+        margin-top: 14px;
+        margin-right: 15px;
+        position: relative;
+        box-shadow: 2px 2px 2px #bfbbbb ;
+    }
+
+    .liulanjilu > div > div > i {
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-top: 8px solid #FFFFFF;
+        border-bottom: 8px solid #FFFFFF;
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 18px;
+        top: 10px;
+    }
+
+    .liulanjilu > div > div > b {
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-left: 8px solid #FFFFFF;
+        border-right: 8px solid #FFFFFF;
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 10px;
+        top: 18px;
+    }
+
+    section.search {
+        width: 100%;
+        float: left;
+        border-top: 4px solid #086dae;
+    }
+
+    .search > div {
+        width: 100%;
+        float: left;
+        border-bottom: 2px solid #e3e3e3;
+        height: 70px;
+        line-height: 70px;
+    }
+
+    .search > div abbr {
+        display: block;
+        float: left;
+        height: 70px;
+        line-height: 70px;
+        font-size: 32px;
+        color: #d77e0a;
+        margin: 0 20px;
+    }
+
+    .search > div dfn {
+        display: block;
+        float: left;
+        height: 70px;
+        line-height: 70px;
+        font-size: 28px;
+        margin: 0 10px;
+        font-style: normal;
+    }
+
+
+    .search > div > div {
+        float: right;
+        width: 42px;
+        height: 42px;
+        border-radius: 21px;
+        background-color: #086dae;
+        margin-top: 14px;
+        margin-right: 15px;
+        position: relative;
+        box-shadow: 2px 2px 2px #bfbbbb ;
+    }
+
+    .search > div > div > i {
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-top: 8px solid #FFFFFF;
+        border-bottom: 8px solid #FFFFFF;
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 18px;
+        top: 10px;
+    }
+
+    .search > div > div > b {
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-left: 8px solid #FFFFFF;
+        border-right: 8px solid #FFFFFF;
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 10px;
+        top: 18px;
+    }
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+

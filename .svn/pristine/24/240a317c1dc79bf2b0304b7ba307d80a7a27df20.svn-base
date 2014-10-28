@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP新闻资讯详情页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/newsdetailpage.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/common.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs">
+        <p><a href="javascript:void (0)">首页</a>&gt;<a href="javascript:void (0)">新闻资讯</a>&gt;<a
+                href="javascript:void (0)">要闻</a></p>
+    </div>
+    <!--面包屑 end-->
+    <!--新闻资讯详情 begin-->
+    <div class="newdetail">
+        <header>
+            <p>7月14日澳元机构观点汇总（欧市）</p>
+
+            <div><span>全景网</span>
+                <time>2014-07-14&nbsp;&nbsp;10:16:11</time>
+            </div>
+        </header>
+        <section>
+            <p>澳元兑美元低开高走。尽管澳洲联储主席史蒂文斯上周末再度表达了对澳元高企的担忧，但澳元多头在日内亚洲时段仍较为坚挺。本周中澳美风险事件云集，中国GDP数据、澳洲联储纪要和美联储主席耶伦国会证词等，均可能对澳元走势产生深远影响。技术面上，澳元兑美元小时图显示，汇价日内低开高走，但整体仍处在区间整理的态势之中。技术指标方面，目前均线系统拐头向上，MACD(12、26、9)主线和信号线低位回升。上方压力位关注0.9455-0.9485，下方支撑0.9355-0.9325。</p>
+            <p>澳元兑美元低开高走。尽管澳洲联储主席史蒂文斯上周末再度表达了对澳元高企的担忧，但澳元多头在日内亚洲时段仍较为坚挺。本周中澳美风险事件云集，中国GDP数据、澳洲联储纪要和美联储主席耶伦国会证词等，均可能对澳元走势产生深远影响。技术面上，澳元兑美元小时图显示，汇价日内低开高走，但整体仍处在区间整理的态势之中。技术指标方面，目前均线系统拐头向上，MACD(12、26、9)主线和信号线低位回升。上方压力位关注0.9455-0.9485，下方支撑0.9355-0.9325。</p>
+        </section>
+    </div>
+    <!--新闻资讯详情 end-->
+</div>
+</body>
+</html>

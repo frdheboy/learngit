@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP委托&撤单</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/entrust.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/common.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs">
+        <p><a href="javascript:void (0)">首页</a>&gt;<a href="javascript:void (0)">模拟炒股</a>&gt;<a
+               href="javascript:void (0)">委托/撤单</a></p>
+    </div>
+    <!--面包屑 end-->
+    <!--委托撤单 begin-->
+    <div class="m_content">
+        <ul class="entrust_list_title">
+            <li>状态</li>
+            <li>股票名称</li>
+            <li>操作</li>
+            <li>委托价格</li>
+            <li>撤单</li>
+        </ul>
+        <ul class="entrust_list">
+            <li>
+                <p class="entrust_list_style01">已报</p>
+
+                <p class="entrust_list_style02">
+
+                    <span>维维股份</span>
+
+                    <em>600300</em>
+                </p>
+
+                <p class="entrust_list_style03">买入</p>
+
+                <p class="entrust_list_style04">44.86%</p>
+
+                <p class="entrust_list_style05">撤单</p>
+            </li>
+            <li>
+                <p class="entrust_list_style01">已报</p>
+
+                <p class="entrust_list_style02">
+
+                    <span>维维股份</span>
+
+                    <em>600300</em>
+                </p>
+
+                <p class="entrust_list_style03">买入</p>
+
+                <p class="entrust_list_style04">44.86%</p>
+
+                <p class="entrust_list_style05">撤单</p>
+            </li>
+            <li>
+                <p class="entrust_list_style01">已报</p>
+
+                <p class="entrust_list_style02">
+
+                    <span>维维股份</span>
+
+                    <em>600300</em>
+                </p>
+
+                <p class="entrust_list_style03">买入</p>
+
+                <p class="entrust_list_style04">44.86%</p>
+
+                <p class="entrust_list_style05">撤单</p>
+            </li>
+            <li>
+                <p class="entrust_list_style01">已报</p>
+
+                <p class="entrust_list_style02">
+
+                    <span>维维股份</span>
+
+                    <em>600300</em>
+                </p>
+
+                <p class="entrust_list_style03">买入</p>
+
+                <p class="entrust_list_style04">44.86%</p>
+
+                <p class="entrust_list_style05">撤单</p>
+            </li>
+            <li>
+                <p class="entrust_list_style01">已报</p>
+
+                <p class="entrust_list_style02">
+
+                    <span>维维股份</span>
+
+                    <em>600300</em>
+                </p>
+
+                <p class="entrust_list_style03">买入</p>
+
+                <p class="entrust_list_style04">44.86%</p>
+
+                <p class="entrust_list_style05">撤单</p>
+            </li>
+            <li>
+                <p class="entrust_list_style01">已报</p>
+
+                <p class="entrust_list_style02">
+
+                    <span>维维股份</span>
+
+                    <em>600300</em>
+                </p>
+
+                <p class="entrust_list_style03">买入</p>
+
+                <p class="entrust_list_style04">44.86%</p>
+
+                <p class="entrust_list_style05">撤单</p>
+            </li>
+            <li>
+                <p class="entrust_list_style01">已报</p>
+
+                <p class="entrust_list_style02">
+
+                    <span>维维股份</span>
+
+                    <em>600300</em>
+                </p>
+
+                <p class="entrust_list_style03">买入</p>
+
+                <p class="entrust_list_style04">44.86%</p>
+
+                <p class="entrust_list_style05">撤单</p>
+            </li>
+            <li>
+                <p class="entrust_list_style01">已报</p>
+
+                <p class="entrust_list_style02">
+
+                    <span>维维股份</span>
+
+                    <em>600300</em>
+                </p>
+
+                <p class="entrust_list_style03">买入</p>
+
+                <p class="entrust_list_style04">44.86%</p>
+
+                <p class="entrust_list_style05">撤单</p>
+            </li>
+            <li>
+                <p class="entrust_list_style01">已报</p>
+
+                <p class="entrust_list_style02">
+
+                    <span>维维股份</span>
+
+                    <em>600300</em>
+                </p>
+
+                <p class="entrust_list_style03">买入</p>
+
+                <p class="entrust_list_style04">44.86%</p>
+
+                <p class="entrust_list_style05">撤单</p>
+            </li>
+            <li>
+                <p class="entrust_list_style01">已报</p>
+
+                <p class="entrust_list_style02">
+
+                    <span>维维股份</span>
+
+                    <em>600300</em>
+                </p>
+
+                <p class="entrust_list_style03">买入</p>
+
+                <p class="entrust_list_style04">44.86%</p>
+
+                <p class="entrust_list_style05">撤单</p>
+            </li>
+        </ul>
+    </div>
+    <!--委托撤单 end-->
+</div>
+</body>
+</html>

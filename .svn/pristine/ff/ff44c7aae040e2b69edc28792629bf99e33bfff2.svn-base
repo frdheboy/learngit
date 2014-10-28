@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP牛人</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/supermanrank.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/galhttprequest.js"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/supermanrank.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs">
+        <p><a href="index.html">首页</a>&gt;<a href="javascript:void (0)">牛人</a></p>
+    </div>
+    <!--面包屑 end-->
+    <!--牛人内容 begin-->
+    <div class="superman_big">
+        <div id="recommendlist"><p>忧顾推荐榜</p><span><a href="javascript:void(0)"></a></span></div>
+        <div id="feverlist"><p>人气榜</p><span><a href="javascript:void(0)"></a></span></div>
+        <div class="hr"></div>
+        <div id="gainttlist"><p>总盈利率</p><span>最高盈利率:<strong>120%</strong><a href="javascript:void(0)"></a></span></div>
+        <div id="succlist"><p>成功率榜</p><span>最高成功率:<strong  style="color: #000">120%</strong><a href="javascript:void(0)"></a></span></div>
+        <div id="monthgainlist"><p>月盈利榜</p><span>最高盈利率:<strong>120%</strong><a href="javascript:void(0)"></a></span></div>
+        <div id="weekgainlist"><p>周盈利榜</p><span>最高盈利率:<strong>120%</strong><a href="javascript:void(0)"></a></span></div>
+        <div id="supermanreports"><p>牛人战绩播报</p><span><a href="javascript:void(0)"></a></span></div>
+    </div>
+    <!--牛人内容 end-->
+</div>
+</body>
+</html>

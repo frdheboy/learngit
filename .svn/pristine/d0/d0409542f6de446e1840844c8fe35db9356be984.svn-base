@@ -1,0 +1,36 @@
+
+.m_content {float: left;width: 100%; border-top: 2px solid #086dae;}
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+.mz{width: 100%;}
+.mz .z1{width: 25%; float: left; margin-top:12px;padding:2px 0px;}
+.a1{width: 46%; height:42px; margin:0 auto;}
+.a1 img{ width:100%;}
+.mz .z1 .z3{font:12px/23px "微软雅黑"; color:#5a5a5a;}
+.m_content p {width: 100%;float: left;height: 30px;line-height: 30px;font-size: 14px;text-indent: 10px;text-align: left;color:#5a5a5a;background-color: #e9eaec;}
+.m_content ul li a span {float: left; display: block;width: 100%;font-size: 14px;color: #5a5a5a;line-height: 25px; }
+}
+
+/*宽度在大于480（包括480）的样式*/
+@media all and (min-width: 480px) {
+	.mz{width: 100%;}
+	.mz .z1{width: 25%; float: left; margin-top:12px;padding:10px 0px;}
+	.a1{width: 46%;margin:0 auto;}
+	.a1 img{ width:100%;}
+	.mz .z1 .z3{font:16px/23px "微软雅黑"; color:#5a5a5a;}
+    .m_content p { width: 100%;float: left;height: 50px; line-height: 50px;font-size: 16px;text-indent: 10px;text-align: left;background-color: #e9eaec;
+    }
+
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+

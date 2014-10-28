@@ -1,0 +1,21 @@
+// JavaScript Document
+$(function(){ 
+    $("#sortkeys").click(function(){ 
+       	console.log($('.mcon_l').scrollTo); 
+    }); 
+}); 
+$(document).ready(function(e) {
+	$('.mcon_r').height($(window).height()-83);
+  	$('#sortkeys li').click(function(){
+		$('#keytoast').text($(this).text());
+		$('#keytoast').fadeIn();//fadeIn淡出
+		console.log($('.mcon_l').scrollTo);
+		//$('.mcon_l').scrollTo({top:'-=100px', left:'+=100'}, 800);
+		
+		setTimeout(function(){//多长时间运行
+			$('#keytoast').fadeOut();
+		},800)
+		
+	});
+
+});

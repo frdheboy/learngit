@@ -1,0 +1,391 @@
+/**
+ * Created by Administrator on 2014/8/18.
+ */
+$(document).ready(function () {
+    addloading("m_content");
+    var opts = {
+    };
+    var gal = new GalHttpRequest(config_url.quoteindex, opts);
+    gal.requestPacketFromNet({
+        succeed: function (data) {
+            console.log(data);
+            $("#sse").find("p:eq(0)").html(data.exponent[0].name);
+            $("#sse").click(function(event){
+                window.location.href="stockinfo_tt.html?codeid="+data.exponent[0].code+"&codename="+data.exponent[0].name;
+                event.stopPropagation();
+            });
+            $("#sse").find("p:eq(1)").find("span").html(data.exponent[0].curprice.toFixed(2));
+            if (data.exponent[0].dataper.toFixed(2) >= 0) {
+                $("#sse").find("p:eq(1)").find("img").attr("src", "../images/figure005.jpg");
+                $("#sse").find("p:eq(1)").find("span").css("color", "#d62829");
+            } else {
+                $("#sse").find("p:eq(1)").find("img").attr("src", "../images/figure004.jpg");
+                $("#sse").find("p:eq(1)").find("span").css("color", "#168816");
+            }
+            var sse_change = data.exponent[0].change.toFixed(2);
+            var sse_dataper = data.exponent[0].dataper.toFixed(2);
+            if (sse_change >= 0) {
+                sse_change = "+" + sse_change;
+            } else {
+
+            }
+            if (sse_dataper >= 0) {
+                sse_dataper = "+" + sse_dataper + "%";
+            } else {
+                sse_dataper = sse_dataper + "%";
+            }
+            $("#sse").find("p:eq(2)").find("span:eq(0)").html(sse_change);
+            $("#sse").find("p:eq(2)").find("span:eq(1)").html(sse_dataper);
+            //"深证成指"
+            $("#sze").find("p:eq(0)").html(data.exponent[1].name);
+            $("#sze").click(function(event){
+                window.location.href="stockinfo_tt.html?codeid="+data.exponent[1].code+"&codename="+data.exponent[1].name;
+                event.stopPropagation();
+            });
+            $("#sze").find("p:eq(1)").find("span").html(data.exponent[1].curprice.toFixed(2));
+            if (data.exponent[1].dataper.toFixed(2) >= 0) {
+                $("#sze").find("p:eq(1)").find("img").attr("src", "../images/figure005.jpg");
+                $("#sze").find("p:eq(1)").find("span").css("color", "#d62829");
+            } else {
+                $("#sze").find("p:eq(1)").find("img").attr("src", "../images/figure004.jpg");
+                $("#sze").find("p:eq(1)").find("span").css("color", "#168816");
+            }
+            var sze_change = data.exponent[1].change.toFixed(2);
+            var sze_dataper = data.exponent[1].dataper.toFixed(2);
+            if (sze_change >= 0) {
+                sze_change = "+" + sze_change;
+            } else {
+            }
+            if (sze_dataper >= 0) {
+                sze_dataper = "+" + sze_dataper + "%";
+            } else {
+                sze_dataper = sze_dataper + "%";
+            }
+            $("#sze").find("p:eq(2)").find("span:eq(0)").html(sze_change);
+            $("#sze").find("p:eq(2)").find("span:eq(1)").html(sze_dataper);
+
+            //"创业板指"
+            $("#cye").find("p:eq(0)").html(data.exponent[2].name);
+            $("#cye").click(function(event){
+                window.location.href="stockinfo_tt.html?codeid="+data.exponent[2].code+"&codename="+data.exponent[2].name;
+                event.stopPropagation();
+            });
+            $("#cye").find("p:eq(1)").find("span").html(data.exponent[2].curprice.toFixed(2));
+            if (data.exponent[2].dataper.toFixed(2) >= 0) {
+                $("#cye").find("p:eq(1)").find("img").attr("src", "../images/figure005.jpg");
+                $("#cye").find("p:eq(1)").find("span").css("color", "#d62829");
+            } else {
+                $("#cye").find("p:eq(1)").find("img").attr("src", "../images/figure004.jpg");
+                $("#cye").find("p:eq(1)").find("span").css("color", "#168816");
+            }
+            var cye_change = data.exponent[2].change.toFixed(2);
+            var cye_dataper = data.exponent[2].dataper.toFixed(2);
+            if (cye_change >= 0) {
+                cye_change = "+" + cye_change;
+            } else {
+
+            }
+            if (cye_dataper >= 0) {
+                cye_dataper = "+" + cye_dataper + "%";
+            } else {
+                cye_dataper = cye_dataper + "%";
+            }
+            $("#cye").find("p:eq(2)").find("span:eq(0)").html(cye_change);
+            $("#cye").find("p:eq(2)").find("span:eq(1)").html(cye_dataper);
+
+            //热门行业1
+            $("#industry_1").find("p:eq(0)").html(data.industry[0].name);
+            $("#industry_1").click(function(event){
+                window.location.href="industrymarket.html?codeid="+data.industry[0].code+"&codename="+data.industry[0].name;
+                event.stopPropagation();
+            });
+            var industry_1_dataper = data.industry[0].dataper.toFixed(2);
+            if (industry_1_dataper >= 0) {
+                industry_1_dataper = "+" + industry_1_dataper + "%";
+                $("#industry_1").find("p:eq(1)").find("img").attr("src", "../images/figure005.jpg");
+                $("#industry_1").find("p:eq(1)").find("span").css("color", "#d62829");
+            } else {
+                industry_1_dataper = "-" + industry_1_dataper + "%";
+                $("#industry_1").find("p:eq(1)").find("img").attr("src", "../images/figure004.jpg");
+                $("#industry_1").find("p:eq(1)").find("span").css("color", "#168816");
+            }
+            $("#industry_1").find("p:eq(1)").find("span").html(industry_1_dataper);
+            $("#industry_1").find("p:eq(2)").html(data.industry[0].leadername);
+            var industry_1_leadercurprice = data.industry[0].leadercurprice.toFixed(2);
+            var industry_1_leaderdataper = data.industry[0].leaderdataper.toFixed(2);
+            if (industry_1_leaderdataper >= 0) {
+                industry_1_leaderdataper = "+" + industry_1_leaderdataper + "%";
+            } else {
+                industry_1_leaderdataper = "-" + industry_1_leaderdataper + "%";
+            }
+
+            $("#industry_1").find("p:eq(3)").find("span:eq(0)").html(industry_1_leadercurprice);
+            $("#industry_1").find("p:eq(3)").find("span:eq(1)").html(industry_1_leaderdataper);
+
+            //热门行业2
+            $("#industry_2").find("p:eq(0)").html(data.industry[1].name);
+            $("#industry_2").click(function(event){
+                window.location.href="industrymarket.html?codeid="+data.industry[1].code+"&codename="+data.industry[1].name;
+                event.stopPropagation();
+            });
+            var industry_2_dataper = data.industry[1].dataper.toFixed(2);
+            if (industry_2_dataper >= 0) {
+                industry_2_dataper = "+" + industry_2_dataper + "%";
+                $("#industry_2").find("p:eq(1)").find("img").attr("src", "../images/figure005.jpg");
+                $("#industry_2").find("p:eq(1)").find("span").css("color", "#d62829");
+            } else {
+                industry_2_dataper = "-" + industry_2_dataper + "%";
+                $("#industry_2").find("p:eq(1)").find("img").attr("src", "../images/figure004.jpg");
+                $("#industry_2").find("p:eq(1)").find("span").css("color", "#168816");
+            }
+            $("#industry_2").find("p:eq(1)").find("span").html(industry_2_dataper);
+            $("#industry_2").find("p:eq(2)").html(data.industry[1].leadername);
+            var industry_2_leadercurprice = data.industry[1].leadercurprice.toFixed(2);
+            var industry_2_leaderdataper = data.industry[1].leaderdataper.toFixed(2);
+            if (industry_2_leaderdataper >= 0) {
+                industry_2_leaderdataper = "+" + industry_2_leaderdataper + "%";
+            } else {
+                industry_2_leaderdataper = "-" + industry_2_leaderdataper + "%";
+            }
+
+            $("#industry_2").find("p:eq(3)").find("span:eq(0)").html(industry_2_leadercurprice);
+            $("#industry_2").find("p:eq(3)").find("span:eq(1)").html(industry_2_leaderdataper);
+
+            //热门行业3
+            $("#industry_3").find("p:eq(0)").html(data.industry[2].name);
+            $("#industry_3").click(function(event){
+                window.location.href="industrymarket.html?codeid="+data.industry[2].code+"&codename="+data.industry[2].name;
+                event.stopPropagation();
+            });
+            var industry_3_dataper = data.industry[2].dataper.toFixed(2);
+            if (industry_3_dataper >= 0) {
+                industry_3_dataper = "+" + industry_3_dataper + "%";
+                $("#industry_3").find("p:eq(1)").find("img").attr("src", "../images/figure005.jpg");
+                $("#industry_3").find("p:eq(1)").find("span").css("color", "#d62829");
+            } else {
+                industry_3_dataper = "-" + industry_3_dataper + "%";
+                $("#industry_3").find("p:eq(1)").find("img").attr("src", "../images/figure004.jpg");
+                $("#industry_3").find("p:eq(1)").find("span").css("color", "#168816");
+            }
+            $("#industry_3").find("p:eq(1)").find("span").html(industry_3_dataper);
+            $("#industry_3").find("p:eq(2)").html(data.industry[2].leadername);
+            var industry_3_leadercurprice = data.industry[2].leadercurprice.toFixed(2);
+            var industry_3_leaderdataper = data.industry[2].leaderdataper.toFixed(2);
+            if (industry_3_leaderdataper >= 0) {
+                industry_3_leaderdataper = "+" + industry_3_leaderdataper + "%";
+            } else {
+                industry_3_leaderdataper = "-" + industry_3_leaderdataper + "%";
+            }
+
+            $("#industry_3").find("p:eq(3)").find("span:eq(0)").html(industry_3_leadercurprice);
+            $("#industry_3").find("p:eq(3)").find("span:eq(1)").html(industry_3_leaderdataper);
+
+
+            //热门概念1
+            $("#notion_1").find("p:eq(0)").html(data.notion[0].name);
+            $("#notion_1").click(function(event){
+                window.location.href="industrymarket.html?codeid="+data.notion[0].code+"&codename="+data.notion[0].name;
+                event.stopPropagation();
+            });
+            var notion_1_dataper = data.notion[0].dataper.toFixed(2);
+            if (notion_1_dataper >= 0) {
+                notion_1_dataper = "+" + notion_1_dataper + "%";
+                $("#notion_1").find("p:eq(1)").find("img").attr("src", "../images/figure005.jpg");
+                $("#notion_1").find("p:eq(1)").find("span").css("color", "#d62829");
+            } else {
+                notion_1_dataper = "-" + notion_1_dataper + "%";
+                $("#notion_1").find("p:eq(1)").find("img").attr("src", "../images/figure004.jpg");
+                $("#notion_1").find("p:eq(1)").find("span").css("color", "#168816");
+            }
+            $("#notion_1").find("p:eq(1)").find("span").html(notion_1_dataper);
+            $("#notion_1").find("p:eq(2)").html(data.notion[0].leadername);
+            var notion_1_leadercurprice = data.notion[0].leadercurprice.toFixed(2);
+            var notion_1_leaderdataper = data.notion[0].leaderdataper.toFixed(2);
+            if (notion_1_leaderdataper >= 0) {
+                notion_1_leaderdataper = "+" + notion_1_leaderdataper + "%";
+            } else {
+                notion_1_leaderdataper = "-" + notion_1_leaderdataper + "%";
+            }
+
+            $("#notion_1").find("p:eq(3)").find("span:eq(0)").html(notion_1_leadercurprice);
+            $("#notion_1").find("p:eq(3)").find("span:eq(1)").html(notion_1_leaderdataper);
+
+            //热门概念2
+            $("#notion_2").find("p:eq(0)").html(data.notion[1].name);
+            $("#notion_2").click(function(event){
+                window.location.href="industrymarket.html?codeid="+data.notion[1].code+"&codename="+data.notion[1].name;
+                event.stopPropagation();
+            });
+            var notion_2_dataper = data.notion[1].dataper.toFixed(2);
+            if (notion_2_dataper >= 0) {
+                notion_2_dataper = "+" + notion_2_dataper + "%";
+                $("#notion_2").find("p:eq(1)").find("img").attr("src", "../images/figure005.jpg");
+                $("#notion_2").find("p:eq(1)").find("span").css("color", "#d62829");
+            } else {
+                notion_2_dataper = "-" + notion_2_dataper + "%";
+                $("#notion_2").find("p:eq(1)").find("img").attr("src", "../images/figure004.jpg");
+                $("#notion_2").find("p:eq(1)").find("span").css("color", "#168816");
+            }
+            $("#notion_2").find("p:eq(1)").find("span").html(notion_2_dataper);
+            $("#notion_2").find("p:eq(2)").html(data.notion[1].leadername);
+            var notion_2_leadercurprice = data.notion[1].leadercurprice.toFixed(2);
+            var notion_2_leaderdataper = data.notion[1].leaderdataper.toFixed(2);
+            if (notion_2_leaderdataper >= 0) {
+                notion_2_leaderdataper = "+" + notion_2_leaderdataper + "%";
+            } else {
+                notion_2_leaderdataper = "-" + notion_2_leaderdataper + "%";
+            }
+
+            $("#notion_2").find("p:eq(3)").find("span:eq(0)").html(notion_2_leadercurprice);
+            $("#notion_2").find("p:eq(3)").find("span:eq(1)").html(notion_2_leaderdataper);
+
+            //热门概念3
+            $("#notion_3").find("p:eq(0)").html(data.notion[2].name);
+            $("#notion_3").click(function(event){
+                window.location.href="industrymarket.html?codeid="+data.notion[2].code+"&codename="+data.notion[2].name;
+                event.stopPropagation();
+            });
+            var notion_3_dataper = data.notion[2].dataper.toFixed(2);
+            if (notion_3_dataper >= 0) {
+                notion_3_dataper = "+" + notion_3_dataper + "%";
+                $("#notion_3").find("p:eq(1)").find("img").attr("src", "../images/figure005.jpg");
+                $("#notion_3").find("p:eq(1)").find("span").css("color", "#d62829");
+            } else {
+                notion_3_dataper = "-" + notion_3_dataper + "%";
+                $("#notion_3").find("p:eq(1)").find("img").attr("src", "../images/figure004.jpg");
+                $("#notion_3").find("p:eq(1)").find("span").css("color", "#168816");
+            }
+            $("#notion_3").find("p:eq(1)").find("span").html(notion_3_dataper);
+            $("#notion_3").find("p:eq(2)").html(data.notion[2].leadername);
+            var notion_3_leadercurprice = data.notion[2].leadercurprice.toFixed(2);
+            var notion_3_leaderdataper = data.notion[2].leaderdataper.toFixed(2);
+            if (notion_3_leaderdataper >= 0) {
+                notion_3_leaderdataper = "+" + notion_3_leaderdataper + "%";
+            } else {
+                notion_3_leaderdataper = "-" + notion_3_leaderdataper + "%";
+            }
+
+            $("#notion_3").find("p:eq(3)").find("span:eq(0)").html(notion_3_leadercurprice);
+            $("#notion_3").find("p:eq(3)").find("span:eq(1)").html(notion_3_leaderdataper);
+
+            //涨幅榜
+            var zdupcurprice=[];
+            var zdupdataper=[];
+            $.each(data.zdup, function (i, n) {
+                zdupdataper[i] = "+"+n.dataper.toFixed(2)+"%";
+                zdupcurprice[i] = n.curprice.toFixed(2);
+                $("#zdup").append("<li><p class='stock_list_style01'><span data-codeid='"+n.name+"'>"+n.name+"</span><em data-codename='"+n.code+"'>"+n.code.substring(2,8)+"</em></p><p class='stock_list_style02'>"+zdupcurprice[i]+"</p><p class='stock_list_style03'>"+zdupdataper[i]+"</p></li>");
+            });
+            $("#zdup").find("li").on("click", function (event) {
+                var _name = $(this).find("span:eq(0)").attr("data-codeid");
+                var _code = $(this).find("em:eq(0)").attr("data-codename");
+                window.location.href="stockinfo.html?codeid="+_code+"&codename="+_name;
+                event.stopPropagation();
+            });
+            //跌幅榜
+            var zddowncurprice=[];
+            var zddowndataper=[];
+            $.each(data.zddown, function (i, n) {
+                zddowndataper[i] = n.dataper.toFixed(2)+"%";
+                zddowncurprice[i] = n.curprice.toFixed(2);
+                $("#zddown").append("<li><p class='stock_list_style01'><span data-codeid='"+n.name+"'>"+n.name+"</span><em data-codename='"+n.code+"'>"+n.code.substring(2,8)+"</em></p><p class='stock_list_style02' style='color: #168816'>"+zddowncurprice[i]+"</p><p class='stock_list_style03' style='color: #168816'>"+zddowndataper[i]+"</p></li>");
+            });
+            $("#zddown").find("li").on("click", function (event) {
+                var _name = $(this).find("span:eq(0)").attr("data-codeid");
+                var _code = $(this).find("em:eq(0)").attr("data-codename");
+                window.location.href="stockinfo.html?codeid="+_code+"&codename="+_name;
+                event.stopPropagation();
+            });
+            //换手榜
+            var hscurprice=[];
+            var hsdataper=[];
+            $.each(data.hs, function (i, n) {
+                hsdataper[i] = n.dataper.toFixed(2)+"%";
+                hscurprice[i] = n.curprice.toFixed(2);
+                $("#hs").append("<li><p class='stock_list_style01'><span data-codeid='"+n.name+"'>"+n.name+"</span><em data-codename='"+n.code+"'>"+n.code.substring(2,8)+"</em></p><p class='stock_list_style02' style='color: #000'>"+hscurprice[i]+"</p><p class='stock_list_style03' style='color: #000'>"+hsdataper[i]+"</p></li>");
+            });
+            $("#hs").find("li").on("click", function (event) {
+                var _name = $(this).find("span:eq(0)").attr("data-codeid");
+                var _code = $(this).find("em:eq(0)").attr("data-codename");
+                window.location.href="stockinfo.html?codeid="+_code+"&codename="+_name;
+                event.stopPropagation();
+            });
+            //振幅榜
+            var zfcurprice=[];
+            var zfdataper=[];
+            $.each(data.zf, function (i, n) {
+                zfdataper[i] = n.dataper.toFixed(2)+"%";
+                zfcurprice[i] = n.curprice.toFixed(2);
+                $("#zf").append("<li><p class='stock_list_style01'><span data-codeid='"+n.name+"'>"+n.name+"</span><em data-codename='"+n.code+"'>"+n.code.substring(2,8)+"</em></p><p class='stock_list_style02' style='color: #000'>"+zfcurprice[i]+"</p><p class='stock_list_style03' style='color: #000'>"+zfdataper[i]+"</p></li>");
+            });
+            $("#zf").find("li").on("click", function (event) {
+                var _name = $(this).find("span:eq(0)").attr("data-codeid");
+                var _code = $(this).find("em:eq(0)").attr("data-codename");
+                window.location.href="stockinfo.html?codeid="+_code+"&codename="+_name;
+                event.stopPropagation();
+            });
+            //新股发行
+            var issueshare=[];
+            $.each(data.newstock, function (i, n) {
+                if(n.issueshare>10000){
+                    issueshare[i] = (n.issueshare/10000).toFixed();                }
+                $("#newstock").append("<li><p class='stock_list_style01'><span data-codeid='"+n.name+"'>"+n.name+"</span><em data-codename='"+n.code+"'>"+n.code.substring(2,8)+"</em></p><p class='stock_list_style02' style='color: #000'>"+issueshare[i]+"</p><p class='stock_list_style03' style='color: #000'>"+n.applydate+"</p></li>");
+            });
+            $("#newstock").find("li").on("click", function (event) {
+                var _name = $(this).find("span:eq(0)").attr("data-codeid");
+                var _code = $(this).find("em:eq(0)").attr("data-codename");
+                window.location.href="stockinfo.html?codeid="+_code+"&codename="+_name;
+                event.stopPropagation();
+            });
+
+            removeloading();
+            $("#m_content").fadeToggle("fast");
+            
+        },
+        error: function (error) {
+            console.log(error);//错误信息提示
+        }
+    });
+
+    scrolltitle();
+
+});
+
+function scrolltitle() {
+    //两种样式表分两种情况
+    var ttwidth = $("body").width() > $(document).width() ? $("body").width() : $(document).width();
+    if(ttwidth<480){
+        $(window).scroll(function () {
+            scrollsize("tip_1",77,147,177);
+            scrollsize("tip_2",177,266,296);
+            scrollsize("tip_3",296,385,415);
+            scrollsize("tip_4",415,980,1010);
+            scrollsize("tip_5",1010,1575,1605);
+            scrollsize("tip_6",1605,2170,2200);
+            scrollsize("tip_7",2200,2765,2795);
+        });
+    }else{
+        $(window).scroll(function () {
+            scrollsize("tip_1",129,225,270);
+            scrollsize("tip_2",270,391,436);
+            scrollsize("tip_3",436,557,602);
+            scrollsize("tip_4",602,1262,1307);
+            scrollsize("tip_5",1307,1967,2012);
+            scrollsize("tip_6",2012,2672,2717);
+            scrollsize("tip_7",2717,3377,3422);
+        });
+    }
+
+}
+
+function scrollsize(name,height1,height2,height3){
+    var scrollheight;
+    scrollheight = $(document).scrollTop();
+    if (scrollheight >= height1 && scrollheight < height2) {
+        $("#"+name).css({"position": "fixed", "left": "0", "top": "0", "z-index": "999"});
+    } else if (scrollheight >= height2 && scrollheight < height3) {
+        $("#"+name).css({"position": "fixed", "left": "0", "top": height2 - scrollheight + "px", "z-index": "999"});
+    } else {
+        $("#"+name).css({"position": "relative", "left": "0", "top": "0", "z-index": "0"});
+    }
+}

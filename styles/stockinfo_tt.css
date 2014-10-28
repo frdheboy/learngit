@@ -1,0 +1,634 @@
+.m_content {
+    float: left;
+    width: 100%;
+    border-top: 2px solid #086dae;
+}
+
+.info_1 {
+    float: left;
+    width: 100%;
+}
+
+.marketindex_list_title {
+    width: 100%;
+    float: left;
+}
+
+.marketindex_list_title li {
+    float: left;
+    width: 33.3%;
+    box-sizing: border-box;
+}
+
+.marketindex_list {
+    float: left;
+    width: 100%;
+}
+
+.info_1 p {
+    width: 40%;
+    float: left;
+    color: #d62829;
+}
+
+.info_1 p:nth-child(2) {
+    float: left;
+    width: 60%;
+    color: #454545;
+}
+
+.info_1 p:nth-child(2) em {
+    font-style: normal;
+    font-weight: bold;
+    color: #454545;
+}
+
+.info_2 p span em {
+    font-style: normal;
+    color: #454545;
+    font-weight: bold;
+}
+
+.info_2 {
+    float: left;
+    width: 100%;
+}
+
+.info_2 p {
+    float: left;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 0 3%;
+}
+
+.marketindex_list_title li a {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.tip_2 {
+    display: none;
+    float: left;
+    width: 100%;
+}
+
+.tip_2 div:nth-child(1) {
+    float: left;
+    width: 100%;
+}
+
+.tubiaobox {
+    float: left;
+    width: 94%;
+    margin-left: 3%;
+    box-sizing: border-box;
+    border: 1px solid #abb2b6;
+    border-top: none;
+    position: relative;
+    height: 1px;
+    overflow: hidden;
+}
+
+.tubiaobox canvas{
+    float: left;
+}
+
+.tubiaotipbox,.tubiaotipbox ul {
+    float: left;
+    width: 100%;
+
+}
+
+.tubiaotipbox ul {
+    margin-top: 10px;
+    width: 94%;
+    margin-left: 3%;
+    box-sizing: border-box;
+    border: 1px solid #abb2b6;
+    color: #FFFFFF;
+    background-color: #78b7e2;
+}
+
+.btnbox {
+    float: left;
+    width: 100%;
+}
+.btnbox ul {
+    float: left;
+    width: 100%;
+}
+.btnbox ul li{
+    float: left;
+    width: 33%;
+    overflow: hidden;
+}
+
+.btnbox ul li a{
+    display: block;
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 25px;
+    background-image: url("../images/btnbox.png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    padding-left: 30px;
+    text-align: left;
+}
+.btnbox ul li:nth-child(1) a{
+    background-position: 0 -60px;
+}
+.btnbox ul li:nth-child(2) a{
+    background-position: 0 -33px;
+}
+.btnbox ul li:nth-child(3) a{
+    background-position: 0 -5px;
+}
+
+#fenshitu {
+    width: 68%;
+    float: left;
+    border-right: 1px solid #abb2b6;
+    box-sizing: border-box;
+}
+
+#fenshiinfo {
+    box-sizing: border-box;
+    width: 32%;
+    float: left;
+    border-left: 6px solid #fff;
+}
+
+#fenshiinfo div {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    float: left;
+    border-left: 1px solid #abb2b6;
+}
+
+#fenshiinfo div table {
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    height: 50%;
+    font-size: 12px;
+}
+#fenshiinfo div table.fenshiinfott_1 {
+    height: 18%;
+    border-bottom: 1px solid #abb2b6;
+}
+#fenshiinfo div table.fenshiinfott_2 {
+    height: 27%;
+    border-bottom: 1px solid #abb2b6;
+}
+#fenshiinfo div table.fenshiinfott_3 {
+    height: 54%;
+}
+
+#fenshiinfo div table tr td:nth-child(1) {
+    width: 50%;
+    overflow-x: visible;
+    text-align: left;
+    white-space: nowrap;
+
+}
+#fenshiinfo div table tr td:nth-child(2) {
+    width: 50%;
+    overflow-x: visible;
+    text-align: right;
+}
+
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    .marketindex_list_title li a span {
+        display: block;
+        float: left;
+        width: 100%;
+        font-size: 18px;
+        line-height: 18px;
+        box-sizing: border-box;
+        margin: 9px 0;
+    }
+
+    .marketindex_list_title li.currect a {
+        color: #076daf;
+        border-bottom: 3px solid #076daf;
+    }
+
+    .marketindex_list_title li.mid a span {
+        border-left: 1px solid #d6d6d6;
+        border-right: 1px solid #d6d6d6;
+    }
+
+    .info_1 {
+        float: left;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .info_1 p:nth-child(1) em {
+        width: 100%;
+        float: left;
+        display: block;
+        font-size: 26px;
+        line-height: 35px;
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    .info_1 p:nth-child(1) span {
+        display: block;
+        width: 45%;
+        float: left;
+        font-size: 12px;
+    }
+
+    .info_1 p:nth-child(2) span {
+        width: 50%;
+        display: block;
+        float: left;
+        font-size: 12px;
+        color: #939393;
+        line-height: 18px;
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow-x: visible;
+        text-align: left;
+    }
+
+    .info_2 p span {
+        float: left;
+        width: 30%;
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow-x: visible;
+        font-size: 12px;
+        color: #939393;
+    }
+
+    #title_list_2 {
+        float: left;
+        width: 90%;
+        margin: 0 5%;
+        border: 1px solid #78b7e2;
+        margin-top: 7px;
+    }
+
+    #title_list_2 li {
+        float: left;
+        width: 33.3333333%;
+        box-sizing: border-box;
+        line-height: 35px;
+        font-size: 14px;
+    }
+
+    #title_list_2 li.mid {
+        border-left: 1px solid #78b7e2;
+        border-right: 1px solid #78b7e2;
+    }
+
+    #title_list_2 li.currect {
+        color: #fff;
+        background: #78b7e2;
+    }
+    #title_list_3 {
+        float: left;
+        width: 90%;
+        margin: 0 5%;
+        border: 1px solid #78b7e2;
+        margin-top: 7px;
+    }
+
+    #title_list_3 li {
+        float: left;
+        width: 33.3%;
+        box-sizing: border-box;
+        line-height: 35px;
+        font-size: 14px;
+    }
+
+    #title_list_3 li.mid {
+        border-left: 1px solid #78b7e2;
+        border-right: 1px solid #78b7e2;
+    }
+
+    #title_list_3 li.currect {
+        color: #fff;
+        background: #78b7e2;
+    }
+
+    .listdemo {
+        float: left;
+        width: 100%;
+    }
+
+    .listdemo li {
+        float: left;
+        width: 100%;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .listdemo li a {
+        float: left;
+        width: 100%;
+        display: block;
+    }
+
+    .listdemo a p {
+        float: left;
+        width: 87%;
+        text-align: left;
+        margin: 8px 0 8px 10%;
+        position: relative;
+        min-height: 40px;
+    }
+
+    .listdemo a p:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 5px;
+        border: 5px solid #076daf;
+        position: absolute;
+        left: -5%;
+        top: 50%;
+        z-index: 999;
+        margin-top: -3px;
+        margin-left: -3px;
+    }
+
+    .listdemo a span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: #6e6e6e;
+        font-size: 12px;
+    }
+
+    .tip_3 {
+        display: none;
+        float: left;
+        width: 100%;
+    }
+
+    .f10list {
+        float: left;
+        width: 100%;
+        height: 1000px;
+        overflow-y: visible;
+    }
+
+    .tubiaotipbox li{
+        float: left;
+        width: 25%;
+        background: #78b7e2;
+        line-height: 28px;
+    }
+
+    .tubiaotipbox li.currect{
+        background: #4d8cbb;
+    }
+
+}
+
+/*宽度在480（包括480）到640之间的样式*/
+@media all and (min-width: 480px) {
+    .m_content {
+        border-top: 4px solid #086dae;
+    }
+    .marketindex_list_title li a span {
+        display: block;
+        float: left;
+        width: 100%;
+        font-size: 24px;
+        line-height: 28px;
+        box-sizing: border-box;
+        margin: 9px 0;
+    }
+
+    .marketindex_list_title li.currect a {
+        color: #076daf;
+        border-bottom: 4px solid #076daf;
+    }
+
+    .marketindex_list_title li.mid a span {
+        border-left: 1px solid #d6d6d6;
+        border-right: 1px solid #d6d6d6;
+    }
+
+    .info_1 {
+        float: left;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .info_1 p:nth-child(1) em {
+        width: 100%;
+        float: left;
+        display: block;
+        font-size: 35px;
+        line-height: 38px;
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    .info_1 p:nth-child(1) span {
+        display: block;
+        width: 45%;
+        float: left;
+        font-size: 14px;
+    }
+
+    .info_1 p:nth-child(2) span {
+        width: 45%;
+        display: block;
+        float: left;
+        font-size: 16px;
+        color: #939393;
+        line-height: 20px;
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow-x: visible;
+        text-align: left;
+    }
+
+    .info_2 p span {
+        float: left;
+        width: 30%;
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow-x: visible;
+        font-size: 16px;
+        color: #939393;
+    }
+
+    #title_list_2 {
+        float: left;
+        width: 90%;
+        margin: 0 5%;
+        border: 1px solid #78b7e2;
+        margin-top: 7px;
+    }
+
+    #title_list_2 li {
+        float: left;
+        width: 33.33333333%;
+        box-sizing: border-box;
+        line-height: 40px;
+        font-size: 18px;
+    }
+
+    #title_list_2 li.mid {
+        border-left: 1px solid #78b7e2;
+        border-right: 1px solid #78b7e2;
+    }
+
+    #title_list_2 li.currect {
+        color: #fff;
+        background: #78b7e2;
+    }
+    #title_list_3 {
+        float: left;
+        width: 90%;
+        margin: 0 5%;
+        border: 1px solid #78b7e2;
+        margin-top: 7px;
+    }
+
+    #title_list_3 li {
+        float: left;
+        width: 33.3%;
+        box-sizing: border-box;
+        line-height: 40px;
+        font-size: 18px;
+    }
+
+    #title_list_3 li.mid {
+        border-left: 1px solid #78b7e2;
+        border-right: 1px solid #78b7e2;
+    }
+
+    #title_list_3 li.currect {
+        color: #fff;
+        background: #78b7e2;
+    }
+
+    .listdemo {
+        float: left;
+        width: 100%;
+    }
+
+    .listdemo li {
+        float: left;
+        width: 100%;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .listdemo li a {
+        float: left;
+        width: 100%;
+        display: block;
+    }
+
+    .listdemo a p {
+        float: left;
+        width: 87%;
+        text-align: left;
+        margin: 8px 0 8px 10%;
+        position: relative;
+        min-height: 50px;
+        font-size: 16px;
+    }
+
+    .listdemo a p:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 5px;
+        border: 5px solid #076daf;
+        position: absolute;
+        left: -5%;
+        top: 50%;
+        z-index: 999;
+        margin-top: -3px;
+        margin-left: -3px;
+    }
+
+    .listdemo a span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: #6e6e6e;
+        font-size: 14px;
+    }
+
+    .tip_3 {
+        display: none;
+        float: left;
+        width: 100%;
+    }
+
+    .f10list {
+        float: left;
+        width: 100%;
+        height: 1000px;
+        overflow-y: visible;
+    }
+    .tubiaotipbox li{
+        float: left;
+        width: 25%;
+        background: #78b7e2;
+        line-height: 45px;
+        font-size: 22px;
+    }
+
+    .tubiaotipbox li.currect{
+        background: #4d8cbb;
+    }
+
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+
+
+/*宽度小于320（包括320）样式，iphone4,5*/
+@media all and (max-width: 320px) {
+    #fenshitu {
+        width: 62%;
+        float: left;
+        border-right: 1px solid #abb2b6;
+        box-sizing: border-box;
+    }
+    #fenshiinfo {
+        box-sizing: border-box;
+        width: 38%;
+        float: left;
+        border-left: 4px solid #fff;
+    }
+}
+
+#tab{width:100%; }
+#tab ul{ width:100%;}
+
+#tab li.option{ width:18%;  line-height:21px; font-size:13px;
+list-style:none;  float:left; border-right:1px solid #ccc;margin-top:1px;margin-bottom:1px; }
+
+#tab li.setion{ background:#78b7e2; color:#fff; }
+#tab div.content{ width:100%; clear:both; display:none;}
+#tab div ul{ margin:0px; padding:0px;}
+#tab div ul li{ font:0.9em/2em "微软雅黑";list-style-type:none; width:96%;}
+#tab div.selectedContent{ display:block;}

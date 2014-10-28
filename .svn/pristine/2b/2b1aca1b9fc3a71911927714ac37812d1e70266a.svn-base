@@ -1,0 +1,144 @@
+$(document).ready(function() {
+	/**-----------------*/
+	//QQ第三方登录
+	var _qqlogin = new QQLogin();
+	_qqlogin.register();
+	//微博三方登录
+	var _weibologin = new WeiboLogin();
+	_weibologin.register();
+	/**-----------------*/
+});
+
+function QQLogin() {
+	this.platform = 2;
+}
+
+QQLogin.prototype.register = function() {
+	if (this.isLogin()) {
+		QC.Login.signOut();
+	}
+	var me = this;
+	QC.Login({}, function() {
+		me.getUserInfo();
+	});
+};
+
+/**检查是否已经QQ登录*/
+QQLogin.prototype.isLogin = function() {
+	return QC.Login.check();
+};
+
+/**获取QQ用户信息*/
+QQLogin.prototype.getUserInfo = function() {
+	var me = this;
+	QC.api("get_user_info", {}).error(function() {//失败回调
+		alert("获取用户信息失败！");
+	}).complete(function(c) {//完成请求回调
+		me.nickname = c.data.nickname;
+		me.head = c.data.figureurl_qq_2;
+		me.getToken();
+	});
+};
+
+/**
+ *获取用户Token值并请求三方登录
+ *  */
+QQLogin.prototype.getToken = function() {
+	var me = this;
+	QC.Login.getMe(function(openid, accesstoken) {
+		me.openid = openid;
+		me.accesstoken = accesstoken;
+		requestThirdPartLogin({
+			openid : me.openid,
+			ak : "00000",
+			type : me.platform,
+			token : me.accesstoken
+		});
+	});
+};
+
+function WeiboLogin() {
+	this.paltform = 3;
+}
+
+WeiboLogin.prototype.isLogin = function() {
+	var status = WB2.checkLogin();
+	return status;
+};
+
+WeiboLogin.prototype.register = function() {
+	if (this.isLogin()) {
+		WB2.logout();
+	}
+	var me = this;
+	$("#weibo_login").click(function() {
+		WB2.login(function() {
+			me.getUserInfo();
+		});
+	});
+};
+
+WeiboLogin.prototype.getUserInfo = function() {
+	var oauthData = WB2.oauthData;
+	this.accesstoken = oauthData.access_token;
+	this.openid = oauthData.uid;
+	var me = this;
+	requestThirdPartLogin({
+		openid : this.openid,
+		ak : "00000",
+		type : this.platform,
+		token : this.accesstoken
+	});
+};
+
+WeiboLogin.prototype.getToken = function() {
+
+};
+
+/**
+ *請求三方登錄
+ *  */
+function requestThirdPartLogin(params) {
+	console.log("开始请求三方认证");
+	var gal = new GalHttpRequest(config_url.thirdpart_auth, params);
+	gal.requestFromNet({
+		succeed : login_succeed,
+		error : login_failed
+	});
+}
+
+/**
+ *三方登录成功
+ *  */
+function login_succeed(data) {
+	console.log("请求三方认证成功");
+	console.log(data);
+	alert("授权成功");
+}
+
+/**
+ *三方登录失败
+ *  */
+function login_failed(data) {
+	console.log(data);
+	if (data && data.status == "1010") {//账户未绑定
+		alert("账户未绑定");
+	} else {
+		alert("授权失败");
+	}
+}
+
+function getRequest() {
+	var url = location.search;
+	//获取url中"?"符后的字串
+	var theRequest = new Object();
+	if (url.indexOf("?") != -1) {
+		var str = url.substr(1);
+		strs = str.split("&");
+		for (var i = 0; i < strs.length; i++) {
+			theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+		}
+	}
+	console.log(theRequest);
+	return theRequest;
+}

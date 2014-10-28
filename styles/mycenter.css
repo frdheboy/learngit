@@ -1,0 +1,233 @@
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    .mycentercontent {
+        width: 100%;
+        float: left;
+    }
+
+    .mycentertop {
+        width: 100%;
+        float: left;
+        border-bottom: 1px solid #e3e3e3;
+        padding-bottom: 10px;
+    }
+
+    .mycentertop img {
+        width: 50px;
+        height: 50px;
+        float: left;
+        margin-left: 25px;
+        margin-top: 10px;
+        border: 1px solid #FFFFFF;
+    }
+
+    .mycentertop span {
+        display: block;
+        float: left;
+        margin-left: 10px;
+        margin-top: 25px;
+        font-size: 16px;
+    }
+
+    .mycentertop div {
+        float: right;
+        margin-right: 20px;
+        margin-top: 15px;
+        font-size: 16px;
+        color: #086dae;
+        border: 1px solid #086dae;
+        padding: 8px 5px;
+    }
+
+    .mycenterlist {
+        float: left;
+        width: 100%;
+    }
+
+    .mycenterlist ul {
+        width: 100%;
+    }
+
+    .mycenterlist ul li {
+        width: 100%;
+        height: 35px;
+        border-top: 1px solid #FFFFFF;
+        border-bottom: 1px solid #e3e3e3;
+    }
+
+    .mycenterlist ul li em {
+        float: left;
+        width: 25px;
+        height: 25px;
+        margin-left: 30px;
+        margin-top: 5px;
+        background-image: url("../images/mycenter.jpg");
+        background-repeat: no-repeat;
+        background-size: 175px 25px;
+    }
+    .mycenterlist ul li:nth-child(2) em {
+        background-position: -25px 0;
+    }
+    .mycenterlist ul li:nth-child(3) em {
+        background-position: -50px 0;
+    }
+    .mycenterlist ul li:nth-child(4) em {
+        background-position: -75px 0;
+    }
+    .mycenterlist ul li:nth-child(5) em {
+        background-position: -100px 0;
+    }
+    .mycenterlist ul li:nth-child(6) em {
+        background-position: -125px 0;
+    }
+
+    .mycenterlist ul li p {
+        float: left;
+        font-size: 16px;
+        line-height: 35px;
+        margin-left: 10px;
+    }
+
+    .mycenterlist ul li a {
+        color: #086dae;
+        font-size: 16px;
+        line-height: 35px;
+        display: block;
+        float: right;
+        margin-right: 30px;
+    }
+
+    .mycenterlist ul li span {
+        font-size: 16px;
+        line-height: 35px;
+        display: block;
+        float: right;
+        margin-right: 30px;
+    }
+}
+
+/*宽度在480（包括480）到640之间的样式*/
+@media all and (min-width: 480px) {
+    .mycentercontent {
+        width: 100%;
+        float: left;
+    }
+
+    .mycentertop {
+        width: 100%;
+        float: left;
+        border-bottom: 2px solid #e3e3e3;
+        padding-bottom: 20px;
+    }
+
+    .mycentertop em {
+        display: block;
+        width: 70px;
+        height: 70px;
+        float: left;
+        margin-left: 30px;
+        margin-top: 20px;
+        border: 2px solid #FFFFFF;
+        background-image: url("../images/mycenter.jpg");
+        background-repeat: no-repeat;
+        background-size: 490px 70px;
+        background-position: -420px 0px;
+    }
+
+    .mycentertop span {
+        display: block;
+        float: left;
+        margin-left: 20px;
+        margin-top: 40px;
+        font-size: 26px;
+    }
+
+    .mycentertop div {
+        float: right;
+        margin-right: 30px;
+        margin-top: 30px;
+        font-size: 26px;
+        color: #086dae;
+        border: 2px solid #086dae;
+        padding: 10px 15px;
+    }
+
+    .mycenterlist {
+        float: left;
+        width: 100%;
+    }
+
+    .mycenterlist ul {
+        width: 100%;
+    }
+
+    .mycenterlist ul li {
+        width: 100%;
+        height: 70px;
+        border-top: 2px solid #FFFFFF;
+        border-bottom: 2px solid #e3e3e3;
+    }
+
+    .mycenterlist ul li em {
+        float: left;
+        width: 50px;
+        height: 50px;
+        margin-left: 30px;
+        margin-top: 10px;
+        background-image: url("../images/mycenter.jpg");
+        background-repeat: no-repeat;
+        background-size: 350px 50px;
+    }
+    .mycenterlist ul li:nth-child(2) em {
+        background-position: -50px 0;
+    }
+    .mycenterlist ul li:nth-child(3) em {
+        background-position: -100px 0;
+    }
+    .mycenterlist ul li:nth-child(4) em {
+        background-position: -150px 0;
+    }
+    .mycenterlist ul li:nth-child(5) em {
+        background-position: -200px 0;
+    }
+    .mycenterlist ul li:nth-child(6) em {
+        background-position: -250px 0;
+    }
+
+    .mycenterlist ul li p {
+        float: left;
+        font-size: 26px;
+        line-height: 70px;
+        margin-left: 20px;
+    }
+
+    .mycenterlist ul li a {
+        color: #086dae;
+        font-size: 26px;
+        line-height: 70px;
+        display: block;
+        float: right;
+        margin-right: 40px;
+    }
+
+    .mycenterlist ul li span {
+        font-size: 26px;
+        line-height: 70px;
+        display: block;
+        float: right;
+        margin-right: 40px;
+    }
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+
+

@@ -1,0 +1,71 @@
+/**
+ * Created by Administrator on 2014/9/29.
+ */
+$(document).ready(function () {
+    addloading("bigbox");
+    var Request = new GetQueryString();
+    var pageid = Request.codeid;
+    var codename = UrlDecode(Request.codename);
+    var category = UrlDecode(Request.category);
+
+    /**
+     * 修改面包屑
+     */
+
+    if($(".crumbs")){
+        $(".crumbs").find("a:eq(2)").text(category);
+    }
+
+    if(category == "热门行业"){
+        $(".crumbs").find("a:eq(2)").attr("href","marketindex.html?pageid=industrylist");
+    }else if(category == "热门概念"){
+        $(".crumbs").find("a:eq(2)").attr("href","marketindex.html?pageid=notionlist");
+    }
+    var opts = {
+        code:pageid,
+        start:1,
+        reqnum:20,
+        order:-1
+    };
+    var gal = new GalHttpRequest(config_url.hygnlist, opts);
+    gal.requestPacketFromNet({
+        succeed: function (data) {
+            removeloading();
+            console.log(data);
+            $(".crumbs").find("a:last").html(codename);
+            $("#title_list").append("<li>股票名称</li><li>最新价</li><li>涨跌幅<img src='../images/figure006.jpg'/></li>");
+            buju(data.stockquote);
+        },
+        error: function (error) {
+            console.log(error.message);//错误信息提示
+        }
+    });
+
+    function buju(data, opt) {
+        var dataper = [];
+        var curprice = [];
+        $.each(data, function (i, n) {
+            curprice[i] = n.curprice.toFixed(2);
+            if (n.dataper >= 0) {
+                dataper[i] = "+" + n.dataper.toFixed(2) + "%";
+                $("#ul_list").append("<li><p><span data-codeid='" + n.name + "'>" + n.name + "</span><em data-codename='" + n.code + "'>" + n.code.substr(2, 6) + "</em></p><p class='red'>" + curprice[i] + "</p><p class='red'>" + dataper[i] + "</p></li>");
+            } else {
+                dataper[i] = n.dataper.toFixed(2) + "%";
+                $("#ul_list").append("<li><p><span data-codeid='" + n.name + "'>" + n.name + "</span><em data-codename='" + n.code + "'>" + n.code.substr(2, 6) + "</em></p><p class='green'>" + curprice[i] + "</p><p class='green'>" + dataper[i] + "</p></li>");
+            }
+
+        });
+        $("#ul_list").find("li").on("click", function (event) {
+            var _name = $(this).find("span[data-codeid]").attr("data-codeid");
+            var _code = $(this).find("em[data-codename]").attr("data-codename");
+            if (opt == true) {
+                window.location.href = "stockinfo_tt.html?codeid=" + _code + "&codename=" + _name;
+            } else {
+                window.location.href = "stockinfo.html?codeid=" + _code + "&codename=" + _name;
+            }
+
+            event.stopPropagation();
+        });
+    }
+
+});

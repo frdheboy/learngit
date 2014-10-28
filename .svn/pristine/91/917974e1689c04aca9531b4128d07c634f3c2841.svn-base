@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP搜索页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/search.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/galhttprequest.js"></script>
+    <script src="../scripts/database.js"></script>
+    <script src="../scripts/search.js"></script>
+    <script src="http://jsconsole.com/remote.js?2465C438-1A32-4E38-ACAD-0E4144BABD7B"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <header class="header">&nbsp;</header>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs">
+        <p><a href="index.html">首页</a>&gt;<a href="javascript:void (0)">搜索股票</a></p>
+    </div>
+    <!--面包屑 end-->
+    <!-- begin-->
+    <section class="search" id="resultbox">
+        <div class="searchli" style="display: none"><abbr title="">600300</abbr><dfn>维维股份</dfn><div><i></i><b></b></div></div>
+    </section>
+    <!-- end-->
+    <section class="liulanjilu" id="liulanjilu">
+        <div class="jilulist" style="display: none"><abbr title="">600300</abbr><dfn>维维股份</dfn><div><i></i><b></b></div></div>
+        <div>上次查询记录</div>
+    </section>
+
+</div>
+</body>
+</html>

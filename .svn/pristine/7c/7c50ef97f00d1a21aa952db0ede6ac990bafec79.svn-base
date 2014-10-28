@@ -1,0 +1,129 @@
+/**
+ * Created by Administrator on 2014/9/4.
+ */
+$(document).ready(function () {
+    var opts = {
+        matchid:1
+    };
+    var gal = new GalHttpRequest(config_url.getAccountDetail, opts);
+    gal.requestFromNet({
+        succeed: function (data) {
+            console.log(data);
+            var beginrender = new renderingpages(data.result);
+            beginrender.showuserinfo(data.result);
+            beginrender.showposition(data.result);
+        },
+        error: function (error) {
+            console.log(error);//错误信息提示
+        }
+    });
+
+    /**
+     * 渲染页面
+     * @param opt
+     */
+    function renderingpages(opt) {
+        this.data = opt;
+    }
+
+    renderingpages.prototype = {
+        /**
+         *
+         * @param opt 用户基础信息渲染
+         */
+        showuserinfo: function (opt) {
+            /**
+             * 依次是：总盈利率，总资产，可用金额，股票市值，浮动盈亏
+             */
+            $("#info_1").find("b").html(opt.profitRate);
+            if(parseFloat(opt.profitRate)>0){
+                $("#info_1").find("b").css({"color":"#d62829"});
+            }else{
+                $("#info_1").find("b").css({"color":"#168816"});
+            }
+            $("#info_2").find("b").html(opt.totalAssets);
+            $("#info_3").find("b").html(opt.fundBalance);
+            $("#info_4").find("b").html(opt.positionValue);
+            if(parseFloat(opt.floatProfit)>0){
+                $("#info_5").find("b").css({"color":"#d62829"});
+            }else{
+                $("#info_5").find("b").css({"color":"#168816"});
+            }
+            $("#info_5").find("b").html(opt.floatProfit);
+        },
+        /**
+         *
+         * @param opt 用户持仓股票渲染
+         */
+        showposition: function (opt) {
+            console.log(opt);
+            if(opt.itemList.length<1){
+                $("#positionlist").show().append("<div style='width: 100%; margin-top: 40px; font-size: 18px; color: #454545'>没有持仓股票</div>");
+                $(".simulateposition").find("span").html("空仓");
+            }else{
+                $.each(opt.itemList,function (i,n) {
+                    console.log(i);
+                    /**
+                     * 数组有多少数据吧第一个模板DIV复制多少次
+                     */
+                    $(".takepositionlist:first").clone(true).appendTo("#positionlist");
+
+                    var nowdata = $(".takepositionlist:eq("+i+")").find("div.listnum");
+                    nowdata.find("p:eq(0)").html(n.stockName+"<span>（"+ n.stockCode+"）</span><em>"+ n.positionRate+"仓</em>");
+                    nowdata.find("p:eq(1)").find("b").html(n.profit+"<i style='color: #000'>（</i>"+ n.profitRate+"<i style='color: #000'>）</i>");
+                    nowdata.find("p:eq(2)").find("b").html(n.curPrice+"<i style='color: #000'>（</i>"+ n.changePercent+"<i style='color: #000'>）</i>");
+                    nowdata.find("p:eq(3)").find("b").html(n.costPrice);
+                    nowdata.find("p:eq(4)").find("b").html(n.amount+"<i>(可卖"+ n.sellableAmount+")</i>");
+                    nowdata.find("p:eq(5)").find("b").html(n.value);
+                    if(parseFloat(n.profitRate)>0){
+                        nowdata.find("p:eq(1)").find("b").css({"color":"#d62829"});
+                    }else{
+                        nowdata.find("p:eq(1)").find("b").css({"color":"#168816"});
+                    }
+                    if(parseFloat(n.changePercent)>0){
+                        nowdata.find("p:eq(2)").find("b").css({"color":"#d62829"});
+                    }else{
+                        nowdata.find("p:eq(2)").find("b").css({"color":"#168816"});
+                    }
+
+                });
+
+                $(".takepositionlist:last").remove();
+                $("#positionlist").show();
+                if($(document).width()<480){
+                    $(".suidongtiao").css({"height":"75px"});
+                }else{
+                    $(".suidongtiao").css({"height":"100px"});
+                }
+
+                $(".takepositionlist").on("click", function () {
+                    if($(this).find(".flexible").is(":hidden")){
+                        $(this).find(".sanjiao").hide();
+                    }else{
+                        $(this).find(".sanjiao").show();
+                    }
+                    $(this).find(".flexible").slideToggle(300);
+                    $(this).siblings(".takepositionlist").find(".flexible").slideUp(300);
+                    if($(document).width()<480){
+                        if($(this).find(".suidongtiao").css("height")=="75px"){
+                            $(this).find(".suidongtiao").animate({height:"175px"},300);
+                            $(this).siblings(".takepositionlist").find(".suidongtiao").animate({height:"75px"},300);
+                        }else{
+                            $(this).find(".suidongtiao").animate({height:"75px"},300);
+                        }
+                    }else{
+                        if($(this).find(".suidongtiao").css("height")=="100px"){
+                            $(this).find(".suidongtiao").animate({height:"235px"},300);
+                            $(this).siblings(".takepositionlist").find(".suidongtiao").animate({height:"100px"},300);
+                        }else{
+                            $(this).find(".suidongtiao").animate({height:"100px"},300);
+                        }
+                    }
+                });
+                $(".simulateposition").find("span").html(opt.positionRate+"仓");
+            }
+        }
+    };
+
+
+});

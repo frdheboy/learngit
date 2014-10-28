@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+	<title>模拟炒股WAP模拟炒股_买入</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../styles/common.css" />
+	<link rel="stylesheet" href="../styles/trade.css" />
+	<link rel="stylesheet" href="../styles/buy.css">
+	<link rel="stylesheet" href="../styles/powerange.css">
+	<script src="../scripts/jquery-1.7.2.min.js"></script>
+	<script src="../scripts/common.js"></script>
+	<script src="../scripts/galhttprequest.js"></script>
+	<script src="../scripts/trade.js"></script>
+	<script src="../scripts/powerange.min.js"></script>
+	<script>
+		var max = 0,
+			buymoney = 0,
+			initVals, param, stockcode, s;
+		$(document).ready(function () {
+			param = new GetQueryString(),
+			stockcode = param.stockcode,
+			s = new StockMarketPriceTrade();
+			loadRanger();
+			s.queryStockInfo4buy(stockcode, function (data) {
+				outputReslut(data);
+			});
+			bindEvent();
+		});
+
+		function bindEvent() {
+			$('#fastselect ul li').click(function (e) {
+				$('#fastselect ul li.checked').addClass('unchecked');
+				$('#fastselect ul li.checked').removeClass('checked');
+				if ($(this).hasClass('unchecked')) {
+					$(this).removeClass();
+					$(this).addClass('checked');
+					initVals.setValue($(this).attr('value'), max);
+					initVals.mouse.obj.setStart($(this).attr('value'));
+				} else {
+					$(this).removeClass();
+					$(this).addClass('unchecked');
+				}
+			});
+			$('#buybutton').click(function () {
+				s.buy(buymoney, function (reslut) {
+					alert('委托成功');
+					s.queryStockInfo4buy(stockcode, function (data) {
+						outputReslut(data);
+					});
+				});
+			});
+
+		}
+
+		/**
+		 * 输出网络请求结果
+		 * @param {Object} reslut 输出结果
+		 */
+		function outputReslut(reslut) {
+			var close = reslut.lastClosePrice;
+			$('#stockcode').text(reslut.stockCode)
+			$('#stockname').text(reslut.stockName)
+			setValue($('#saleprice'), reslut.curPrice, close);
+			setValue($('#uplimit'), reslut.upLimit, close);
+			setValue($('#highprice'), reslut.highPrice, close);
+			setValue($('#downlimit'), reslut.downLimit, close);
+			setValue($('#lowprice'), reslut.lowPrice, close);
+			$('#maxbuy').text(reslut.maxBuy);
+			$('#fundsable').text(reslut.fundsAble);
+			initVals.options.max = reslut.fundsAble;
+			initVals.setRange(0, reslut.fundsAble);
+			initVals.mouse.obj.setStart(reslut.fundsAble);
+		}
+
+		/**
+		 * 设置结果
+		 * @param {Object} el    控件
+		 * @param {Number} price 价格
+		 * @param {Number} close 昨收价
+		 */
+		function setValue(el, price, close) {
+			var style;
+			if (price > close) {
+				style = 'up';
+			} else if (price < close) {
+				style = 'down';
+			}
+			el.removeClass();
+			el.addClass(style);
+			el.text(price);
+		}
+
+
+		/**
+		 * 加载滑动条
+		 */
+		function loadRanger() {
+			var vals = document.querySelector('.js-min-max-start');
+			initVals = new Powerange(vals, {
+				callback: function () {
+					buymoney = vals.value;
+					$('#sidervalue').text('￥' + vals.value);
+					$('#sidervalue').css('left', $('.range-handle').position().left + $('.range-handle').width() / 2 - $('#sidervalue').width() / 2);
+				},
+				hideRange: true,
+				min: 0,
+				max: 100000,
+				start: 1,
+				step: 1
+			});
+		}
+	</script>
+</head>
+
+<body>
+	<div class="main">
+		<!--头部共用搜索框 begin-->
+		<div class="header">&nbsp;</div>
+		<!--头部共用搜索框 end-->
+		<!--面包屑 begin-->
+		<div class="crumbs">
+			<p><a href="javascript:void (0)">首页</a>&gt;<a href="javascript:void (0)">模拟炒股</a>&gt;<a href="javascript:void (0)">买入</a>
+			</p>
+		</div>
+		<!--面包屑 end-->
+		<!--模拟炒股 begin-->
+		<div class="m_content">
+			<div class="buy_main">
+				<div class="buy_main_01">
+					<p>股票代码</p>
+					<div><span id="stockcode">--</span><span id="stockname" class="proname">--</span>
+					</div>
+				</div>
+				<div class="buy_slider">
+					<div class="slider-wrapper">
+						<div id="sidervalue">￥0</div>
+						<input type="text" class="js-min-max-start" />
+					</div>
+					<div id="fastselect">
+						<ul>
+							<li class="unchecked" value="20000">￥2万</li>
+							<li class="unchecked" value="50000">￥5万</li>
+							<li class="unchecked" value="100000">￥10万</li>
+							<li class="unchecked" value="200000">￥20万</li>
+						</ul>
+						<div id="buybutton">
+							买入
+						</div>
+					</div>
+
+				</div>
+				<div class="buyinfolist">
+					<ul>
+						<li>
+							<p>最新：<span id="saleprice">--</span>
+							</p>
+
+							<p>涨停：<span id="uplimit">--</span>
+							</p>
+						</li>
+						<li>
+							<p>最高：<span id="highprice">--</span>
+							</p>
+
+							<p>跌停：<span id="downlimit">--</span>
+							</p>
+						</li>
+						<li>
+							<p>最低：<span id="lowprice">--</span>
+							</p>
+
+							<p>可买：<span id="maxbuy">--</span>
+							</p>
+						</li>
+						<li id="buyinfolistlast">
+							<p>可用资金：<span id="fundsable">--</span>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--模拟炒股 end-->
+	</div>
+</body>
+
+</html>

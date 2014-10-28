@@ -1,0 +1,572 @@
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    .index_content {
+        width: 100%;
+        float: left;
+    }
+
+    .index_title {
+        width: 100%;
+        float: left;
+        border-bottom: 2px solid #086dae;
+        background-color: #FFFFFF;
+    }
+
+    .index_title li {
+        float: left;
+        width: 25%;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .index_title li.currect a {
+        color: #086dae;
+    }
+
+    .person_link {
+        width: 100%;
+        float: left;
+    }
+
+    .person_link li {
+        float: left;
+        width: 33%;
+        line-height: 40px;
+
+    }
+
+    .person_link li a {
+        display: block;
+        width: 100%;
+        float: left;
+        font-size: 12px;
+    }
+
+    .person_link li a img {
+        width: 25px;
+        height: 25px;
+        float: left;
+        margin-left: 15%;
+        margin-top: 6px;
+    }
+
+    .person_link li a p {
+        float: left;
+    }
+
+    .tab_block {
+        float: left;
+        width: 95%;
+        margin-left: 5%;
+    }
+
+    .tab_block li {
+        float: left;
+        width: 20%;
+        margin-right: 4%;
+        background-color: #FFFFFF;
+        border: 1px solid #eeedee;
+        margin-bottom: 12px;
+    }
+
+    .tab_block li.unable {
+        background-color: #abb2b6;
+    }
+
+    .tab_block li a {
+        width: 100%;
+        float: left;
+    }
+
+    .tab_block li a img {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+
+    .tab_block li a span {
+        width: 100%;
+        float: left;
+        display: block;
+        margin-bottom: 5px;
+        font-size: 12px;
+        color: #939393;
+    }
+
+    .index_sse {
+        width: 100%;
+        float: left;
+    }
+
+    .index_sse li {
+        width: 33%;
+        float: left;
+    }
+
+    .index_sse li.leftrightborder {
+        border-left: 1px solid #d7d7d7;
+        border-right: 1px solid #d7d7d7;
+    }
+
+    .sse_01 {
+        width: 100%;
+        float: left;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .sse_02 {
+        float: left;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .sse_02 img {
+        float: left;
+        width: 20%;
+        margin-top: 2px;
+    }
+
+    .sse_02 span {
+        width: 80%;
+        display: block;
+        float: left;
+        line-height: 20px;
+        font-size: 18px;
+        color: #168816;
+    }
+
+    .sse_03 {
+        float: left;
+        width: 100%;
+        line-height: 20px;
+    }
+
+    .sse_03_01 {
+        float: left;
+        width: 45%;
+        text-align: right;
+        font-size: 12px;
+        margin-right: 5%;
+    }
+
+    .sse_03_02 {
+        float: left;
+        width: 45%;
+        text-align: left;
+        font-size: 12px;
+        margin-left: 5%;
+    }
+
+    .stock_list_title {
+        float: left;
+        width: 100%;
+        background-color: #e9eaec;
+        margin-top: 12px;
+    }
+
+    .stock_list_title li {
+        float: left;
+        width: 33%;
+        line-height: 35px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .stock_list_title_01 {
+        float: left;
+        width: 100%;
+        background-color: #e9eaec;
+    }
+
+    .stock_list_title_01 li {
+        float: left;
+        width: 33%;
+        line-height: 35px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .title_leftrightborder {
+        border-left: 1px solid #d9dadf;
+        border-right: 1px solid #d9dadf;
+    }
+
+    .backgroundlist span {
+        display: block;
+        float: left;
+        width: 70%;
+        text-align: right;
+    }
+    .backgroundlist img {
+        float: left;
+        width: 20px;
+        margin-top: 7px;
+    }
+
+    .stock_list {
+        float: left;
+        width: 100%;
+    }
+
+    .stock_list li {
+        float: left;
+        width: 100%;
+        font-size: 18px;
+        border-bottom: 1px solid #e3e3e3;
+        padding: 6px 0px;
+    }
+
+    .stock_list_style01 {
+        width: 33%;
+        float: left;
+    }
+
+    .stock_list_style01 span {
+        display: block;
+        width: 100%;
+        float: left;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .stock_list_style01 em {
+        font-style: normal;
+        display: block;
+        width: 100%;
+        float: left;
+        font-size: 16px;
+        line-height: 16px;
+        color: #f78d05;
+    }
+
+    .stock_list_style02 {
+        width: 33%;
+        float: left;
+        font-size: 22px;
+        line-height: 40px;
+        color: #d62829;
+        font-weight: bold;
+    }
+
+    .stock_list_style03 {
+        width: 33%;
+        float: left;
+        font-size: 22px;
+        line-height: 40px;
+        color: #d62829;
+        font-weight: bold;
+    }
+
+    #logininenterimg {
+        display: none;width: 100%; float: left
+    }
+
+    #logininenterimg img {
+        width: 40%;
+        margin-top: 20px;
+    }
+    #logininenterimg p{
+        font-size: 14px;
+        color: #454545;
+    }
+    #logininenterimg p span{
+        font-size: 18px;
+        color: #d62829;
+    }
+}
+
+/*宽度在大于480（包括480）的样式*/
+@media all and (min-width: 480px) {
+    .index_content {
+        width: 100%;
+        float: left;
+    }
+
+    .index_title {
+        width: 100%;
+        float: left;
+        border-bottom: 2px solid #086dae;
+        background-color: #FFFFFF;
+    }
+
+    .index_title li {
+        float: left;
+        width: 25%;
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    .index_title li.currect a {
+        color: #086dae;
+    }
+
+    .person_link {
+        width: 100%;
+        float: left;
+    }
+
+    .person_link li {
+        float: left;
+        width: 33%;
+        line-height: 40px;
+
+    }
+
+    .person_link li a {
+        display: block;
+        width: 100%;
+        float: left;
+        font-size: 20px;
+        line-height: 55px;
+        margin: 5px 0;
+    }
+
+    .person_link li a img {
+        width: 35px;
+        height: 35px;
+        float: left;
+        margin-left: 15%;
+        margin-top: 10px;
+    }
+
+    .person_link li a p {
+        float: left;
+    }
+
+    .tab_block {
+        float: left;
+        width: 95%;
+        margin-left: 5%;
+    }
+
+    .tab_block li {
+        float: left;
+        width: 20%;
+        margin-right: 4%;
+        background-color: #FFFFFF;
+        border: 1px solid #eeedee;
+        margin-bottom: 12px;
+    }
+
+    .tab_block li.unable {
+        background-color: #abb2b6;
+    }
+
+    .tab_block li a {
+        width: 100%;
+        float: left;
+    }
+
+    .tab_block li a img {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+
+    .tab_block li a span {
+        width: 100%;
+        float: left;
+        display: block;
+        margin-bottom: 5px;
+        font-size: 18px;
+        color: #939393;
+    }
+
+    .index_sse {
+        width: 100%;
+        float: left;
+    }
+
+    .index_sse li {
+        width: 33%;
+        float: left;
+    }
+
+    .index_sse li.leftrightborder {
+        border-left: 1px solid #d7d7d7;
+        border-right: 1px solid #d7d7d7;
+    }
+
+    .sse_01 {
+        width: 100%;
+        float: left;
+        font-size: 24px;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .sse_02 {
+        float: left;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .sse_02 img {
+        float: left;
+        width: 20%;
+        margin-top: 2px;
+    }
+
+    .sse_02 span {
+        width: 80%;
+        display: block;
+        float: left;
+        line-height: 30px;
+        font-size: 28px;
+        color: #168816;
+    }
+
+    .sse_03 {
+        float: left;
+        width: 100%;
+        line-height: 20px;
+    }
+
+    .sse_03_01 {
+        float: left;
+        width: 45%;
+        text-align: right;
+        font-size: 16px;
+        margin-right: 5%;
+        line-height: 25px;
+    }
+
+    .sse_03_02 {
+        float: left;
+        width: 45%;
+        text-align: left;
+        font-size: 16px;
+        margin-left: 5%;
+        line-height: 25px;
+    }
+
+    .stock_list_title {
+        float: left;
+        width: 100%;
+        background-color: #e9eaec;
+        margin-top: 15px;
+    }
+
+    .stock_list_title li {
+        float: left;
+        width: 33%;
+        line-height: 50px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .stock_list_title_01 {
+        float: left;
+        width: 100%;
+        background-color: #e9eaec;
+    }
+
+    .stock_list_title_01 li {
+        float: left;
+        width: 33%;
+        line-height: 50px;
+        font-size: 24px;
+        text-align: center
+    }
+
+    .title_leftrightborder {
+        border-left: 1px solid #d9dadf;
+        border-right: 1px solid #d9dadf;
+    }
+
+    .backgroundlist span {
+        display: block;
+        float: left;
+        width: 70%;
+        text-align: right;
+    }
+    .backgroundlist img {
+        float: left;
+        width: 30px;
+        margin-top: 8px;
+    }
+
+    .stock_list {
+        float: left;
+        width: 100%;
+    }
+
+    .stock_list li {
+        float: left;
+        width: 100%;
+        font-size: 26px;
+        border-bottom: 2px solid #e3e3e3;
+        padding: 6px 0px;
+    }
+
+    .stock_list_style01 {
+        width: 33%;
+        float: left;
+    }
+
+    .stock_list_style01 span {
+        display: block;
+        width: 100%;
+        float: left;
+        font-size: 26px;
+        line-height: 26px;
+    }
+
+    .stock_list_style01 em {
+        font-style: normal;
+        display: block;
+        width: 100%;
+        float: left;
+        font-size: 22px;
+        line-height: 22px;
+        color: #f78d05;
+    }
+
+    .stock_list_style02 {
+        width: 33%;
+        float: left;
+        font-size: 32px;
+        line-height: 50px;
+        color: #d62829;
+        font-weight: bold;
+    }
+
+    .stock_list_style03 {
+        width: 33%;
+        float: left;
+        font-size: 32px;
+        line-height: 50px;
+        color: #d62829;
+        font-weight: bold;
+    }
+    #logininenterimg {
+        display: none;width: 100%; float: left
+    }
+
+    #logininenterimg img {
+        width: 40%;
+        margin-top:40px;
+    }
+    #logininenterimg p{
+        font-size: 22px;
+        color: #454545;
+    }
+    #logininenterimg p span{
+        font-size: 28px;
+        color: #d62829;
+    }
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+

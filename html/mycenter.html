@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP个人中心</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/mycenter.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/galhttprequest.js"></script>
+    <script src="../scripts/mycenter.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs">
+        <p><a href="index.html">首页</a>&gt;<a href="javascript:void (0)">个人中心</a></p>
+    </div>
+    <!--面包屑 end-->
+    <!--个人中心内容 begin-->
+    <div class="mycentercontent">
+        <div class="mycentertop">
+            <!--暂不加链接，可能多处不同链接-->
+            <em></em>
+            <span>用户昵称</span>
+            <div>修改个人信息</div>
+        </div>
+        <div class="mycenterlist">
+            <ul>
+              <a href="myfront.html"><li><em></em><p>我的主页</p><span>点击进入</span></li></a>
+               <a href="javascript:void (0)"> <li><em></em><p>我的追踪</p><span id="p"></span></li></a>
+               <a href="myattention.html"><li><em></em><p>我的关注</p><span id="p1"></span></li></a>
+               <a href="myfans.html"><li><em></em><p>我的粉丝</p><span id="p2"></span></li></a>
+               <a href="javascript:void (0)"><li><em></em><p>我的交易</p><span id="p3"></span></li></a>
+               <a href="javascript:void (0)"><li><em></em><p>我的宝箱</p><span id="p4"></span></li></a>
+            </ul>
+        </div>
+    </div>
+    <!--个人中心内容 end-->
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<title>登录请求Demo</title>
+	<head>
+		<script src="../scripts/base64.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../scripts/galhttprequest.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../scripts/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../scripts/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				var username = "";
+				var password = "";
+
+				var params = {
+					// ak : config_other.ak,
+					// username : "bugkill",
+					// userpwd : "111111"
+				};
+
+				var gal = new GalHttpRequest(config_url.dologonnew, params);
+				gal.requestFromNet({
+					succeed : function(data) {
+						console.log(data);
+					},
+					error : function(error) {
+						alert(error.message);
+					}
+				});
+
+			});
+		</script>
+	</head>
+</html>

@@ -1,0 +1,135 @@
+.m_content {
+    float: left;
+    width: 100%;
+    border-top: 2px solid #086dae;
+}
+
+.newtitle {
+    float: left;
+    width: 100%;
+}
+
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    .newtitle li {
+        width: 100%;
+        float: left;
+        border-top: 1px solid #FFFFFF;
+        border-bottom: 1px solid #e5e5e5;
+        height: 50px;
+        position: relative;
+        padding: 5px 0px;
+    }
+
+    .newtitle li a {
+        width: 100%;
+        float: left;
+        height: 50px;
+        display: block;
+        color: #5a5a5a;
+    }
+
+    .newtitle li a p {
+        float: left;
+        font-size: 16px;
+        line-height: 24px;
+        width: 85%;
+        text-align: left;
+        padding-right: 5%;
+    }
+
+    .newtitle li a span {
+        /*width: 10%;*/
+        margin-left: 12px;
+        margin-top: 8px;
+        margin-right: 10px;
+        float: left;
+    }
+
+    .newtitle li a i {
+        font-style: normal;
+        font-size: 12px;
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+        color: #939393;
+    }
+
+    .circle {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: #0b6faf;
+        -webkit-border-radius: 5px;
+    }
+}
+
+/*宽度在大于480（包括480）的样式*/
+@media all and (min-width: 480px) {
+    .m_content {
+        border-top: 4px solid #086dae;
+    }
+    .newtitle li {
+        width: 100%;
+        float: left;
+        border-top: 2px solid #FFFFFF;
+        border-bottom: 2px solid #e5e5e5;
+        height: 80px;
+        position: relative;
+        padding: 15px 0px;
+    }
+
+    .newtitle li a {
+        width: 100%;
+        float: left;
+        height: 50px;
+        display: block;
+        color: #5a5a5a;
+    }
+
+    .newtitle li a p {
+        float: left;
+        font-size: 26px;
+        line-height: 40px;
+        width: 87%;
+        text-align: left;
+        padding-right: 3%;
+    }
+
+    .newtitle li a span {
+        /*width: 10%;*/
+        margin-left: 12px;
+        margin-top: 12px;
+        margin-right: 10px;
+        float: left;
+    }
+
+    .newtitle li a i {
+        font-style: normal;
+        font-size: 20px;
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+        color: #939393;
+    }
+
+    .circle {
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-color: #0b6faf;
+        -webkit-border-radius: 8px;
+    }
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+

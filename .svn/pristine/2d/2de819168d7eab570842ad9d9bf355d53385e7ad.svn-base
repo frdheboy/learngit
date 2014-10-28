@@ -1,0 +1,275 @@
+/*模拟炒股WAP公共样式表*/
+/*格式化*/
+@charset "utf-8";
+/* 使用重置样式表 */
+html, body, h1, h2, p, span, a, div, ol, ul, li, table, tbody, tfoot, thead, tr, th, td, canvas {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    font-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    font-family: Microsoft YaHei,simhei,SimSun, sans-serif
+}
+
+ol, ul {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+    color: #545164
+}
+
+/*网页公共设置*/
+body {
+    font-size: 14px;
+    color: #000;
+    min-width: 300px;
+    max-width: 640px;
+    background: #f7f7f7;
+    margin: 0 auto;
+}
+.main {
+    width: 100%;
+    float: left;
+    overflow-x: hidden;
+}
+
+.l {
+    float: left;
+}
+
+.r {
+    float: right;
+}
+/*搜索框和面包屑*/
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    .header {
+        width: 100%;
+        height: 40px;
+        background: #086dae;
+    }
+
+    .header_logo {
+        float: left;
+        height: 41px;
+        width: 30%;
+    }
+
+    .header_logo div {
+        width: 30px;
+        float: left;
+        height: 30px;
+        margin: 5px 0 0 6px;
+        border-radius:15px ;
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
+        background-image: url("../images/logo50.jpg");
+        background-repeat:no-repeat ;
+        background-size: 35px 35px;
+        background-clip: padding-box;
+        background-color: #FFFFFF;
+        background-position: 50% 50%;
+
+    }
+
+    .header_input {
+        height: 35px;
+        float:right;
+        background: #FFF;
+        margin: 3px 3px 0px 0px;
+        width: 65%;
+    }
+
+    .header_logo div img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .header_logo p {
+        float: left;
+        color: #FFF;
+        font-size: 24px;
+        line-height: 35px;
+        padding: 3px 0px 0px 3px;
+    }
+
+    .header_input input {
+        height: 35px;
+        float: left;
+        border: none;
+        padding: 0px;
+        color: #6e6e6e;
+        width: 80%;
+        text-indent: 10px;
+    }
+
+    .header_input div {
+        height: 35px;
+        float: right;
+        width: 20%;
+    }
+
+    .header_input a {
+        display: block;
+        height: 35px;
+        width: 35px;
+        float: right;
+    }
+
+    .header_input a img {
+        height:100%;
+        width: 100%;
+    }
+
+    .crumbs {
+        width: 100%;
+        height: 33px;
+        float: left;
+        background-color: #FFFFFF;
+    }
+
+    .crumbs p {
+        white-space: nowrap;
+        float: left;
+        font-size: 16px;
+        line-height: 33px;
+        color: #086dae;
+        margin-left: 5px;
+        text-align: left;
+    }
+
+    .crumbs p a {
+        font-size: 16px;
+        color: #086dae;
+        margin-left: 5px;
+        margin-right: 5px;
+
+    }
+
+
+}
+
+/*宽度在480（包括480）到640之间的样式*/
+@media all and (min-width: 480px) {
+    .header {
+        width: 100%;
+        height: 70px;
+        background: #086dae;
+    }
+
+    .header_logo {
+        float: left;
+        height: 70px;
+        width: 30%;
+    }
+
+    .header_logo div {
+        width: 52px;
+        float: left;
+        height: 52px;
+        margin: 10px 5px 0 15px;
+        border-radius:26px ;
+        -moz-border-radius: 26px;
+        -webkit-border-radius: 26px;
+        background-image: url("../images/logo50.jpg");
+        background-repeat:no-repeat ;
+        background-size: 60px 60px;
+        background-clip: padding-box;
+        background-color: #FFFFFF;
+        background-position: 50% 50%;
+    }
+
+    .header_logo div img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .header_logo p {
+        float: left;
+        color: #FFF;
+        font-size: 34px;
+        line-height: 65px;
+        padding: 3px 0px 0px 3px;
+    }
+
+    .header_input {
+        height: 60px;
+        float:right;
+        background: #FFF;
+        margin: 5px 10px 0px 0px;
+        width: 65%;
+    }
+
+
+    .header_input input {
+        height: 60px;
+        float: left;
+        border: none;
+        padding: 0px;
+        color: #6e6e6e;
+        width: 80%;
+        font-size: 24px;
+        text-indent: 20px;
+    }
+
+    .header_input div {
+        height: 60px;
+        float: right;
+        width: 20%;
+    }
+
+    .header_input a {
+        display: block;
+        height: 60px;
+        width: 60px;
+        float: right;
+    }
+
+    .header_input a img {
+        height:100%;
+        width: 100%;
+    }
+
+    .crumbs {
+        width: 100%;
+        height: 55px;
+        float: left;
+        background-color: #FFFFFF;
+    }
+
+    .crumbs p {
+        width: 80%;
+        float: left;
+        font-size: 26px;
+        line-height: 55px;
+        color: #086dae;
+        margin-left: 5px;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .crumbs p a {
+        font-size: 26px;
+        color: #086dae;
+        margin-left: 5px;
+        margin-right: 5px;
+
+    }
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+

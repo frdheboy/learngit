@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="lightApp" default="releasea">
+
+
+	<!--执行之前先调用dist，然后删除指定文件，再创建指定文件，将dist目录文件打成tar&gz-->
+	<target name="releasea" >
+	    <delete dir="release"/>
+	    <mkdir dir="release"/>
+        <tar destfile="release/lightApp.tar" basedir="../workspace/"/>
+        <gzip src="release/lightApp.tar" zipfile="release/lightApp.tar.gz"/>
+    </target>
+
+</project>

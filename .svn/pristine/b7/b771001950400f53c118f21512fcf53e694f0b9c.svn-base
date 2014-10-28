@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP牛人具体页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/supermandetal.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/galhttprequest.js"></script>
+    <script src="../scripts/common.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs">
+        <p><a href="index.html">首页</a>&gt;<a href="superman.html">牛人</a>&gt;<a href="javascript:void(0)">榜单名称</a></p>
+    </div>
+    <!--面包屑 end-->
+    <!--牛人内容 begin-->
+    <div class="superman_big">
+        <div>
+            <div>
+                <ul>
+                    <li>232450</li>
+                    <li></li>
+                    <li><h1>鸿富锦</h1>
+                        <p><span>周盈利：</span><strong>14.00%</strong></p>
+                        <ul>
+                            <li><span>周盈利率：</span><strong class="read">14.00%</strong></li>
+                            <li><span>持仓数：</span><strong>1200</strong></li>
+                            <li><span>交易数：</span><strong>140</strong></li>
+                            <li><span>成功率：</span><strong>140</strong></li>
+                            <li><span>聊股数：</span><strong>1400</strong></li>
+                            <li><span>粉丝数：</span><strong>1400</strong></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="infobtn" href="javascript:void(0)"></a>
+            </div>
+        </div>
+        <div class="hr"></div>
+        <div>
+            <div>
+                <ul>
+                    <li class="first">1</li>
+                    <li></li>
+                    <li><h1>鸿富锦</h1>
+                        <p><span>周盈利：</span><strong>14.00%</strong></p>
+                        <ul>
+                            <li><span>周盈利率：</span><strong class="read">14.00%</strong></li>
+                            <li><span>持仓数：</span><strong>1200</strong></li>
+                            <li><span>交易数：</span><strong>140</strong></li>
+                            <li><span>成功率：</span><strong>140</strong></li>
+                            <li><span>聊股数：</span><strong>1400</strong></li>
+                            <li><span>粉丝数：</span><strong>1400</strong></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="infobtn" href="javascript:void(0)"></a>
+            </div>
+        </div>
+        <div>
+            <div>
+                <ul>
+                    <li class="second">2</li>
+                    <li></li>
+                    <li><h1>鸿富锦</h1>
+                        <p><span>周盈利：</span><strong>14.00%</strong></p>
+                        <ul>
+                            <li><span>周盈利率：</span><strong class="read">14.00%</strong></li>
+                            <li><span>持仓数：</span><strong>1200</strong></li>
+                            <li><span>交易数：</span><strong>140</strong></li>
+                            <li><span>成功率：</span><strong>140</strong></li>
+                            <li><span>聊股数：</span><strong>1400</strong></li>
+                            <li><span>粉丝数：</span><strong>1400</strong></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="infobtn" href="javascript:void(0)"></a>
+            </div>
+        </div>
+        <div>
+            <div>
+                <ul>
+                    <li class="third">3</li>
+                    <li></li>
+                    <li><h1>鸿富锦</h1>
+                        <p><span>周盈利：</span><strong>14.00%</strong></p>
+                        <ul>
+                            <li><span>周盈利率：</span><strong class="read">14.00%</strong></li>
+                            <li><span>持仓数：</span><strong>1200</strong></li>
+                            <li><span>交易数：</span><strong>140</strong></li>
+                            <li><span>成功率：</span><strong>140</strong></li>
+                            <li><span>聊股数：</span><strong>1400</strong></li>
+                            <li><span>粉丝数：</span><strong>1400</strong></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="infobtn" href="javascript:void(0)"></a>
+            </div>
+        </div>
+        <div>
+            <div>
+                <ul>
+                    <li class="nomarl">4</li>
+                    <li></li>
+                    <li><h1>鸿富锦</h1>
+                        <p><span>周盈利：</span><strong>14.00%</strong></p>
+                        <ul>
+                            <li><span>周盈利率：</span><strong class="read">14.00%</strong></li>
+                            <li><span>持仓数：</span><strong>1200</strong></li>
+                            <li><span>交易数：</span><strong>140</strong></li>
+                            <li><span>成功率：</span><strong>140</strong></li>
+                            <li><span>聊股数：</span><strong>1400</strong></li>
+                            <li><span>粉丝数：</span><strong>1400</strong></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="infobtn" href="javascript:void(0)"></a>
+            </div>
+        </div>
+
+    </div>
+    <!--牛人内容 end-->
+</div>
+</body>
+</html>

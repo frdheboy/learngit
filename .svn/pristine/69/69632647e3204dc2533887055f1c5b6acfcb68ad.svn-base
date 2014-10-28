@@ -1,0 +1,128 @@
+.page {
+    float: left;
+    width: 100%;
+    display: none;
+    background-color: #f7f7f7;
+}
+
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    .content {
+        width: 100%;
+        float: left;
+        border-top: 2px solid #086dae;
+    }
+
+    .content > div {
+        width: 100%;
+        float: left;
+    }
+
+    .userheadimg {
+        float: left;
+        width: 35%;
+    }
+
+    .userheadimg div {
+        width: 80px;
+        float: left;
+        height: 80px;
+        margin: 20px 0 0 20px;
+        border-radius: 80px;
+        -moz-border-radius: 80px;
+        -webkit-border-radius: 80px;
+        background-image: url("../images/headerimgdemo.jpg");
+        background-repeat: no-repeat;
+        background-size: 80px 80px;
+        background-clip: padding-box;
+        background-color: #FFFFFF;
+        background-position: 50% 50%;
+        box-shadow: inset 0px 0px 8px #f7f7f7;
+
+    }
+
+    .userinfo {
+        float: left;
+        width: 60%;
+
+    }
+
+    .username {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    .usersignature {
+        font-size: 10px;
+        color: #939393;
+    }
+
+    .userstatus {
+        width: 100%;
+        float: left;
+        height: 35px;
+        border-radius: 6px;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        background-color: #31bce9;
+        margin-top: 15px;
+    }
+
+    .userstatus>p {
+        width: 30%;
+        float: left;
+        color: #ffffff;
+        line-height: 19px;
+        position: relative;
+        margin: 8px 0;
+        font-size: 14px;
+    }
+    .userstatus>p:nth-child(2){
+        width: 38%;
+        border-right: 1px solid #1d97bf;
+        border-left: 1px solid #1d97bf;
+    }
+
+    .userstatus>p>img {
+        width: 20px;
+        height: 20px;
+        vertical-align:text-top;
+    }
+
+    .userdigital p {
+        width: 33.3%;
+        float: left;
+        margin-top: 15px;
+    }
+    .userdigital p span{
+        display: block;
+        color: #086dae;
+        font-weight: bold;
+    }
+    .userdigital p em{
+        display: block;
+        font-style: normal;
+        color: #5a5a5a;
+    }
+
+}
+
+/*宽度在480（包括480）到640之间的样式*/
+@media all and (min-width: 480px) {
+    .content {
+        width: 100%;
+    }
+
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+

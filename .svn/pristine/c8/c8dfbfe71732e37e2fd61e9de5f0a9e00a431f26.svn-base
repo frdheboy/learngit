@@ -1,0 +1,197 @@
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    .competitiontiptitle {
+        width: 100%;
+        float: left;
+        border-top: 2px solid #086dae;
+    }
+
+    .competitiontipbox {
+        width: 100%;
+        float: left;
+    }
+
+    .competitiontipbox li {
+        width: 50%;
+        float: left;
+    }
+
+    .competitiontipbox li a {
+        display: block;
+        width: 100%;
+        float: left;
+        line-height: 35px;
+        font-size: 18px;
+    }
+
+    .competitiontipbox li.currect a {
+        color: #086dae;
+        border-bottom: 3px solid #086dae;
+    }
+
+    .competitionmainbox {
+        float: left;
+        width: 100%;
+    }
+
+    .competitionmainpage {
+        float: left;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .competitionmainpage img {
+        box-sizing: border-box;
+        width: 30%;
+        float: left;
+        padding-left: 20px;
+        padding-right: 10px;
+
+    }
+
+    .competitionmainpage div {
+        float: left;
+        width: 70%;
+    }
+
+    .competitionmainpage div p {
+        box-sizing: border-box;
+        width: 100%;
+        float: left;
+        text-align: left;
+        padding-right: 20px;
+        color: #5a5a5a;
+    }
+
+    .competitionmainpage div p em {
+        font-style: normal;
+        float: left;
+        font-size: 16px;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .competitionmainpage div p span {
+        float: right;
+        font-size: 14px;
+    }
+
+    .competitionmainpage div p span b {
+        font-weight: normal;
+        color: #d62829;
+    }
+
+    .competitionmainpage div p:nth-child(2) {
+        width: 100%;
+        float: left;
+        font-size: 12px;
+        color: #abb2b6;
+        line-height: 22px;
+    }
+}
+
+/*宽度在大于480（包括480）的样式*/
+@media all and (min-width: 480px) {
+    .competitiontiptitle {
+        width: 100%;
+        float: left;
+        border-top: 2px solid #086dae;
+    }
+
+    .competitiontipbox {
+        width: 100%;
+        float: left;
+    }
+
+    .competitiontipbox li {
+        width: 50%;
+        float: left;
+    }
+
+    .competitiontipbox li a {
+        display: block;
+        width: 100%;
+        float: left;
+        line-height: 50px;
+        font-size: 30px;
+    }
+
+    .competitiontipbox li.currect a {
+        color: #086dae;
+        border-bottom: 3px solid #086dae;
+    }
+
+    .competitionmainbox {
+        float: left;
+        width: 100%;
+    }
+
+    .competitionmainpage {
+        float: left;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .competitionmainpage img {
+        box-sizing: border-box;
+        width: 25%;
+        float: left;
+        padding-left: 20px;
+
+    }
+
+    .competitionmainpage div {
+        box-sizing: border-box;
+        float: left;
+        width: 75%;
+        padding-left: 15px;
+    }
+
+    .competitionmainpage div p {
+        box-sizing: border-box;
+        width: 100%;
+        float: left;
+        text-align: left;
+        padding-right: 20px;
+        color: #5a5a5a;
+        font-size: 20px;
+    }
+
+    .competitionmainpage div p em {
+        font-style: normal;
+        float: left;
+        font-size: 24px;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .competitionmainpage div p span {
+        float: right;
+        font-size: 18px;
+    }
+
+    .competitionmainpage div p span b {
+        font-weight: normal;
+        color: #d62829;
+    }
+
+    .competitionmainpage div p:nth-child(2) {
+        width: 100%;
+        float: left;
+        font-size: 16px;
+        color: #abb2b6;
+        line-height: 35px;
+    }
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+

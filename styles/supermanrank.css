@@ -1,0 +1,202 @@
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    .superman_big {
+        float: left;
+        width: 100%;
+        border-top: 2px solid #086dae;
+    }
+
+    .superman_big div {
+        float: left;
+        width: 100%;
+        border-bottom: 1px solid #dfdfdf;
+
+    }
+    .superman_big div.hr {
+        float: left;
+        width: 100%;
+        height: 15px;
+        background-color: #dfdfdf;
+    }
+
+    .superman_big div p {
+        float: left;
+        width: 45%;
+        font-size: 14px;
+        line-height: 45px;
+        text-align: left;
+        text-indent: 50px;
+        word-break:keep-all;
+        white-space:nowrap;
+        background-image: url("../images/supermantitlelog.png");
+        background-size: 36px 350px;
+        background-repeat: no-repeat;
+    }
+
+    .superman_big div:nth-child(1) p {
+        background-position: 7px 2px;
+    }
+
+    .superman_big div:nth-child(2) p{
+        background-position: 7px -50px;
+    }
+    .superman_big div:nth-child(4) p {
+        background-position: 7px -118px;
+    }
+
+    .superman_big div:nth-child(5) p{
+        background-position: 7px -165px;
+    }
+    .superman_big div:nth-child(6) p {
+        background-position: 7px -214px;
+    }
+
+    .superman_big div:nth-child(7) p{
+        background-position: 7px -260px;
+    }
+    .superman_big div:nth-child(8) p {
+        background-position: 7px -307px;
+    }
+
+
+    .superman_big div span{
+        float: left;
+        width: 55%;
+        font-size: 12px;
+        line-height: 45px;
+        display: block;
+        position: relative;
+        color: #939393;
+        word-break:keep-all;
+        white-space:nowrap;
+        text-align: left;
+    }
+
+    .superman_big div span strong{
+        font-weight: normal;
+        color: #d62829;
+        font-size: 12px;
+        padding: 0 3px;
+    }
+    .superman_big div span a{
+        display: block;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        -webkit-transform:rotate(45deg);
+        transform:rotate(45deg);
+        border-right: 1px solid #000;
+        border-top: 1px solid #000;
+        right: 20px;
+        top: 15px;
+    }
+}
+
+/*宽度在480（包括480）到640之间的样式*/
+@media all and (min-width: 480px) {
+    .superman_big {
+        float: left;
+        width: 100%;
+        border-top: 3px solid #086dae;
+    }
+
+    .superman_big div {
+        float: left;
+        width: 100%;
+        border-bottom: 2px solid #dfdfdf;
+
+    }
+    .superman_big div.hr {
+        float: left;
+        width: 100%;
+        height: 25px;
+        background-color: #dfdfdf;
+    }
+
+    .superman_big div p {
+        float: left;
+        width: 45%;
+        font-size: 26px;
+        line-height: 90px;
+        text-align: left;
+        text-indent: 80px;
+        word-break:keep-all;
+        white-space:nowrap;
+        background-image: url("../images/supermantitlelog.png");
+        background-size: 60px 580px;
+        background-repeat: no-repeat;
+    }
+
+    .superman_big div:nth-child(1) p {
+        background-position: 7px 10px;
+    }
+
+    .superman_big div:nth-child(2) p{
+        background-position: 7px -78px;
+    }
+    .superman_big div:nth-child(4) p {
+        background-position: 7px -190px;
+    }
+
+    .superman_big div:nth-child(5) p{
+        background-position: 7px -270px;
+    }
+    .superman_big div:nth-child(6) p {
+        background-position: 7px -350px;
+    }
+
+    .superman_big div:nth-child(7) p{
+        background-position: 7px -425px;
+    }
+    .superman_big div:nth-child(8) p {
+        background-position: 7px -502px;
+    }
+
+
+    .superman_big div span{
+        float: left;
+        width: 55%;
+        font-size: 18px;
+        line-height: 90px;
+        display: block;
+        position: relative;
+        color: #939393;
+        word-break:keep-all;
+        white-space:nowrap;
+        text-align: left;
+    }
+
+    .superman_big div span strong{
+        font-weight: normal;
+        color: #d62829;
+        font-size: 18px;
+        padding: 0 5px;
+    }
+    .superman_big div span a{
+        display: block;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        -webkit-transform:rotate(45deg);
+        transform:rotate(45deg);
+        border-right: 2px solid #000;
+        border-top: 2px solid #000;
+        right: 35px;
+        top: 30px;
+    }
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+
+
+
+

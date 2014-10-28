@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP首页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/index.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/index.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--首页内容 begin-->
+    <!--首页标题 begin-->
+    <div class="index_content">
+        <ul class="index_title">
+            <li class="currect"><a href="index.html">首页</a></li>
+            <li><a href="superman.html">牛人</a></li>
+            <li><a href="market.html">行情</a></li>
+            <li><a href="competition.html">比赛</a></li>
+        </ul>
+    </div>
+    <!--首页标题 end-->
+    <div>
+        <ul class="person_link">
+            <li><a href="mycenter.html"><img src="../images/figure001.jpg" alt="小图标001"/>
+
+                <p>个人中心</p></a></li>
+            <li><a href="checkin.html"><img src="../images/figure002.jpg" alt="小图标002"/>
+
+                <p>签到领奖</p></a></li>
+            <li><a href="javascript:void(0)"><img src="../images/figure003.jpg" alt="小图标003"/>
+
+                <p>消息中心</p></a></li>
+        </ul>
+        <ul class="tab_block">
+            <li><a href="selfselectstock.html"><img src="../images/figure_001.jpg" alt="自选股图标"/><span>自选股</span></a></li>
+            <li><a href="newsinformation.html"><img src="../images/figure_002.jpg" alt="新闻资讯图标"/><span>新闻资讯</span></a></li>
+            <li class="unable"><a href="javascript:void(0)"><img src="../images/figure_003.jpg" alt="理财超市图标"/><span>理财超市</span></a></li>
+            <li class="unable"><a href="javascript:void(0)"><img src="../images/figure_004.jpg" alt="理财问答图标"/><span>理财问答</span></a></li>
+            <li><a href="simulate.html"><img src="../images/figure_005.jpg" alt="模拟炒股图标"/><span>模拟炒股</span></a></li>
+            <li class="unable"><a href="javascript:void(0)"><img src="../images/figure_006.jpg" alt="实盘交易图标"/><span>实盘交易</span></a></li>
+            <li><a href="school.html"><img src="../images/figure_007.jpg" alt="股市学堂图标"/><span>股市学堂</span></a></li>
+            <li><a href="dictionary.html"><img src="../images/figure_008.jpg" alt="证劵词典图标"/><span>证劵词典</span></a></li>
+        </ul>
+        <div id="indexinfo" style="width: 100%;float: left;display:none;">
+            <ul class="index_sse">
+                <li>
+                    <p class="sse_01">上证指数</p>
+
+                    <p class="sse_02"><img src="../images/figure004.jpg" alt="下箭头"/><span>2015.93</span></p>
+
+                    <p class="sse_03"><span class="sse_03_01">-7.42</span><span class="sse_03_02">-0.37%</span></p>
+                </li>
+                <li class="leftrightborder">
+                    <p class="sse_01">上证指数</p>
+
+                    <p class="sse_02"><img src="../images/figure005.jpg" alt="上剪头"/><span>2015.93</span></p>
+
+                    <p class="sse_03"><span class="sse_03_01">-7.42</span><span class="sse_03_02">-0.37%</span></p>
+                </li>
+                <li>
+                    <p class="sse_01">创业版</p>
+
+                    <p class="sse_02"><img src="../images/figure005.jpg" alt="上箭头"/><span>2015.93</span></p>
+
+                    <p class="sse_03"><span class="sse_03_01">-7.42</span><span class="sse_03_02">-0.37%</span></p>
+                </li>
+            </ul>
+            <ul class="stock_list_title">
+                <li>股票名称</li>
+                <li>最新价</li>
+                <li>涨跌幅</li>
+            </ul>
+            <ul class="stock_list">
+                <li>
+                    <p class="stock_list_style01">
+
+                        <span>维维股份</span>
+
+                        <em>600300</em>
+                    </p>
+
+                    <p class="stock_list_style02">4.86</p>
+
+                    <p class="stock_list_style03">44.86%</p>
+                </li>
+                <li><p class="stock_list_style01">
+
+                    <span>维维股份</span>
+
+                    <em>600300</em>
+                </p>
+
+                    <p class="stock_list_style02">4.86</p>
+
+                    <p class="stock_list_style03">44.86%</p></li>
+                <li><p class="stock_list_style01">
+
+                    <span>维维股份</span>
+
+                    <em>600300</em>
+                </p>
+
+                    <p class="stock_list_style02">4.86</p>
+
+                    <p class="stock_list_style03">44.86%</p></li>
+                <li><p class="stock_list_style01">
+
+                    <span>维维股份</span>
+
+                    <em>600300</em>
+                </p>
+
+                    <p class="stock_list_style02">4.86</p>
+
+                    <p class="stock_list_style03">44.86%</p></li>
+                <li><p class="stock_list_style01">
+
+                    <span>维维股份</span>
+
+                    <em>600300</em>
+                </p>
+
+                    <p class="stock_list_style02">4.86</p>
+
+                    <p class="stock_list_style03">44.86%</p></li>
+            </ul>
+
+        </div>
+        <div id="logininenterimg">
+            <img src="../images/niuniu.gif" alt="注册入口"/>
+
+            <p>注册即送<span>10万元</span>模拟资金</p>
+        </div>
+
+    </div>
+
+    <!--首页内容 end-->
+</div>
+</body>
+</html>

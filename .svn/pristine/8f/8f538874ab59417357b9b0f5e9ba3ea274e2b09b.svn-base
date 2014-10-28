@@ -1,0 +1,903 @@
+.page {
+    float: left;
+    width: 100%;
+    display: none;
+    background-color: #f7f7f7;
+}
+
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    .content {
+        width: 100%;
+    }
+
+    .content p {
+        width: 100%;
+        text-align: center;
+        margin: 50px 0px 0px 0px;
+        color: #5a5a5a;
+    }
+
+    .content div {
+        width: 100%;
+        margin: 30px 0px 0px 0px;
+    }
+
+    .content div a {
+        display: block;
+        width: 70%;
+        height: 40px;
+        border: 1px solid #e6e6e6;
+        background-color: #FFFFFF;
+        margin: 0 auto;
+        color: #d62829;
+        position: relative;
+    }
+
+    .content div a img {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 20px;
+        top: 5px;
+    }
+
+    .content div a span {
+        line-height: 40px;
+    }
+
+    .content_1 {
+        width: 100%;
+        float: left;
+        border-top: 2px solid #086dae;
+    }
+
+    .name_1 {
+        width: 100%;
+        float: left;
+        margin-top: 25px;
+    }
+
+    .name_1 div:nth-child(1) {
+        width: 75%;
+        float: left;
+        margin-left: 12%;
+        height: 32px;
+        border-bottom: 2px solid #086dae;
+        background: url("../images/figure_009.jpg") no-repeat;
+        background-size: 30px 30px;
+        position: relative;
+    }
+
+    .name_1 div:nth-child(1) input {
+        display: block;
+        float: left;
+        margin-left: 30px;
+        border: none;
+        height: 30px;
+        background-color: #f7f7f7;
+        font-size: 16px;
+
+    }
+
+    .name_1 div input::-webkit-input-placeholder {
+        color: #999999;
+    }
+
+    .name_1 div:nth-child(1) div.sanjiaobtn {
+        float: right;
+        width: 0;
+        height: 0;
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+        border-top: 12px solid #086dae;
+        margin-top: 15px;
+        margin-right: 5px;
+        display: none;
+    }
+    .loginedname {
+        position: absolute;
+        right: 25px;
+        top: 0px;
+        z-index: 20;
+        box-shadow: 2px 2px 2px #086dae;
+        background-color: #f7f7f7;
+        padding-top: 5px;
+        display: none;
+    }
+    .loginedname p {
+        margin:0 5px;
+        border-bottom: 1px solid #086dae;
+        line-height: 30px;
+        font-size: 16px;
+    }
+    .loginedname p a{
+        display: block;
+        height: 100%;
+        border-bottom: 1px solid #086dae;
+    }
+    .loginedname p:last-child {
+        border-bottom: none;
+    }
+
+    .pass_1 {
+        width: 100%;
+        float: left;
+        margin-top: 25px;
+    }
+
+    .pass_1 div:nth-child(1) {
+        width: 75%;
+        float: left;
+        margin-left: 12%;
+        height: 32px;
+        border-bottom: 2px solid #086dae;
+        background: url("../images/figure_010.jpg") no-repeat;
+        background-size: 30px 30px;
+    }
+
+    .pass_1 div:nth-child(1) input {
+        display: block;
+        float: left;
+        margin-left: 30px;
+        border: none;
+        height: 30px;
+        background-color: #f7f7f7;
+        font-size: 16px;
+
+    }
+
+    .login_01 {
+        float: left;
+        width: 100%;
+    }
+
+    .login_01 p:nth-child(1) {
+        float: left;
+        width: 50%;
+        margin-top: 10px;
+    }
+
+    .login_01 p:nth-child(1) a {
+        display: block;
+        float: left;
+        text-indent: 20px;
+        margin-left: 30px;
+        height: 30px;
+        line-height: 30px;
+        background: url("../images/figure007.jpg") no-repeat;
+        background-size: 20px 20px;
+        background-position: 0 5px;
+        color: #d62829;
+    }
+
+    .login_01 p:nth-child(2) {
+        float: left;
+        width: 50%;
+        margin-top: 10px;
+    }
+
+    .login_01 p:nth-child(2) a {
+        display: block;
+        float: left;
+        text-indent: 20px;
+        margin-left: 30px;
+        height: 30px;
+        line-height: 30px;
+        background: url("../images/figure008.jpg") no-repeat;
+        background-size: 20px 20px;
+        background-position: 0 5px;
+        color: #086dae;
+    }
+
+    .loginbtn_01 {
+        width: 100%;
+        float: left;
+        margin-top: 35px;
+    }
+
+    .loginbtn_01 a {
+        display: block;
+        width: 75%;
+        float: left;
+        margin-left: 12%;
+        margin-top: 35px;
+        background-color: #086dae;
+        height: 40px;
+        font-size: 20px;
+        line-height: 40px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    .content_2 {
+        width: 100%;
+        float: left;
+        border-top: 2px solid #086dae;
+    }
+
+    .tap_01 {
+        width: 100%;
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .tap_01 div {
+        float: left;
+        width: 49%;
+        border-bottom: 3px solid #f7f7f7;
+        background-color: #ffffff;
+    }
+
+    .tap_01 div.tap_tt_currect {
+        color: #086dae;
+        border-bottom: 3px solid #0b6faf;
+    }
+
+    .tap_01 div:nth-child(1) {
+        border-right: 1px solid #dbdbdb;
+    }
+
+    .phonenum_01 {
+        width: 100%;
+        float: left;
+        margin-top: 30px;
+    }
+
+    .phonenum_01 div {
+        float: left;
+        width: 80%;
+        margin-left: 10%;
+        border-bottom: 2px solid #086dae;
+    }
+
+    .phonenum_01 div:nth-child(1) input {
+        float: left;
+        width: 60%;
+        border: none;
+        background-color: #f7f7f7;
+        height: 25px;
+        font-size: 16px;
+    }
+
+    .phonenum_01 div:nth-child(1) a {
+        display: block;
+        float: left;
+        width: 40%;
+        border: none;
+        background-color: #086dae;
+        color: #ffffff;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .phonenum_01 div:nth-child(2) {
+        float: left;
+        width: 80%;
+        margin-top: 25px;
+        border: none;
+        background-color: #f7f7f7;
+        border-bottom: 2px solid #086dae;
+    }
+
+    .phonenum_01 div:nth-child(2) input {
+        font-size: 16px;
+        float: left;
+        width: 100%;
+        border: none;
+        background-color: #f7f7f7;
+        height: 25px;
+    }
+
+    .next_01 {
+        float: left;
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    .next_01 a {
+        display: block;
+        width: 80%;
+        float: left;
+        margin-left: 10%;
+        height: 40px;
+        line-height: 40px;
+        color: #ffffff;
+        background-color: #086dae;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .next_01 p {
+        width: 80%;
+        float: left;
+        font-size: 12px;
+        text-align: left;
+        margin-left: 10%;
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+    }
+
+    .content_3 {
+        width: 100%;
+        float: left;
+
+    }
+
+    #error_ms {
+        position: fixed;
+        left: 25%;
+        top: 70%;
+        color: #ffffff;
+        border: 4px solid #086dae;
+        width: 50%;
+        border-radius:8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        text-align: center;
+        background-color: #086dae;
+        font-size: 16px;
+        line-height: 20px;
+        display: none;
+        z-index: 20;
+    }
+
+    #error_ms p {
+        padding: 0 5px;
+        word-wrap: break-word;
+        word-break: normal;
+    }
+    .content_3 section {
+        width: 100%;
+        float: left;
+        border-top: 2px solid #086dae;
+    }
+
+    .content_3 section p {
+        width: 100%;
+        float: left;
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+    }
+
+    .content_3 section div {
+        float: left;
+    }
+
+    .m_wrap_1 {
+        float: left;
+        width: 100%;
+        overflow-y: hidden;
+        position: relative;
+        left: 0;
+        top: 0;
+        background-color: #ffffff;
+    }
+
+    .m_wrap_1 > div {
+        background-color: #f7f7f7;
+        float: left;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow-x: hidden;
+    }
+
+    .pass_2 {
+        width: 80%;
+        margin-left: 10%;
+        border-bottom: 1px solid #086dae;
+        margin-top: 10px;
+        height: 35px;
+    }
+
+    .pass_2 span {
+        display: block;
+        float: left;
+        color: #086dae;
+        line-height: 40px;
+        font-size: 16px;
+    }
+
+    .pass_2 input {
+        display: block;
+        float: left;
+        height: 30px;
+        line-height: 38px;
+        border: none;
+        background-color: #f7f7f7;
+        width: 65%;
+        font-size: 16px;
+    }
+
+    .ok_01 {
+        width: 80%;
+        height: 35px;
+        margin-left: 10%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .ok_01 input {
+        color: #ffffff;
+        font-size: 20px;
+        line-height: 35px;
+        width: 100%;
+        display: block;
+        float: left;
+        background-color: #086dae;
+    }
+
+    .inputmeihua {
+        -webkit-box-sizing: border-box ;
+        -moz-box-sizing: border-box ;
+        box-sizing: border-box ;
+        height: -webkit-calc(3em + 2px) ;
+        height: calc(3em + 2px) ;
+        border: 1px solid #cccccc ;
+        border-radius: 1.5em ;
+    }
+}
+
+/*宽度在480（包括480）到640之间的样式*/
+@media all and (min-width: 480px) {
+    .content {
+        width: 100%;
+    }
+
+    .content p {
+        width: 100%;
+        text-align: center;
+        margin: 100px 0px 0px 0px;
+        color: #5a5a5a;
+        font-size: 26px;
+    }
+
+    .content div {
+        width: 100%;
+        margin: 50px 0px 0px 0px;
+    }
+
+    .content div a {
+        display: block;
+        width: 70%;
+        height: 70px;
+        border: 2px solid #e6e6e6;
+        background-color: #FFFFFF;
+        margin: 0 auto;
+        color: #d62829;
+        position: relative;
+    }
+
+    .content div a img {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 25px;
+        top: 10px;
+    }
+
+    .content div a span {
+        line-height: 70px;
+        font-size: 26px;
+    }
+
+    .content_1 {
+        width: 100%;
+        float: left;
+        border-top: 2px solid #086dae;
+    }
+
+    .name_1 {
+        width: 100%;
+        float: left;
+        margin-top: 35px;
+    }
+
+    .name_1 div:nth-child(1) {
+        width: 75%;
+        float: left;
+        margin-left: 12%;
+        height: 48px;
+        border-bottom: 2px solid #086dae;
+        background: url("../images/figure_009.jpg") no-repeat;
+        background-size: 45px 45px;
+        position: relative;
+    }
+
+    .name_1 div:nth-child(1) input {
+        display: block;
+        float: left;
+        margin-left: 50px;
+        border: none;
+        height: 45px;
+        background-color: #f7f7f7;
+        font-size: 24px;
+        line-height: 50px;
+
+    }
+
+    .name_1 div input::-webkit-input-placeholder {
+        color: #999999;
+    }
+
+    .name_1 div:nth-child(1) div.sanjiaobtn {
+        float: right;
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 18px solid #086dae;
+        margin-top: 20px;
+        margin-right: 5px;
+        display: none;
+    }
+    .loginedname {
+        position: absolute;
+        right: 35px;
+        top: 0px;
+        z-index: 20;
+        box-shadow: 2px 2px 2px #086dae;
+        background-color: #f7f7f7;
+        padding-top: 5px;
+        display: none;
+    }
+    .loginedname p {
+        border-bottom: 1px solid #086dae;
+        line-height: 40px;
+        font-size: 20px;
+        padding: 5px 15px;
+    }
+    .loginedname p a{
+        display: block;
+        height: 100%;
+        border-bottom: 1px solid #086dae;
+    }
+    .loginedname p:last-child {
+        border-bottom: none;
+    }
+
+    .pass_1 {
+        width: 100%;
+        float: left;
+        margin-top: 35px;
+    }
+
+    .pass_1 div:nth-child(1) {
+        width: 75%;
+        float: left;
+        margin-left: 12%;
+        height: 48px;
+        border-bottom: 2px solid #086dae;
+        background: url("../images/figure_010.jpg") no-repeat;
+        background-size: 45px 45px;
+    }
+
+    .pass_1 div:nth-child(1) input {
+        display: block;
+        float: left;
+        margin-left: 50px;
+        border: none;
+        height: 45px;
+        background-color: #f7f7f7;
+        font-size: 22px;
+        line-height: 50px;
+
+    }
+
+    .login_01 {
+        float: left;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .login_01 p:nth-child(1) {
+        float: left;
+        width: 50%;
+        margin-top: 10px;
+    }
+
+    .login_01 p:nth-child(1) a {
+        display: block;
+        float: left;
+        text-indent: 40px;
+        margin-left: 65px;
+        height: 45px;
+        line-height: 45px;
+        background: url("../images/figure007.jpg") no-repeat;
+        background-size: 35px 35px;
+        background-position: 0 5px;
+        color: #d62829;
+        font-size: 20px;
+    }
+
+    .login_01 p:nth-child(2) {
+        float: left;
+        width: 50%;
+        margin-top: 10px;
+    }
+
+    .login_01 p:nth-child(2) a {
+        display: block;
+        float: left;
+        text-indent:40px;
+        margin-left: 70px;
+        height: 45px;
+        line-height: 45px;
+        background: url("../images/figure008.jpg") no-repeat;
+        background-size: 35px 35px;
+        background-position: 0 5px;
+        color: #086dae;
+        font-size: 20px;
+    }
+
+    .loginbtn_01 {
+        width: 100%;
+        float: left;
+        margin-top: 35px;
+    }
+
+    .loginbtn_01 a {
+        display: block;
+        width: 75%;
+        float: left;
+        margin-left: 12%;
+        margin-top: 35px;
+        background-color: #086dae;
+        height: 60px;
+        font-size: 26px;
+        line-height: 60px;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    .content_2 {
+        width: 100%;
+        float: left;
+        border-top: 2px solid #086dae;
+    }
+
+    .tap_01 {
+        width: 100%;
+        float: left;
+        height: 60px;
+        line-height: 60px;
+        font-size: 26px;
+    }
+
+    .tap_01 div {
+        float: left;
+        width: 49%;
+        border-bottom: 3px solid #f7f7f7;
+        background-color: #ffffff;
+    }
+
+    .tap_01 div.tap_tt_currect {
+        color: #086dae;
+        border-bottom: 3px solid #0b6faf;
+    }
+
+    .tap_01 div:nth-child(1) {
+        border-right: 1px solid #dbdbdb;
+    }
+
+    .phonenum_01 {
+        width: 100%;
+        float: left;
+        margin-top: 45px;
+    }
+
+    .phonenum_01 div {
+        float: left;
+        width: 80%;
+        margin-left: 10%;
+        border-bottom: 2px solid #086dae;
+    }
+
+    .phonenum_01 div:nth-child(1) input {
+        float: left;
+        width: 60%;
+        border: none;
+        background-color: #f7f7f7;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    .phonenum_01 div:nth-child(1) a {
+        display: block;
+        float: left;
+        width: 40%;
+        border: none;
+        background-color: #086dae;
+        color: #ffffff;
+        height: 45px;
+        line-height: 45px;
+        font-size: 22px;
+    }
+
+    .phonenum_01 div:nth-child(2) {
+        float: left;
+        width: 80%;
+        margin-top: 35px;
+        border: none;
+        background-color: #f7f7f7;
+        border-bottom: 2px solid #086dae;
+    }
+
+    .phonenum_01 div:nth-child(2) input {
+        font-size: 22px;
+        float: left;
+        width: 100%;
+        border: none;
+        background-color: #f7f7f7;
+        height: 45px;
+        line-height: 45px;
+    }
+
+    .next_01 {
+        float: left;
+        width: 100%;
+        margin-top: 65px;
+    }
+
+    .next_01 a {
+        display: block;
+        width: 80%;
+        float: left;
+        margin-left: 10%;
+        height: 60px;
+        line-height: 60px;
+        color: #ffffff;
+        background-color: #086dae;
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .next_01 p {
+        width: 80%;
+        float: left;
+        font-size: 18px;
+        text-align: left;
+        margin-left: 10%;
+        margin-bottom: 20px;
+    }
+
+    .content_3 {
+        width: 100%;
+        float: left;
+
+    }
+
+    #error_ms {
+        position: fixed;
+        left: 25%;
+        top: 70%;
+        color: #ffffff;
+        border: 4px solid #086dae;
+        width: 50%;
+        border-radius:8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        text-align: center;
+        background-color: #086dae;
+        font-size: 16px;
+        line-height: 20px;
+        display: none;
+        z-index: 20;
+    }
+
+    #error_ms p {
+        padding: 0 5px;
+        word-wrap: break-word;
+        word-break: normal;
+    }
+    .content_3 section {
+        width: 100%;
+        float: left;
+        border-top: 2px solid #086dae;
+    }
+
+    .content_3 section p {
+        width: 100%;
+        float: left;
+        height: 50px;
+        line-height: 50px;
+        font-size: 26px;
+        margin-top: 25px;
+    }
+
+    .content_3 section div {
+        float: left;
+    }
+
+    .m_wrap_1 {
+        float: left;
+        width: 100%;
+        overflow-y: hidden;
+        position: relative;
+        left: 0;
+        top: 0;
+        background-color: #ffffff;
+    }
+
+    .m_wrap_1 > div {
+        background-color: #f7f7f7;
+        float: left;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow-x: hidden;
+    }
+
+    .pass_2 {
+        width: 80%;
+        margin-left: 10%;
+        border-bottom: 2px solid #086dae;
+        margin-top: 30px;
+        height: 45px;
+    }
+
+    .pass_2 span {
+        display: block;
+        float: left;
+        color: #086dae;
+        line-height: 45px;
+        font-size: 24px;
+    }
+
+    .pass_2 input {
+        display: block;
+        float: left;
+        height: 40px;
+        line-height: 45px;
+        border: none;
+        background-color: #f7f7f7;
+        width: 65%;
+        font-size: 22px;
+    }
+
+    .ok_01 {
+        width: 80%;
+        height: 50px;
+        margin-left: 10%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .ok_01 input {
+        color: #ffffff;
+        font-size: 26px;
+        line-height: 50px;
+        width: 100%;
+        display: block;
+        float: left;
+        background-color: #086dae;
+    }
+
+    .inputmeihua {
+        -webkit-box-sizing: border-box ;
+        -moz-box-sizing: border-box ;
+        box-sizing: border-box ;
+        height: -webkit-calc(3em + 2px) ;
+        height: calc(3em + 2px) ;
+        border: 1px solid #cccccc ;
+        border-radius: 1.5em ;
+    }
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+

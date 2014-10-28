@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP行情页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/market.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/galhttprequest.js"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/market.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs">
+        <p><a href="index.html">首页</a>&gt;<a href="javascript:void (0)">行情</a></p>
+    </div>
+    <!--面包屑 end-->
+    <!--行情首页 begin-->
+    <div class="m_content" id="m_content" style="display: none">
+        <div class="placeholder"><div class="markettitle" id="tip_1">大盘指数<a href="marketindex.html?pageid=exponent"><p></p><p></p><p></p></a></div></div>
+        <ul class="index_sse">
+            <li id="sse">
+                <p class="sse_01"></p>
+
+                <p class="sse_02"><img src=""/><span></span></p>
+
+                <p class="sse_03"><span class="sse_03_01"></span><span class="sse_03_02"></span></p>
+            </li>
+            <li class="leftrightborder" id="sze">
+                <p class="sse_01"></p>
+
+                <p class="sse_02"><img src=""/><span></span></p>
+
+                <p class="sse_03"><span class="sse_03_01"></span><span class="sse_03_02"></span></p>
+            </li>
+            <li id="cye">
+                <p class="sse_01"></p>
+
+                <p class="sse_02"><img src=""/><span></span></p>
+
+                <p class="sse_03"><span class="sse_03_01"></span><span class="sse_03_02"></span></p>
+            </li>
+        </ul>
+        <div class="placeholder"><div class="markettitle" id="tip_2">热门行业<a href="marketindex.html?pageid=industrylist"><p></p><p></p><p></p></a></div></div>
+        <ul class="index_sse">
+            <li id="industry_1">
+                <p class="sse_01">上证指数</p>
+
+                <p class="sse_02"><img src="../images/figure004.jpg"/><span>2015.93</span></p>
+                <p class="sse_04">梅花伞</p>
+
+                <p class="sse_03"><span class="sse_03_01">-7.42</span><span class="sse_03_02">-0.37%</span></p>
+            </li>
+            <li class="leftrightborder" id="industry_2">
+                <p class="sse_01">上证指数</p>
+
+                <p class="sse_02"><img src="../images/figure005.jpg"/><span>2015.93</span></p>
+                <p class="sse_04">梅花伞</p>
+
+                <p class="sse_03"><span class="sse_03_01">-7.42</span><span class="sse_03_02">-0.37%</span></p>
+            </li>
+            <li id="industry_3">
+                <p class="sse_01">创业版</p>
+
+                <p class="sse_02"><img src="../images/figure005.jpg"/><span>2015.93</span></p>
+                <p class="sse_04">梅花伞</p>
+
+                <p class="sse_03"><span class="sse_03_01">-7.42</span><span class="sse_03_02">-0.37%</span></p>
+            </li>
+        </ul>
+        <div class="placeholder"><div class="markettitle" id="tip_3">热门概念<a href="marketindex.html?pageid=notionlist"><p></p><p></p><p></p></a></div></div>
+        <ul class="index_sse">
+            <li id="notion_1">
+                <p class="sse_01">智能制造</p>
+
+                <p class="sse_02"><img src="../images/figure004.jpg"/><span>2015.93</span></p>
+                <p class="sse_04">梅花伞</p>
+
+                <p class="sse_03"><span class="sse_03_01">-7.42</span><span class="sse_03_02">-0.37%</span></p>
+            </li>
+            <li class="leftrightborder" id="notion_2">
+                <p class="sse_01">在线旅游</p>
+
+                <p class="sse_02"><img src="../images/figure005.jpg"/><span>2015.93</span></p>
+                <p class="sse_04">梅花伞</p>
+
+                <p class="sse_03"><span class="sse_03_01">-7.42</span><span class="sse_03_02">-0.37%</span></p>
+            </li>
+            <li id="notion_3">
+                <p class="sse_01">配电网</p>
+
+                <p class="sse_02"><img src="../images/figure005.jpg"/><span>2015.93</span></p>
+                <p class="sse_04">梅花伞</p>
+
+                <p class="sse_03"><span class="sse_03_01">-7.42</span><span class="sse_03_02">-0.37%</span></p>
+            </li>
+        </ul>
+        <div class="placeholder"><div class="markettitle" id="tip_4">涨幅榜<a href="marketindex.html?pageid=upranklist"><p></p><p></p><p></p></a></div></div>
+        <ul class="stock_list_title">
+            <li>股票名称</li>
+            <li>最新价</li>
+            <li>涨幅</li>
+        </ul>
+        <ul class="stock_list" id="zdup"></ul>
+        <div class="placeholder"><div class="markettitle" id="tip_5">跌幅榜<a href="marketindex.html?pageid=downranklist"><p></p><p></p><p></p></a></div></div>
+        <ul class="stock_list_title">
+            <li>股票名称</li>
+            <li>最新价</li>
+            <li>跌幅</li>
+        </ul>
+        <ul class="stock_list" id="zddown"></ul>
+        <div class="placeholder"><div class="markettitle" id="tip_6">换手榜<a href="marketindex.html?pageid=hslist"><p></p><p></p><p></p></a></div></div>
+        <ul class="stock_list_title">
+            <li>股票名称</li>
+            <li>最新价</li>
+            <li>换手率</li>
+        </ul>
+        <ul class="stock_list" id="hs"></ul>
+        <div class="placeholder"><div class="markettitle" id="tip_7">振幅榜<a href="marketindex.html?pageid=zflist"><p></p><p></p><p></p></a></div></div>
+        <ul class="stock_list_title">
+            <li>股票名称</li>
+            <li>最新价</li>
+            <li>振幅</li>
+        </ul>
+        <ul class="stock_list" id="zf"></ul>
+        <div class="placeholder"><div class="markettitle" id="tip_8">新股发行<a href="marketindex.html?pageid=newstock"><p></p><p></p><p></p></a></div></div>
+        <ul class="stock_list_title">
+            <li>股票名称</li>
+            <li>总发行数(万股)</li>
+            <li>申购日期</li>
+        </ul>
+        <ul class="stock_list" id="newstock"></ul>
+    </div>
+    <!--行情首页 end-->
+</div>
+</body>
+</html>

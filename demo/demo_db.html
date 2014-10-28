@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<style>
+		html,
+		body {
+			padding: 0;
+			margin: 0;
+			height: 100%;
+			width: 100%;
+		}
+		button {
+			border-radius: 0;
+			border: 0;
+			color: white;
+			height: 10%;
+			width: 50%;
+			position: absolute;
+			left: 25%;
+			font-size: 1.1em;
+			outline: none;
+		}
+		#syn_code {
+			background-color: #0266C8;
+			top: 15%;
+		}
+		#search {
+			background-color: #F90101;
+			top: 30%;
+		}
+		#syn_ps {
+			background-color: #F2B50F;
+			top: 45%;
+		}
+		#modify_ps {
+			background-color: #00933B;
+			top: 60%;
+		}
+	</style>
+	<script src="../scripts/galhttprequest.js"></script>
+	<script src="../scripts/database.js"></script>
+	<script src="../scripts/jquery-1.7.2.js"></script>
+	<script>
+		function isLogin() {
+			try {
+				if (typeof (window.localStorage) === 'object' && localStorage.getItem("userinfo_currect")) {
+					return true;
+				} else {
+					return false;
+				}
+			} catch (err) {
+				return false;
+			}
+		}
+
+		$(document).ready(function () {
+			$('#syn_code').click(function () {
+				var s = new StockBaseInfoDB();
+				s.synFromNet();
+			});
+			$('#search').click(function () {
+				var s = new StockBaseInfoDB();
+				s.search('F', function (reslut) {
+					alert(reslut.length + '条数据');
+				});
+			});
+			$('#syn_ps').click(function () {
+				if (!isLogin()) {
+					window.location.href = '../html/loginin.html';
+				}
+				var p = new PersonalStockList();
+				p.synFromNet();
+			});
+
+			$('#modify_ps').click(function () {
+				if (!isLogin()) {
+					window.location.href = '../html/loginin.html';
+				}
+				var p = new PersonalStockList();
+				p.addStock('21000681');
+			});
+
+		});
+	</script>
+	<title>Demo 4 DB</title>
+</head>
+
+<body>
+	<button id="syn_code">同步码表数据</button>
+	<button id="search">查询"F"开头数据</button>
+	<button id="syn_ps">同步自选股列表</button>
+	<button id="modify_ps">修改自选股</button>
+</body>
+
+</html>

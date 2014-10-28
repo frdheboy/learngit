@@ -1,0 +1,78 @@
+/**
+ * Created by Administrator on 2014/8/20.
+ */
+$(document).ready(function () {
+    addloading("bigbox");
+    var Request = new GetQueryString();
+    var codeid = Request.codeid;
+    var codename = UrlDecode(Request.codename);
+    var _num = 1;
+    var biaoshifu = true;
+
+    function requhygnlist() {
+        var opts = {
+            code: codeid,
+            start: _num,
+            reqnum: 20,
+            order: -1
+        };
+        var gal = new GalHttpRequest(config_url.hygnlist, opts);
+        gal.requestPacketFromNet({
+            succeed: function (data) {
+                removeloading();
+                $(".crumbs").find("a:last").html(codename);
+                console.log(data);
+                buju_1(data.stockquote);
+                if (_num != 1) {
+                    biaoshifu = true;
+                } else {
+                    $("#title_list").append("<li>股票名称</li><li>最新价</li><li>涨跌幅<img src='../images/figure006.jpg'/></li>");
+                }
+                if (data.stockquote.length < 1) {
+                    biaoshifu = false;
+                }
+                lazyload1(requhygnlist, _num);
+            },
+            error: function (error) {
+                console.log(error.message);//错误信息提示
+            }
+        });
+    }
+
+    requhygnlist();
+
+    function buju_1(data) {
+        var dataper = [];
+        var curprice = [];
+        $.each(data, function (i, n) {
+            curprice[i] = n.curprice.toFixed(2);
+            if (n.dataper >= 0) {
+                dataper[i] = "+" + n.dataper.toFixed(2) + "%";
+                $("#ul_list").append("<li><p><span>" + n.name + "</span><em>" + n.code + "</em></p><p class='red'>" + curprice[i] + "</p><p class='red'>" + dataper[i] + "</p></li>");
+            } else {
+                dataper[i] = n.dataper.toFixed(2) + "%";
+                $("#ul_list").append("<li><p><span>" + n.name + "</span><em>" + n.code + "</em></p><p class='green'>" + curprice[i] + "</p><p class='green'>" + dataper[i] + "</p></li>");
+            }
+        });
+    }
+
+    //lazyload
+    function lazyload1(fn, opt, pro) {
+        $(window).scroll(function () {
+            var ttheight = $("body").height() > $(document).height() ? $("body").height() : $(document).height();
+            var scrollheight;
+            var lazyloadcoe = 0.9;
+            scrollheight = $(document).scrollTop() + $(window).height();
+            if (parseInt(scrollheight) > parseInt(ttheight * lazyloadcoe)) {
+                if (biaoshifu) {
+                    biaoshifu = false;
+                    opt = opt + 20;
+                    _num = opt;
+                    fn(pro);
+                }
+            }
+        });
+    }
+
+
+});

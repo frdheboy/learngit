@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP炒股比赛详细页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/competitiondetail.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/galhttprequest.js"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/competitiondetail.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs">
+        <p><a href="index.html">首页</a>&gt;<a href="competition.html">炒股比赛</a>&gt;<a href="javascript:void(0)"
+                                                                                    class="matchname"></a>
+        </p>
+    </div>
+    <!--面包屑 end-->
+    <!--首页内容 begin-->
+    <!--首页标题 begin-->
+    <div class="comdetail_big" id="comdetail_big">
+        <div class="focusimg">
+            <img src="" alt="比赛焦点图"/>
+
+            <div class="matchDescp"><p>比赛说明:</p>
+
+                <p id="matchDescp"></p></div>
+            <div class="matchTime"><p>比赛时间</p>
+
+                <p id="matchTime"></p></div>
+        </div>
+        <!--首页标题 end-->
+        <div class="competitionlist">
+            <div class="joinbtn">
+                <p>创建人：<span id="creator">哈密猫大剧院</span></p>
+                <a href="javascript:void(0)" id="state">参与比赛</a></div>
+            <div class="tabtitle">
+                <div>
+                    <p class="currect"><a href="javascript:void(0)">总盈利榜</a></p>
+
+                    <p><a href="javascript:void(0)">月盈利榜</a></p>
+
+                    <p><a href="javascript:void(0)">周盈利榜</a></p>
+                </div>
+                <ul class="paihang">
+                    <li>
+                        <p>排名</p>
+
+                        <p>用户名</p>
+
+                        <p>盈利率</p>
+                    </li>
+                    <li>
+                        <p></p>
+
+                        <p></p>
+
+                        <p></p>
+                    </li>
+                    <li>
+                        <p></p>
+
+                        <p></p>
+
+                        <p></p>
+                    </li>
+                    <li>
+                        <p></p>
+
+                        <p></p>
+
+                        <p></p>
+                    </li>
+                    <li>
+                        <p></p>
+
+                        <p></p>
+
+                        <p></p>
+                    </li>
+                    <li>
+                        <p></p>
+
+                        <p></p>
+
+                        <p></p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--首页内容 end-->
+</div>
+</body>
+</html>

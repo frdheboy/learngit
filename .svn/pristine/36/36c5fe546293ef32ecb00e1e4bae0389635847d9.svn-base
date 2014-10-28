@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP搜索框</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <!--<link rel="stylesheet" href="../styles/loginin.css"/>-->
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+</head>
+<body id="hearderdemo">
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">
+        <div class="header_logo">
+            <div></div>
+            <p>优顾</p>
+        </div>
+        <div class="header_input">
+            <input type="text" name="search" id="" maxlength="100" autocomplete="off" placeholder="搜索框">
+
+            <div><a href="javascript:void (0)"><img src="../images/magnifyingglass30.jpg"></a></div>
+        </div>
+    </div>
+    <!--头部共用搜索框 end-->
+</div>
+</body>
+</html>

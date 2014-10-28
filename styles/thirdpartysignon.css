@@ -1,0 +1,59 @@
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+.thirdpartysignon {
+     float: left;
+    width: 100%;
+}
+@media all and (max-width: 480px) {
+    div.headerimg {
+        width: 65px;
+        height: 65px;
+        position: relative;
+        left: 50%;
+        top: 25px;
+        margin-left: -32px;
+        border-radius:26px ;
+        -moz-border-radius: 32px;
+        -webkit-border-radius: 32px;
+        background-image: url("../images/headerimgdemo.jpg");
+        background-repeat:no-repeat ;
+        background-size: 80px 80px;
+        background-clip: padding-box;
+        background-color: #FFFFFF;
+        background-position: 50% 50%;
+        box-shadow: 2px 0px 0px #fff;
+    }
+    .thirdpartysignon_input {
+        position: relative;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+    .thirdpartysignon_input {
+        position: relative;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+}
+
+/*宽度在480（包括480）到640之间的样式*/
+@media all and (min-width: 480px) {
+    section.search {
+        width: 100%;
+        float: left;
+        border-top: 4px solid #086dae;
+    }
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+

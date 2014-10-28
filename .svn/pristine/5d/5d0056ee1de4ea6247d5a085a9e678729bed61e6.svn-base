@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP股市学堂TAB页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/schooltabbg.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/jquery.scrollTo.js"></script>
+    <script src="../scripts/galhttprequest.js"></script>
+   <script src="../scripts/common.js"></script>
+    <script src="../scripts/schooltabgs.js"></script>
+    
+</head>
+<body>
+<div class="main"  style="height:100%;" >
+    <!--头部共用搜索框 begin-->
+
+    <div class="header hr">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs hc">
+        <p><a href="javascript:void (0)">首页</a>&gt;<a href="school.html">股市学堂</a>&gt;<a id="title" href="javascript:void (0)">证券词典</a></p>
+    </div>
+    <!--面包屑 end-->
+   
+    <!--股市学堂TAB页 begin-->
+    <div class="mcon" >
+    	<div class="mcon_l" >
+        	  <div class="mcontent" >
+        			<ul class="newtitl" id="newtitl">
+                        <p class="nw">A</p> 
+                        <li><a href="http://www.baidu.com/"><span class="circle"></span><p>ADL</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>ADR</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>A股</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>安防概念</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>AR指标</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>A字账户</p></a></li>
+                  		<p class="nw">B</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                        <p class="nw">c</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                        <p class="nw">d</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                         <p class="nw">e</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                         <p class="nw" id="f_box">f</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                         <p class="nw">g</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                         <p class="nw">h</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                         <p class="nw">i</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                         <p class="nw">j</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>半强式有效市场</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>保障房概念</p></a></li>
+                         <p class="nw">k</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                         <p class="nw">l</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                         <p class="nw">m</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                         <p class="nw">n</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                         <p class="nw">o</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                         <p class="nw">p</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                         <p class="nw">q</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                         <p class="nw">r</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                         <p class="nw">s</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                         <p class="nw">t</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                         <p class="nw">u</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                         <p class="nw">v</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                         <p class="nw">w</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                         <p class="nw">x</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                         <p class="nw">y</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+                         <p class="nw">z</p> 
+                        <li><a href=""><span class="circle"></span><p>八分之一点规则</p></a></li>
+                        <li><a href=""><span class="circle"></span><p>白手拿鱼</p></a></li>
+       				 </ul>
+			</div>
+        </div>
+      <div class="mcon_r" id="sortkeys">
+        	<ul>
+            	<li id="a_btn">A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+               	<li>E</li>
+                <li>F</li>
+                <li>G</li>
+                <li>H</li>
+                <li>I</li>
+                <li>J</li>
+                <li>K</li>
+                <li>L</li>
+                <li>M</li>
+                <li>N</li>
+                <li>O</li>
+                <li>P</li>
+                <li>Q</li>
+                <li>R</li>
+                <li>S</li>
+                <li>T</li>
+                <li>U</li>
+                <li>V</li>
+                <li>W</li>
+                <li>X</li>
+                <li>Y</li>
+                <li>Z</li>
+            </ul>     
+        </div>
+         <div id="keytoast"></div>
+    </div>
+    <!--股市学堂TAB页 end-->
+</div>
+</body>
+</html>

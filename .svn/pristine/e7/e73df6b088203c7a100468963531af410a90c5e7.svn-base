@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP签到领奖</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <link rel="stylesheet" href="../styles/checkin.css"/>
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/common.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <div class="crumbs">
+        <p><a href="javascript:void (0)">首页</a>&gt;<a href="javascript:void (0)">签到领奖</a></p>
+    </div>
+    <!--面包屑 end-->
+    <!--签到领奖内容 begin-->
+    <div class="gold_big">
+        <div class="gold_total"><i>金币数：<span>654654</span></i>
+
+            <p>金币可以参加游戏，参加有奖炒股比赛，购买部分产品</p></div>
+        <div class="gold_chart">
+            <p>明日签到可获得：<span>20金币</span></p>
+
+            <div>
+                <!--CSS实现倒三角图形，JS调用left百分比是实现第几天-->
+                <em class="briefs"></em>
+                <ul>
+                    <li style="background: #50b0f1">5金币</li>
+                    <li style="background: #a688d1">10金币</li>
+                    <li style="background: #f098c0">20金币</li>
+                    <li style="background: #ffbb42">30金币</li>
+                    <li style="background: #ff814a">50金币</li>
+                </ul>
+                <ol>
+                    <li style="color: #50b0f1">第1天</li>
+                    <li style="color: #a688d1">第2天</li>
+                    <li style="color: #f098c0">第3天</li>
+                    <li style="color: #ffbb42">第4天</li>
+                    <li style="color: #ff814a">第5天</li>
+                </ol>
+            </div>
+        </div>
+        <div class="checkin">
+            <ul>
+                <li>
+                    <section><img src="../images/gold.jpg" alt="金币图"/>
+                        <em>&times;5</em></section>
+                    <p><b>签到</b>
+
+                        <span>连续签到赢金币！签到中断则重置签到次数</span>
+                        <i><a href="javascript:void(0)">今日已领</a></i>
+                </li>
+
+                <li>
+                    <section><img src="../images/gold.jpg" alt="金币图"/>
+                        <em>&times;5</em></section>
+                    <p><b>模拟交易，买或卖</b>
+
+                        <span>在忧顾模拟炒股买入或卖出一笔股票，每天2次领取机会</span>
+                        <i><a href="javascript:void(0)">立即领取</a></i>
+                </li>
+                <li>
+                    <section><img src="../images/gold.jpg" alt="金币图"/>
+                        <em>&times;30</em></section>
+                    <p><b>实盘交易，买或卖</b>
+
+                        <span>在忧顾的实盘交易中买入或卖出一笔股票，每天2次领取机会</span>
+                        <i><a href="javascript:void(0)">今日已领</a></i>
+                </li>
+                <li>
+                    <section><img src="../images/gold.jpg" alt="金币图"/>
+                        <em>&times;10</em></section>
+                    <p><b>分享</b>
+
+                        <span>把行情、主页、比赛等分享到微博微信等第三方平台，每天2次机会</span>
+                        <i><a href="javascript:void(0)">已领取</a></i>
+                </li>
+                <li>
+                    <section><img src="../images/gold.jpg" alt="金币图"/>
+                        <em>&times;10</em></section>
+                    <p><b>注册</b>
+
+                        <span>注册忧顾模拟炒股账号</span>
+                        <i><a href="javascript:void(0)">立即领取</a></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--签到领奖内容 end-->
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+// JavaScript Document
+if(window.localStorage){
+var userinfostr = localStorage.getItem('userinfo_currect')//获取userinfostr的值
+var userinfo = jQuery.parseJSON(userinfostr);//将JSON数据转换为json对像
+var userid = userinfo.userid;
+//console.log(userid);
+}else{
+ throw new Error('没有localStorage值')
+}
+$(document).ready(function() {
+	if(window.isloginin){
+		//成功登录之后显示数据
+		var obj={
+		ak:config_other.ak_new,
+		userid:userid,
+		queryuid:userid,
+		querymid:1
+		};
+
+var requsetmycenter=new GalHttpRequest(config_url.showuseracountinfo, obj);//new构造函数
+	requsetmycenter.requestFromNet({
+		succeed:function(data){
+			$("#p").text(data.fansNum)
+			$("#p1").text(data.followNum)
+			$("#p2").text(data.fansNum)
+			$("#p3").text(data.tradeNum)
+			},
+
+		error:function(data){
+				//console.log(data);
+			}
+		});
+	}
+
+});
+

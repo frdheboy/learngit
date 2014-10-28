@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>模拟炒股WAP牛人具体页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../styles/common.css"/>
+    <!--<link rel="stylesheet" href="../styles/supermandetal.css"/>-->
+    <script src="../scripts/jquery-1.7.2.min.js"></script>
+    <script src="../scripts/galhttprequest.js"></script>
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/superman_report.js"></script>
+    <style>
+        .supermanreport_list {
+            width: 100%;
+            float: left;
+        }
+
+        .supermanreport_list a {
+            display: block;
+            width: 100%;
+            padding: 0 5%;
+            float: left;
+            text-align: left;
+            line-height: 35px;
+            box-sizing: border-box;
+            -moz-box-shadow: -5px -5px 5px #999 inset;
+            -webkit-box-shadow: -5px -5px 5px #999 inset;
+            box-shadow: -5px -5px 5px #999 inset;
+            border-radius: 6px;
+            background-color: #fff;
+            word-break: keep-all;
+            white-space: nowrap;
+        }
+
+        @media all and (min-width: 480px) {
+            .supermanreport_list {
+                width: 100%;
+                float: left;
+            }
+
+            .supermanreport_list a {
+                display: block;
+                width: 100%;
+                padding: 0 5%;
+                float: left;
+                font-size: 20px;
+                text-align: left;
+                line-height: 65px;
+                word-break: keep-all;
+                white-space: nowrap;
+                box-sizing: border-box;
+                -moz-box-shadow: -8px -8px 8px #999 inset;
+                -webkit-box-shadow: -8px -8px 8px #999 inset;
+                box-shadow: -8px -8px 8px #999 inset;
+                border-radius: 14px;
+                background-color: #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <!--头部共用搜索框 begin-->
+    <div class="header">&nbsp;</div>
+    <!--头部共用搜索框 end-->
+    <!--面包屑 begin-->
+    <!--<div class="crumbs">-->
+    <!--<p><a href="index.html">首页</a>&gt;<a href="superman.html">牛人</a>&gt;<a href="javascript:void(0)">周盈利榜</a></p>-->
+    <!--</div>-->
+    <!--面包屑 end-->
+    <!--牛人内容 begin-->
+    <div class="superman_big" id="superman_big">
+    </div>
+    <!--牛人内容 end-->
+</div>
+</body>
+</html>

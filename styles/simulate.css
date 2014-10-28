@@ -1,0 +1,635 @@
+.m_content {
+    float: left;
+    width: 100%;
+    border-top: 2px solid #086dae;
+}
+
+#infoblock {
+    width: 100%;
+    float: left;
+    background-color: #FFFFFF;
+}
+
+.btnarea {
+    width: 100%;
+    float: left;
+}
+
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    #infoblock em {
+        width: 100%;
+        float: left;
+        background-color: #e9eaec;
+        height: 25px;
+        font-size: 14px;
+        line-height: 25px;
+        font-style: normal;
+        text-align: left;
+        text-indent: 10px;
+        color: #2f2e2f;
+    }
+
+    #info_1 {
+        height: 45px;
+        float: left;
+        width: 100%;
+    }
+
+    #info_1 span {
+        height: 35px;
+        float: left;
+        width: 27%;
+        text-align: right;
+        color: #5a5a5a;
+        font-size: 16px;
+        line-height: 55px;
+    }
+
+    #info_1 b {
+        height: 35px;
+        float: left;
+        text-align: left;
+        color: #d62829;
+        font-size: 24px;
+        line-height: 55px;
+        text-indent: 5px;
+    }
+
+    #info_2 {
+        height: 25px;
+        float: left;
+        width: 100%;
+    }
+
+    #info_2 span {
+        height: 40px;
+        float: left;
+        width: 27%;
+        text-align: right;
+        color: #939393;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    #info_2 b {
+        height: 40px;
+        float: left;
+        text-align: left;
+        color: #000;
+        font-size: 16px;
+        line-height: 25px;
+        text-indent: 5px;
+    }
+
+    #info_3 {
+        height: 25px;
+        float: left;
+        width: 100%;
+    }
+
+    #info_4 {
+        height: 25px;
+        float: left;
+        width: 100%;
+    }
+
+    #info_5 {
+        height: 25px;
+        float: left;
+        width: 100%;
+    }
+
+    #info_3 span {
+        height: 25px;
+        float: left;
+        width: 27%;
+        text-align: right;
+        color: #939393;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    #info_3 b {
+        height: 25px;
+        float: left;
+        text-align: left;
+        color: #000;
+        font-size: 16px;
+        line-height: 25px;
+        text-indent: 5px;
+    }
+
+    #info_4 span {
+        height: 25px;
+        float: left;
+        width: 27%;
+        text-align: right;
+        color: #939393;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    #info_4 b {
+        height: 25px;
+        float: left;
+        text-align: left;
+        color: #000;
+        font-size: 16px;
+        line-height: 25px;
+        text-indent: 5px;
+    }
+
+    #info_5 span {
+        height: 25px;
+        float: left;
+        width: 27%;
+        text-align: right;
+        color: #939393;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    #info_5 b {
+        height: 25px;
+        float: left;
+        text-align: left;
+        color: #d62829;
+        font-size: 16px;
+        line-height: 25px;
+        text-indent: 5px;
+    }
+
+    .btnarea div {
+        width: 33%;
+        float: left;
+        height: 50px;
+        background-color: #FFFFFF;
+    }
+
+    .btnarea div a {
+        display: block;
+        margin-left: 15%;
+        margin-top: 10px;
+        width: 70%;
+        height: 24px;
+        background-color: #efefef; /* Can be set to transparent */
+        border: 1px #086dae solid;
+        -webkit-border-radius: 50px;
+        line-height: 27px;
+        font-size: 14px;
+        background-color: #FFFFFF;
+        color: #086dae;
+    }
+
+    .simulateposition {
+        width: 100%;
+        float: left;
+        background-color: #e9eaec;
+        height: 25px;
+        font-size: 14px;
+        line-height: 25px;
+        font-style: normal;
+        text-align: left;
+        text-indent: 10px;
+        color: #2f2e2f;
+    }
+
+    .simulateposition span {
+        display: block;
+        float: right;
+        margin-right: 20px;
+    }
+
+    .suidongtiao {
+        float: left;
+        margin-left: 4%;
+        margin-top: 10px;
+        width: 3%;
+        margin-right: 4%;
+        height: 175px;
+        background-color: #d62829; /* Can be set to transparent */
+        /*border: 1px #086dae solid;*/
+        -webkit-border-radius: 10px;
+        line-height: 27px;
+        font-size: 14px;
+        color: #086dae;
+    }
+
+    .takepositionlist {
+        width: 100%;
+        float: left;
+        position: relative;
+        border-bottom: 2px solid #e9eaec;
+        border-top: 1px solid #e9eaec;
+        padding-bottom: 8px;
+    }
+
+    .takepositionlist div.sanjiao {
+        position: absolute;
+        bottom: 5px;
+        right: 10px;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 15px solid #cbcbcb;
+        border-left: 15px solid transparent;
+    }
+
+    .takepositionlist div.listnum {
+        float: left;
+        margin-top: 8px;
+        width: 89%;
+    }
+
+    .takepositionlist div.listnum p.listtitle {
+        text-align: left;
+        font-size: 16px;
+        line-height: 30px;
+        color: #000000;
+    }
+
+    .takepositionlist div.listnum p.listtitle span {
+        color: #000000;
+    }
+
+    .takepositionlist div.listnum p.listtitle em {
+        font-style: normal;
+        font-size: 14px;
+        color: #939393;
+    }
+
+    .takepositionlist div.listnum p {
+        text-align: left;
+        font-size: 14px;
+        line-height: 24px;
+
+    }
+
+    .takepositionlist div.listnum p b {
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    .takepositionlist div.listnum p span {
+        width: 70px;
+        display: inline-block;
+        color: #939393;
+    }
+
+    .takepositionlist div.listnum p b i {
+        font-style: normal;
+    }
+
+    .listtitle em {
+        display: block;
+        float: right;
+        margin-right: 20px;
+    }
+
+    .listbtnarea {
+        width: 100%;
+        float: left;
+    }
+
+    .listbtnarea div {
+        width: 24%;
+        float: left;
+        height: 30px;
+    }
+
+    .listbtnarea div a {
+        display: block;
+        margin-top: 5px;
+        width: 85%;
+        height: 20px;
+        background-color: #efefef; /* Can be set to transparent */
+        border: 1px #086dae solid;
+        -webkit-border-radius: 50px;
+        line-height: 20px;
+        font-size: 12px;
+        background-color: #FFFFFF;
+        color: #086dae;
+    }
+
+}
+
+/*宽度在480（包括480）到640之间的样式*/
+@media all and (min-width: 480px) {
+    .m_content {
+        border-top: 4px solid #086dae;
+    }
+
+    #infoblock em {
+        width: 100%;
+        float: left;
+        background-color: #e9eaec;
+        height: 40px;
+        font-size: 22px;
+        line-height: 40px;
+        font-style: normal;
+        text-align: left;
+        text-indent: 20px;
+        color: #2f2e2f;
+    }
+
+    #info_1 {
+        height: 55px;
+        float: left;
+        width: 100%;
+    }
+
+    #info_1 span {
+        height: 55px;
+        float: left;
+        width: 27%;
+        text-align: right;
+        color: #5a5a5a;
+        font-size: 22px;
+        line-height: 65px;
+    }
+
+    #info_1 b {
+        height: 55px;
+        float: left;
+        text-align: left;
+        color: #d62829;
+        font-size: 38px;
+        line-height: 55px;
+        text-indent: 5px;
+    }
+
+    #info_2 {
+        height: 35px;
+        float: left;
+        width: 100%;
+    }
+
+    #info_2 span {
+        height: 35px;
+        float: left;
+        width: 27%;
+        text-align: right;
+        color: #939393;
+        font-size: 22px;
+        line-height: 35px;
+    }
+
+    #info_2 b {
+        height: 35px;
+        float: left;
+        text-align: left;
+        color: #000;
+        font-size: 26px;
+        line-height: 35px;
+        text-indent: 5px;
+    }
+
+    #info_3 {
+        height: 35px;
+        float: left;
+        width: 100%;
+    }
+
+    #info_4 {
+        height: 35px;
+        float: left;
+        width: 100%;
+    }
+
+    #info_5 {
+        height: 35px;
+        float: left;
+        width: 100%;
+    }
+
+    #info_3 span {
+        height: 35px;
+        float: left;
+        width: 27%;
+        text-align: right;
+        color: #939393;
+        font-size: 22px;
+        line-height: 35px;
+    }
+
+    #info_3 b {
+        height: 35px;
+        float: left;
+        text-align: left;
+        color: #000;
+        font-size: 26px;
+        line-height: 35px;
+        text-indent: 5px;
+    }
+
+    #info_4 span {
+        height: 35px;
+        float: left;
+        width: 27%;
+        text-align: right;
+        color: #939393;
+        font-size: 22px;
+        line-height: 35px;
+    }
+
+    #info_4 b {
+        height: 35px;
+        float: left;
+        text-align: left;
+        color: #000;
+        font-size: 26px;
+        line-height: 35px;
+        text-indent: 5px;
+    }
+
+    #info_5 span {
+        height: 35px;
+        float: left;
+        width: 27%;
+        text-align: right;
+        color: #939393;
+        font-size: 22px;
+        line-height: 35px;
+    }
+
+    #info_5 b {
+        height: 35px;
+        float: left;
+        text-align: left;
+        color: #d62829;
+        font-size: 26px;
+        line-height: 35px;
+        text-indent: 5px;
+    }
+
+    .btnarea div {
+        width: 33%;
+        float: left;
+        height: 70px;
+        background-color: #FFFFFF;
+    }
+
+    .btnarea div a {
+        display: block;
+        margin-left: 15%;
+        margin-top: 15px;
+        width: 70%;
+        height: 32px;
+        background-color: #efefef; /* Can be set to transparent */
+        border: 2px #086dae solid;
+        -webkit-border-radius: 50px;
+        line-height: 32px;
+        font-size: 22px;
+        background-color: #FFFFFF;
+        color: #086dae;
+    }
+
+    .simulateposition {
+        width: 100%;
+        float: left;
+        background-color: #e9eaec;
+        height: 35px;
+        font-size: 22px;
+        line-height: 35px;
+        font-style: normal;
+        text-align: left;
+        text-indent: 20px;
+        color: #2f2e2f;
+    }
+
+    .simulateposition span {
+        display: block;
+        float: right;
+        margin-right: 20px;
+    }
+
+    .suidongtiao {
+        float: left;
+        margin-left: 4%;
+        margin-top: 15px;
+        width: 3%;
+        margin-right: 4%;
+        height: 235px;
+        background-color: #d62829; /* Can be set to transparent */
+        /*border: 1px #086dae solid;*/
+        -webkit-border-radius: 10px;
+        line-height: 27px;
+        font-size: 14px;
+        color: #086dae;
+    }
+
+    .takepositionlist {
+        width: 100%;
+        float: left;
+        position: relative;
+        border-bottom: 2px solid #e9eaec;
+        border-top: 1px solid #e9eaec;
+        padding-bottom: 8px;
+    }
+
+    .takepositionlist div.sanjiao {
+        position: absolute;
+        bottom: 5px;
+        right: 20px;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 25px solid #cbcbcb;
+        border-left: 25px solid transparent;
+    }
+
+    .takepositionlist div.listnum {
+        float: left;
+        margin-top: 12px;
+        width: 89%;
+    }
+
+    .takepositionlist div.listnum p.listtitle {
+        text-align: left;
+        font-size: 26px;
+        line-height: 40px;
+        color: #000000;
+    }
+
+    .takepositionlist div.listnum p.listtitle span {
+        color: #000000;
+    }
+
+    .takepositionlist div.listnum p.listtitle em {
+        font-style: normal;
+        font-size: 22px;
+        color: #939393;
+    }
+
+    .takepositionlist div.listnum p {
+        text-align: left;
+        font-size: 22px;
+        line-height: 30px;
+
+    }
+
+    .takepositionlist div.listnum p b {
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    .takepositionlist div.listnum p span {
+        width: 100px;
+        display: inline-block;
+        color: #939393;
+    }
+
+    .takepositionlist div.listnum p b i {
+        font-style: normal;
+    }
+
+    .listtitle em {
+        display: block;
+        float: right;
+        margin-right: 20px;
+    }
+
+    .listbtnarea {
+        width: 100%;
+        float: left;
+    }
+
+    .listbtnarea div {
+        width: 24%;
+        float: left;
+        height: 50px;
+    }
+
+    .listbtnarea div a {
+        display: block;
+        margin-top: 10px;
+        width: 85%;
+        height: 30px;
+        background-color: #efefef; /* Can be set to transparent */
+        border: 2px #086dae solid;
+        -webkit-border-radius: 50px;
+        line-height: 30px;
+        font-size: 20px;
+        background-color: #FFFFFF;
+        color: #086dae;
+    }
+
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+
+
+
+

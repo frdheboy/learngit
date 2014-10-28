@@ -1,0 +1,69 @@
+div.detail_left {
+	display: table;
+	position: absolute;
+	top: 25px;
+	left: 0;
+	border: 1px solid #7D8A92;
+	border-radius: 6px;
+	background: #E8F5FB;
+	padding: 6px;
+}
+div.detail_right {
+	display: table;
+	position: absolute;
+	top: 25px;
+	right: 0;
+	border: 1px solid #7D8A92;
+	border-radius: 6px;
+	background: #E8F5FB;
+	padding: 6px;
+}
+div.keyrow {
+	display: table-cell;
+}
+div.valuerow {
+	display: table-cell;
+	text-align: right;
+}
+span.up {
+	color: red;
+	padding-top: 4px;
+}
+span.normal {
+	color: black;
+	padding-top: 4px;
+}
+span.down {
+	color: green;
+	padding-top: 4px;
+}
+div.fivetrade {
+	display: table;
+	width: 100%;
+	height: 300px;
+}
+div.tradeinfo {
+	display: table-row;
+}
+.tradeinfo div {
+	height: 10%;
+	vertical-align: middle;
+}
+div.mark {
+	display: table-cell;
+}
+div.price {
+	display: table-cell;
+	color: black;
+}
+div.priceup {
+	display: table-cell;
+	color: red;
+}
+div.pricedown {
+	display: table-cell;
+	color: green;
+}
+div.amount {
+	display: table-cell;
+}

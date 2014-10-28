@@ -1,0 +1,404 @@
+var dbmanager = {
+	name: "jhss",
+	version: 2,
+	displayName: 'jhss',
+	maxSize: 3 * 1024 * 1024
+};
+
+function initDB() {
+	var myDB = null;
+	try {
+		if (!window.openDatabase) {
+			// 当前浏览器没有数据库支持
+			alert('db not supported');
+		} else {
+			myDB = openDatabase(dbmanager.name, dbmanager.version, dbmanager.displayName, dbmanager.maxSize);
+		}
+	} catch (e) {
+		// 这里开始异常处理 .
+		if (e == INVALID_STATE_ERR) {
+			// 数据库版本异常 .
+			alert("Invalid database version.");
+		} else {
+			alert("Unknown error " + e + ".");
+		}
+	}
+	// 返回创建好的数据库实例
+	return myDB;
+}
+
+/**
+ * 股票代码码表数据
+ */
+function StockBaseInfoDB() {
+	this.db = initDB();
+	this.create();
+}
+
+StockBaseInfoDB.prototype.create = function () {
+	var createsql = 'CREATE TABLE IF NOT EXISTS {tablename} ({code} TEXT UNIQUE,{stockcode} TEXT,{name} TEXT,{pyjc} TEXT,{firstType} TEXT,{secondType} TEXT,{modifyTime} LONG);',
+		params = {
+			tablename: 'stock_table',
+			code: 'code',
+			stockcode: 'stockcode',
+			name: 'name',
+			pyjc: 'pyjc',
+			firstType: 'firstType',
+			secondType: 'secondType',
+			modifyTime: 'modifyTime'
+		};
+	this.params = params;
+	this.db.transaction(
+		function (transaction) {
+			transaction.executeSql(formatString(createsql, params), [], function (result) {}, function (tx, error) {});
+		}
+	);
+}
+
+StockBaseInfoDB.prototype.synFromNet = function (sid, time) {
+	var opts = {
+			ak: config_other.ak_new,
+			sid: sid || 0,
+			time: time || 0,
+			type: "01,02,03,05"
+		},
+		gal = new GalHttpRequest(config_url.stocklist, opts),
+		self = this;
+	gal.requestFromNet({
+		succeed: function (data) {
+			self.add(data.result);
+			console.log('syn from network success');
+		},
+		error: function (error) {
+			console.log(error); //错误信息提示
+		}
+	});
+}
+
+
+StockBaseInfoDB.prototype.add = function (data) {
+	var arr = [],
+		i = 0,
+		datas = [];
+	if (data instanceof Array) {
+		arr = data;
+	} else if (data instanceof Object) {
+		arr.push(data);
+	} else {
+		console.error('错误股票基本信息');
+		return;
+	}
+	for (; i < arr.length; i++) {
+		arr[i].stockcode = arr[i].code.substr(2);
+	}
+	this.addAll(arr);
+}
+
+StockBaseInfoDB.prototype.addAll = function (datas) {
+	if (!datas) {
+		return;
+	}
+	var insertsaql = formatString("insert or replace into {tablename} values(?, ?, ?, ?, ?, ?, ?);", {
+			tablename: this.params.tablename
+		}),
+		self = this,
+		i = 0;
+	console.log(insertsaql);
+	this.db.transaction(function (transaction) {
+		for (; i < datas.length; i++) {
+			var data = datas[i];
+			transaction.executeSql(insertsaql, [data.code, data.stockcode, data.name, data.pyjc, data.firstType, data.secondType, data.modifyDate],
+				function (tx, rs) {}, function (tx, error) {});
+		}
+	});
+}
+
+
+StockBaseInfoDB.prototype.search = function (keyword, callback, limit) {
+	limit = limit || 20;
+	var sqltemp = formatString("SELECT * FROM {tablename} WHERE {stockcode} like '{pattern}' or {pyjc} like '{pattern}' or {name} like '{pattern}' order by {pyjc} limit {limit}", this.params);
+	this.db.transaction(function (transaction) {
+		transaction.executeSql(formatString(sqltemp, {
+				limit: limit,
+				pattern: keyword + '%'
+			}), [],
+			function (tx, rs) {
+				var i = 0,
+					result = [];
+				for (; i < rs.rows.length; i++) {
+					result.push(rs.rows.item(i));
+				}
+				if (callback) {
+					callback(result);
+				}
+			}, function (tx, error) {});
+	});
+}
+/**
+ * 自选股数据操作
+ */
+function PersonalStockList() {
+	this.stockList = [];
+	var userinfostr = localStorage.getItem('userinfo_currect'),
+		userinfo = jQuery.parseJSON(userinfostr);
+	if (!userinfo || !userinfo.userid) {
+		this.userid = '';
+	} else {
+		this.userid = userinfo.userid;
+	}
+	this.db = initDB();
+	this.create();
+	this.queryPersonalStock();
+	var self = this,
+		currentTime = new Date().getTime(),
+		lastTime = localStorage.getItem('psutime') ? localStorage.getItem('psutime') : 0;
+	if (currentTime - lastTime > 24 * 60 * 60 * 1000) {
+		self.synFromNet(function () {
+			localStorage.setItem('psutime', currentTime);
+			self.queryPersonalStock();
+		})
+	}
+}
+
+/**
+ * 创建数据库
+ * @param {Object} db 数据库
+ */
+PersonalStockList.prototype.create = function (db) {
+	var createsql = 'CREATE TABLE IF NOT EXISTS {tablename} ({userid} TEXT UNIQUE,{portfolio} TEXT,{ver} TEXT);',
+		params = {
+			tablename: 'personalstock',
+			userid: 'userid',
+			portfolio: 'portfolio',
+			ver: 'ver'
+		};
+	this.params = params;
+	this.db.transaction(
+		function (transaction) {
+			transaction.executeSql(formatString(createsql, params), [], function (result) {}, function (tx, error) {});
+		}
+	);
+}
+
+/**
+ * 从远程端同步数据到本地数据库
+ * @param {Object} callback 同步完成回调函数
+ */
+PersonalStockList.prototype.synFromNet = function (callback) {
+	var self = this;
+	this.queryVersion(function (ver) {
+		var g = new GalHttpRequest('http://220.181.47.36/jhss/portfolio/query/{userid}?v={version}', {
+			userid: self.userid,
+			version: ver
+		});
+		g.requestFromNet({
+			succeed: function (data) {
+				if (!data.ver && !data.portfolio) {
+					return;
+				}
+				var info = {
+					portfolio: data.portfolio,
+					ver: data.ver,
+					userid: self.userid
+				};
+				self.additem(info);
+			},
+			error: function (error) {
+				console.log(error);
+			}
+		});
+	})
+}
+
+PersonalStockList.prototype.additem = function (param) {
+	var sql = formatString("insert or replace into " + this.params.tablename + " values ('{userid}', '{portfolio}', '{ver}')", param);
+	this.db.transaction(function (transaction) {
+		transaction.executeSql(sql, [],
+			function (tx, rs) {}, function (tx, error) {});
+	});
+}
+
+/**
+ * 增加自选股到本地数据并同步到网络
+ * @param {String} stockcode 股票代码
+ */
+PersonalStockList.prototype.addStock = function (stockcode) {
+	if (!this.userid) {
+		return;
+	}
+	var self = this;
+	this.queryInfo(function (info) {
+		var stockcodes = [];
+		if (info && info.portfolio) {
+			var tempstockcodes = info.portfolio.split(',');
+			for (var i = 0; i < tempstockcodes.length; i++) {
+				if (tempstockcodes[i]) {
+					stockcodes.push(tempstockcodes[i]);
+				}
+			}
+		}
+		if (stockcodes.indexOf(stockcode) < 0) {
+			var version = (info && info.ver ? info.ver : 0);
+			stockcodes.push(stockcode);
+			var info = {
+				portfolio: stockcodes.join(),
+				ver: version,
+				userid: self.userid
+			};
+			self.additem(info);
+			self.stockList = stockcodes;
+			self.synToNet(stockcodes.join(','), version);
+		}
+	});
+}
+
+/**
+ * 从本地移除自选股并同步到网络
+ * @param {String} stockcode 股票代码
+ * @param {Object} callback  删除完成回调
+ */
+PersonalStockList.prototype.removeStock = function (stockcode, callback) {
+	if (!this.userid) {
+		return;
+	}
+	var self = this;
+	this.queryInfo(function (info) {
+		var stockcodes = [];
+		if (info && info.portfolio) {
+			tempstockcodes = info.portfolio.split(',');
+		}
+		if (tempstockcodes.indexOf(stockcode) > 0) {
+			var i,
+				tempstockcode,
+				version = (info && info.ver ? info.ver : 0);
+			for (i = 0; i < tempstockcodes.length; i++) {
+				tempstockcode = tempstockcodes[i];
+				if (tempstockcode !== stockcode) {
+					stockcodes.push(tempstockcode);
+				}
+			}
+			var info = {
+				portfolio: stockcodes.join(),
+				ver: version,
+				userid: self.userid
+			};
+			slef.additem(info);
+			self.stockList = stockcodes;
+			self.synToNet(stockcodes.join(','), version);
+		}
+	});
+}
+
+/**
+ * 同步本地自选股列表到云端
+ * @param {String} portfolio 自选股列表
+ * @param {Number} ver       自选股版本号
+ */
+PersonalStockList.prototype.synToNet = function (portfolio, ver) {
+	var self = this;
+	var user_id;
+	var session_id;
+	try {
+		if (typeof (window.localStorage) === 'object' && localStorage.getItem("userinfo_currect")) {
+			user_id = JSON.parse(localStorage.getItem("userinfo_currect")).userid;
+			session_id = JSON.parse(localStorage.getItem("userinfo_currect")).sessionid;
+		} else {
+			user_id = "-1";
+			session_id = "0110001";
+		}
+	} catch (err) {}
+
+	var g = new GalHttpRequest('http://220.181.47.36/jhss/portfolio/modify'),
+		data = {
+			portfolio: portfolio,
+			ver: ver,
+			userid: self.userid,
+			isForce: '0'
+		};
+	g.postDataToNet(data, {
+		succeed: function (data) {
+			self.updateVersion(data.ver);
+		},
+		error: function (err) {
+			console.log(err);
+		}
+	});
+}
+
+/**
+ * 查询个人自选股信息学
+ * @param {Object} callback 查询完毕回调
+ */
+PersonalStockList.prototype.queryInfo = function (callback) {
+	//	this.userid
+	var self = this;
+	var sql = formatString("select * from {tablename} where {userid} = '{val_userid}'", {
+		tablename: self.params.tablename,
+		userid: self.params.userid,
+		val_userid: self.userid
+	});
+	this.db.transaction(function (transaction) {
+		transaction.executeSql(sql, [],
+			function (tx, rs) {
+				if (callback) {
+					callback(rs.rows.length > 0 ? rs.rows.item(0) : null);
+				}
+			}, function (tx, error) {});
+	});
+}
+
+/**
+ * 查询自选股版本
+ * @param {Object} callback 查询完毕回调
+ */
+PersonalStockList.prototype.queryVersion = function (callback) {
+	this.queryInfo(function (info) {
+		callback(info ? info.ver : 0);
+	});
+}
+
+/**
+ * 更新自选股列版版本
+ * @param {Number} version 自选股版本
+ */
+PersonalStockList.prototype.updateVersion = function (version) {
+	var self = this;
+	this.queryInfo(function (data) {
+		self.additem({
+			portfolio: data.portfolio,
+			ver: version,
+			userid: data.userid
+		});
+	});
+}
+
+/**
+ * 查询所有自选股列表
+ * @param {Object} callback 查询完成回调
+ */
+PersonalStockList.prototype.queryPersonalStock = function (callback) {
+	var self = this;
+	this.queryInfo(function (info) {
+		var stockcodes = [];
+		if (info && info.portfolio) {
+			stockcodes = info.portfolio.split(',');
+		}
+		self.stockList = stockcodes;
+		console.log('查询自选股成功:' + self.stockList);
+		if (callback) {
+			callback(stockcodes);
+		}
+	});
+}
+
+function formatString(format, args) {
+	var key,
+		result = format;
+	for (key in args) {
+		if (args[key]) {
+			var reg = new RegExp("({" + key + "})", "g");
+			result = result.replace(reg, args[key]);
+		}
+	}
+	return result;
+}

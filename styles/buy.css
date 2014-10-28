@@ -1,0 +1,54 @@
+div#sidervalue {
+	margin-top: -35px;
+	font-size: 16px;
+	color: #007EBF;
+	position: absolute;
+	text-align: center;
+}
+#fastselect {
+	width: 100%;
+	padding-left: 5%;
+}
+#fastselect ul {
+	list-style: none;
+	width: 60%;
+	height: 70px;
+	margin: 0px;
+	margin-top: 50px;
+	float: left;
+}
+#fastselect ul li {
+	text-align: center;
+	float: left;
+	width: 25%;
+	line-height: 35px;
+	border: 1px solid #15BDE5;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-size: 20px;
+}
+#fastselect ul li.unchecked {
+	background-color: #F7F7F7;
+	color: #007EBF;
+}
+#fastselect ul li.checked {
+	background-color: #15BDE5;
+	color: #FFFFFF;
+}
+.slider-wrapper {
+	width: 90%;
+	margin-top: 50px;
+}
+#buybutton {
+	float: left;
+	height: 37px;
+	margin-top: 50px;
+	width: 20%;
+	line-height: 37px;
+	border-radius: 19px;
+	background: #15BDE5;
+	font-size: 24px;
+	margin-left: 5%;
+	color: white;
+	cursor: pointer;
+}

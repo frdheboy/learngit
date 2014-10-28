@@ -1,0 +1,830 @@
+/**
+ * Created by XA-0301031A on 2014/7/24.
+ */
+$(document).ready(function () {
+
+	/**-----------------*/
+	//QQ第三方登录
+	var _qqlogin = new QQLogin();
+	_qqlogin.register();
+	//微博三方登录
+	var _weibologin = new WeiboLogin();
+	_weibologin.register();
+	/**-----------------*/
+
+	//注册页页面切换效果
+	$("div.page:first").show();
+
+	//如果实际内容高度小于页面高度，调整到相等
+	var page_num = $(".page").length;
+	for (var i = 1; i < page_num + 1; i++) {
+		if (i.toString().length < 2) {
+			i = "0" + i;
+		}
+		var contont_height = $("#page_" + i).outerHeight(true);
+		var document_height = $(document).outerHeight();
+		//padding高度
+		var pading_height = 4;
+		var _other = $(".header").outerHeight(true) + pading_height;
+		if (contont_height <= document_height) {
+			$("#page_" + i).height(document_height - _other);
+		}
+		$("#page_" + i).width($("body").width());
+	}
+
+	var anmiationobj = {
+		btnid: "", //点击按钮
+		pageleftid: "", //第一页
+		pageright: "", //第二页
+		speed: "", //数值越大越慢;
+		suofang: "", //缩放的最终百分比，初始是100
+		wrap: "",
+		fn: function () {
+			var _this = this;
+			_this.btnid = $("#" + _this.btnid);
+			_this.pageleftid = $("#" + _this.pageleftid);
+			_this.pageright = $("#" + _this.pageright);
+			_this.pageleftid.css("-webkit-transform", "scale(1)");
+			var _speed = _this.speed;
+			var _per = 100;
+			var _per_b = parseInt(_this.suofang);
+			var _res = parseInt(_this.suofang);
+			var _time = setInterval(function () {
+				_per = _per - 1;
+				_this.pageleftid.css("-webkit-transform", "scale(" + _per / 100 + ")");
+				if (_per == _res) {
+					window.clearInterval(_time);
+					$("." + _this.wrap).width(_this.pageleftid.width() * 2);
+					_this.pageright.css("-webkit-transform", "scale(" + _per / 100 + ")");
+					_this.pageright.show();
+					$("." + _this.wrap).css({
+						"position": "relative"
+					});
+					$("." + _this.wrap).delay(200).animate({
+						left: "-" + _this.pageleftid.width() + "px"
+					}, 400, function () {
+						_this.pageleftid.hide();
+						$("." + _this.wrap).width(_this.pageleftid.width());
+						$("." + _this.wrap).css({
+							"left": "0"
+						});
+						var _time_b = setInterval(function () {
+							_per_b = _per_b + 1;
+							_this.pageright.css("-webkit-transform", "scale(" + _per_b / 100 + ")");
+							if (_per_b == 100) {
+								window.clearInterval(_time_b);
+							}
+						}, parseInt(_speed));
+					})
+				}
+			}, parseInt(_speed));
+
+
+		}
+	}
+
+	var anmiationobj_1 = {
+		btnid: "", //点击按钮
+		pageleftid: "", //第一页
+		pageright: "", //第二页
+		speed: "", //数值越大越慢;
+		suofang: "", //缩放的最终百分比，初始是100
+		wrap: "",
+		fn: function () {
+			var _this = this;
+			_this.btnid = $("#" + _this.btnid);
+			_this.pageleftid = $("#" + _this.pageleftid);
+			_this.pageright = $("#" + _this.pageright);
+			_this.pageleftid.css("-webkit-transform", "scale(1)");
+			var _speed = _this.speed;
+			var _per = 100;
+			var _per_b = parseInt(_this.suofang);
+			var _res = parseInt(_this.suofang);
+			var _time = setInterval(function () {
+				_per = _per - 1;
+				_this.pageleftid.css("-webkit-transform", "scale(" + _per / 100 + ")");
+				if (_per == _res) {
+					window.clearInterval(_time);
+					$("." + _this.wrap).width(_this.pageleftid.width() * 2);
+					_this.pageright.css("-webkit-transform", "scale(" + _per / 100 + ")");
+					_this.pageright.show();
+					$("." + _this.wrap).css({
+						"position": "relative"
+					});
+					$("." + _this.wrap).delay(200).animate({
+						left: "-" + _this.pageleftid.width() + "px"
+					}, 400, function () {
+						_this.pageleftid.hide();
+						$("." + _this.wrap).width(_this.pageleftid.width());
+						$("." + _this.wrap).css({
+							"left": "0"
+						});
+						var _time_b = setInterval(function () {
+							_per_b = _per_b + 1;
+							_this.pageright.css("-webkit-transform", "scale(" + _per_b / 100 + ")");
+							if (_per_b == 100) {
+								window.clearInterval(_time_b);
+							}
+						}, parseInt(_speed));
+					})
+				}
+			}, parseInt(_speed));
+
+
+		}
+	}
+
+	anmiationobj.suofang = "75";
+	anmiationobj.speed = "5";
+	anmiationobj.wrap = "m_wrap";
+
+
+	//手机号注册页面跳转效果
+	$("#loginin_letinbtn").click(function () {
+		anmiationobj.btnid = "loginin_letinbtn";
+		anmiationobj.pageleftid = "page_01";
+		anmiationobj.pageright = "page_02";
+		anmiationobj.fn();
+	});
+	//注册新用户跳转效果
+	$("#loginin_newuser").click(function () {
+		anmiationobj.btnid = "loginin_newuser";
+		anmiationobj.pageleftid = "page_02";
+		anmiationobj.pageright = "page_03";
+		anmiationobj.fn();
+	});
+	//手机注册和普通注册标签切换
+	var tip_tt = $("#logintip_title");
+	var tip_1 = $("#login_phone_tip");
+	var tip_2 = $("#login_normal_tip");
+	$(".m_wrap_1").height($(document).outerHeight() - $(".header").outerHeight(true) - $(".crumbs:first").outerHeight(true) - $(".tap_01").outerHeight(true) - 6);
+	$(".m_wrap_1>div").height($(".m_wrap_1").height());
+	tip_tt.children("div:first").click(function () {
+		if ($(this).hasClass("tap_tt_currect")) {
+			return false;
+		}
+		$(this).addClass("tap_tt_currect").siblings("div").removeClass("tap_tt_currect");
+		tip_2.stop(false, true);
+		tip_2.fadeOut(600, function () {
+
+		});
+		tip_1.slideToggle(800);
+	});
+
+	tip_tt.children("div:last").click(function () {
+		if ($(this).hasClass("tap_tt_currect")) {
+			return false;
+		}
+		$(this).addClass("tap_tt_currect").siblings("div").removeClass("tap_tt_currect");
+		tip_1.stop(false, true);
+		tip_1.fadeOut(600, function () {
+
+		});
+		tip_2.slideToggle(800);
+	});
+
+	//手机号快速注册
+	var fastlogin_phonenum;
+	var fastlogin_verifycode;
+
+	$("#phonenumdiv_1").children("a").click(function () {
+		if ($(this).attr("disabled") == "disabled") {
+			error_alert("一分钟后才可重新获取验证码"); //错误信息提示
+			return false;
+		}
+		var str1 = $("#phonenum_1").val();
+		var re1 = new RegExp("^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$"); //手机号
+		if (str1 == "") {
+			error_hd("phonenumdiv_1", 0, 5); //晃动提示
+			error_alert("手机号不能为空"); //错误信息提示
+			return false;
+		} else if (!re1.test(str1)) {
+			error_hd("phonenumdiv_1", 0, 5); //晃动提示
+			error_alert("手机号格式不正确"); //错误信息提示
+			return false;
+		}
+		fastlogin_phonenum = str1;
+
+		var opts = {
+			phone: str1,
+			type: "1"
+		};
+		var gal = new GalHttpRequest(config_url.makeRegisterPin, opts);
+		gal.requestFromNet({
+			succeed: function (data) {
+				console.log(data);
+				againget();
+
+			},
+			error: function (error) {
+				error_alert(error.message); //错误信息提示
+			}
+		});
+		var againget = function () {
+			$("#phonenumdiv_1").children("a").css({
+				"background-color": "#a8a8a8"
+			});
+			var daojishinum = 60;
+			var daojishi60 = setInterval(function () {
+				var herhtml = "重新获取" + daojishinum + "&Prime;";
+				daojishinum--;
+				$("#phonenumdiv_1").children("a").html(herhtml);
+				$("#phonenumdiv_1").children("a").attr("disabled", "disabled");
+				if (daojishinum == 0) {
+					$("#phonenumdiv_1").children("a").css({
+						"background-color": "#086dae"
+					}).html("获取验证码");
+					window.clearInterval(daojishi60);
+					$("#phonenumdiv_1").children("a").removeAttr("disabled");
+				}
+			}, 1000)
+		}
+	});
+
+	$("#phonefastlogin_next").click(function () {
+		var str1 = $("#phonenum_1").val();
+		var re1 = new RegExp("^13[0-9]{9}$|14[0-9]{9}|15[0-9]{9}$|18[0-9]{9}$"); //手机号
+		if (str1 == "") {
+			error_hd("phonenumdiv_1", 0, 5); //晃动提示
+			error_alert("手机号不能为空"); //错误信息提示
+			return false;
+		} else if (!re1.test(str1)) {
+			error_hd("phonenumdiv_1", 0, 5); //晃动提示
+			error_alert("手机号格式不正确"); //错误信息提示
+			return false;
+		}
+		var str2 = $("#verificationcode_1").val();
+		if (str2 == "") {
+			error_hd("verificationcodediv_1", 0, 5); //晃动提示
+			error_alert("验证码不能为空"); //错误信息提示
+			return false;
+		}
+
+		$("#fastloginphoneinput").attr({
+			value: str1
+		});
+		$("#fastverfycodeinput").attr({
+			value: str2
+		});
+		fastlogin_verifycode = str2;
+		var opts = {
+			phone: str1,
+			verifycode: str2,
+			type: 1
+		};
+		var gal = new GalHttpRequest(config_url.authsmscode, opts);
+		gal.requestFromNet({
+			succeed: function (data) {
+				console.log(data);
+				anmiationobj.btnid = "phonefastlogin_next";
+				anmiationobj.pageleftid = "page_03";
+				anmiationobj.pageright = "page_04";
+				anmiationobj.fn();
+			},
+			error: function (error) {
+				error_alert(error.message); //错误信息提示
+			}
+		});
+	});
+
+	//手机快速注册设置密码
+	$("#password_confirm").click(function () {
+		var str1 = $("#password_first").val();
+		var str2 = $("#password_again").val();
+		var re2 = new RegExp("^([a-zA-Z0-9]){6,16}$"); //密码
+		if (str1 == "" || str2 == "") {
+			error_hd("password_firstbox", 0, 5); //晃动提示
+			error_hd("password_againbox", 0, 5); //晃动提示
+			error_alert("密码不能为空"); //错误信息提示
+			return false;
+		} else if (!(re2.test(str1) || re2.test(str2))) {
+			error_hd("password_firstbox", 0, 5); //晃动提示
+			error_hd("password_againbox", 0, 5); //晃动提示
+			error_alert("密码格式不正确，必须为6-16位字母或者数字，不能有特殊符号"); //错误信息提示
+			return false;
+		} else if (str1 != str2) {
+			error_hd("password_firstbox", 0, 5); //晃动提示
+			error_hd("password_againbox", 0, 5); //晃动提示
+			error_alert("二次输入的密码必须一致"); //错误信息提示
+			return false;
+		}
+
+	});
+
+	//普通注册
+	$("#norlogsubbtn").click(function () {
+		var str1 = $("#norphonenum").children("input").val();
+		var str2 = $("#norpassw").children("input").val();
+		var str3 = $("#norpasswagain").children("input").val();
+		var str4 = $("#noremail").children("input").val();
+		//        var str5 = $("#norreferrer").children("input").val();
+		var re1 = new RegExp("^([\u4E00-\uFA29]|[\uE7C7-\uE7F3]|[a-zA-Z0-9]){3,12}$"); //用户名
+		var re2 = new RegExp("^([a-zA-Z0-9]){6,16}$"); //密码
+		var re4 = new RegExp("^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$"); //邮箱
+		//        var re5 = new RegExp("/^([a-zA-Z0-9]){3,12}$");//邀请人
+		if (str1 == "") {
+			error_hd("norphonenum", 0, 5); //晃动提示
+			error_alert("用户名不能为空"); //错误信息提示
+			return false;
+		} else if (!re1.test(str1)) {
+			error_hd("norphonenum", 0, 5); //晃动提示
+			error_alert("用户名格式不正确，必须为3到12位汉字或者字母数字，不能有特殊符号"); //错误信息提示
+			return false;
+		} else if (str2 == "") {
+			error_hd("norpassw", 0, 5); //晃动提示
+			error_hd("norpasswagain", 0, 5); //晃动提示
+			error_alert("密码不能为空"); //错误信息提示
+			return false;
+		} else if (!re2.test(str2)) {
+			error_hd("norpassw", 0, 5); //晃动提示
+			error_hd("norpasswagain", 0, 5); //晃动提示
+			error_alert("密码格式不正确，必须为6-16位字母或者数字，不能有特殊符号"); //错误信息提示
+			return false;
+		} else if (str2 != str3) {
+			error_hd("norpassw", 0, 5); //晃动提示
+			error_hd("norpasswagain", 0, 5); //晃动提示
+			error_alert("二次输入的密码必须一致"); //错误信息提示
+			return false;
+		} else if (!re4.test(str4)) {
+			error_hd("noremail", 0, 5); //晃动提示
+			error_alert("邮箱格式错误"); //错误信息提示
+			return false;
+		}
+	});
+	var formoptions1 = {
+		success: getJsondata
+	};
+
+	function getJsondata(data) {
+		var gal = new GalHttpRequest();
+		var text = gal.jiemibase64(data);
+		if (text.status == "0000") {
+			error_alert("注册成功");
+			setTimeout(function () {
+				window.location.href = "mycenter.html";
+			}, 1000)
+		} else {
+			error_alert(text.message);
+		}
+	}
+
+	$("#doFormRegister").ajaxForm(formoptions1);
+
+	var formoptions2 = {
+		success: getJsondata
+	};
+
+	$("#phoneRegister").ajaxForm(formoptions2);
+	//忘记密码
+	$("#forgetpassword").click(function () {
+		anmiationobj.btnid = "phonefastlogin_next";
+		anmiationobj.pageleftid = "page_02";
+		anmiationobj.pageright = "page_05";
+		anmiationobj.fn();
+	});
+
+	$("#makeregisterpin").click(function () {
+		if ($(this).attr("disabled") == "disabled") {
+			error_alert("一分钟后才可重新获取验证码"); //错误信息提示
+			return false;
+		}
+		var str1 = $("#phonenum_2").val();
+		var re1 = new RegExp("^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$"); //手机号
+		if (str1 == "") {
+			error_hd("phonenumdiv_2", 0, 5); //晃动提示
+			error_alert("手机号不能为空"); //错误信息提示
+			return false;
+		} else if (!re1.test(str1)) {
+			error_hd("phonenumdiv_2", 0, 5); //晃动提示
+			error_alert("手机号格式不正确"); //错误信息提示
+			return false;
+		}
+
+		var opts = {
+			phone: str1,
+			type: "2"
+		};
+		var gal = new GalHttpRequest(config_url.makeForgotPwdPin, opts);
+		gal.requestFromNet({
+			succeed: function (data) {
+				console.log(data);
+				againget();
+			},
+			error: function (error) {
+				error_alert(error.message); //错误信息提示
+			}
+		});
+		var againget = function () {
+			$("#phonenumdiv_2").children("a").css({
+				"background-color": "#a8a8a8"
+			});
+			var daojishinum = 60;
+			var daojishi60 = setInterval(function () {
+				var herhtml = "重新获取" + daojishinum + "&Prime;";
+				daojishinum--;
+				$("#phonenumdiv_2").children("a").html(herhtml);
+				$("#phonenumdiv_2").children("a").attr("disabled", "disabled");
+				if (daojishinum == 0) {
+					$("#phonenumdiv_2").children("a").css({
+						"background-color": "#086dae"
+					}).html("获取验证码");
+					window.clearInterval(daojishi60);
+					$("#phonenumdiv_2").children("a").removeAttr("disabled");
+				}
+			}, 1000)
+		}
+	});
+
+	var forgetpwdphonenum;
+	$("#forgetpassword_next").click(function () {
+		var str1 = $("#phonenum_2").val();
+		var re1 = new RegExp("^13[0-9]{9}$|14[0-9]{9}|15[0-9]{9}$|18[0-9]{9}$"); //手机号
+		if (str1 == "") {
+			error_hd("phonenumdiv_2", 0, 5); //晃动提示
+			error_alert("手机号不能为空"); //错误信息提示
+			return false;
+		} else if (!re1.test(str1)) {
+			error_hd("phonenumdiv_2", 0, 5); //晃动提示
+			error_alert("手机号格式不正确"); //错误信息提示
+			return false;
+		}
+		var str2 = $("#verificationcode_2").val();
+		if (str2 == "") {
+			error_hd("verificationcodediv_2", 0, 5); //晃动提示
+			error_alert("验证码不能为空"); //错误信息提示
+			return false;
+		}
+
+		forgetpwdphonenum = str1;
+		var opts = {
+			phone: str1,
+			verifycode: str2,
+			type: 2
+		};
+		var gal = new GalHttpRequest(config_url.authsmscode, opts);
+		gal.requestFromNet({
+			succeed: function (data) {
+				console.log(data);
+				anmiationobj.btnid = "forgetpassword_next";
+				anmiationobj.pageleftid = "page_05";
+				anmiationobj.pageright = "page_06";
+				anmiationobj.fn();
+			},
+			error: function (error) {
+				error_alert(error.message); //错误信息提示
+			}
+		});
+	});
+
+	$("#forgetpwd_confirm").click(function () {
+		var str1 = $("#forget_pwd").val();
+		var str2 = $("#forget_pwdag").val();
+		var re2 = new RegExp("^([a-zA-Z0-9]){6,16}$"); //密码
+		if (str1 == "") {
+			error_hd("forget_pwddiv", 0, 5); //晃动提示
+			error_hd("forget_pwdagdiv", 0, 5); //晃动提示
+			error_alert("密码不能为空"); //错误信息提示
+			return false;
+		} else if (!re2.test(str1)) {
+			error_hd("forget_pwddiv", 0, 5); //晃动提示
+			error_hd("forget_pwdagdiv", 0, 5); //晃动提示
+			error_alert("密码格式不正确，必须为6-16位字母或者数字，不能有特殊符号"); //错误信息提示
+			return false;
+		} else if (str2 != str1) {
+			error_hd("forget_pwddiv", 0, 5); //晃动提示
+			error_hd("forget_pwdagdiv", 0, 5); //晃动提示
+			error_alert("二次输入的密码必须一致"); //错误信息提示
+			return false;
+		}
+
+		var opts = {
+			phone: forgetpwdphonenum,
+			password: str1,
+			flag: 1
+		};
+		var gal = new GalHttpRequest(config_url.doRetrievePwd, opts);
+		gal.requestFromNet({
+			succeed: function (data) {
+				error_alert(data.message);
+				setTimeout(function () {
+					window.location.href = "mycenter.html";
+				}, 1000)
+			},
+			error: function (error) {
+				error_alert(error.message); //错误信息提示
+			}
+		});
+	});
+
+
+	//表单提示错误框晃动
+	var error_hd = function (opt, size, speed) {
+		var shock_idname = $("#" + opt);
+		shock_idname.css({
+			"position": "relative"
+		});
+		for (var i = 1; i < parseInt(speed); i++) {
+			shock_idname.animate({
+				'left': '-=6'
+			}, 3, function () {
+				$(this).animate({
+					'left': '+=12'
+				}, 3, function () {
+					$(this).animate({
+						'left': '-=6'
+					}, 3, function () {
+						$(this).animate({
+							'left': '+=12'
+						}, 3, function () {
+							$(this).animate({
+								'left': '-=6'
+							}, 3, function () {
+								$(this).animate({
+									'left': parseInt(size)
+								}, 3, function () {});
+							});
+						});
+					});
+				});
+			});
+		}
+	};
+	//表单错误提示alert
+	var error_alert = function (mess) {
+		var error_ms = $("<div id='error_ms'><p>" + mess.toString() + "</p></div>")
+		error_ms.appendTo("body");
+		error_ms.fadeToggle(200, function () {
+			error_ms.fadeToggle(1200, function () {
+				error_ms.fadeToggle(200, function () {
+					error_ms.fadeToggle(1200, function () {
+						error_ms.remove();
+					})
+				})
+			})
+		})
+
+
+	}
+
+	/*-----------------------------------------------------------------------*/
+	//登录
+	$("#loginin_btn1").click(function () {
+		var logonusername = $("#username_1").val();
+		var logonuserpwd = $("#password_1").val();
+		var opts = {
+			ak: config_other.ak_new,
+			username: logonusername,
+			userpwd: logonuserpwd,
+			flag: 1
+		};
+		var gal = new GalHttpRequest(config_url.dologonnew, opts);
+		gal.requestFromNet({
+			succeed: function (data) {
+				window.location.href = "mycenter.html";
+				//把登录成功的信息本地存储
+				try {
+					if (typeof (window.localStorage) === 'object') {
+						localStorage.setItem("userinfo_currect", JSON.stringify(data));
+						var userinfo_name = JSON.parse(localStorage.getItem("userinfo_currect")).username;
+						if (localStorage.getItem("username")) {
+							var usernamearraynew = localStorage.getItem("username");
+							usernamearraynew = usernamearraynew.split(",");
+							var biaoshifu = false;
+							$.each(usernamearraynew, function (i, n) {
+								if (n == userinfo_name) {
+									biaoshifu = true;
+								}
+							});
+							if (!biaoshifu) {
+								usernamearraynew.unshift(userinfo_name);
+							}
+							//登录成功的用户名数组
+							localStorage.setItem("username", usernamearraynew);
+						} else {
+							localStorage.setItem("username", userinfo_name);
+						}
+						//登陆成功跳转到个人中心
+						window.location.href = "mycenter.html";
+					}
+				} catch (err) {
+
+				}
+			},
+			error: function (error) {
+				error_alert(error.message); //错误信息提示
+			}
+		});
+	});
+	var showblock = $(".loginedname");
+	try {
+		if (typeof (window.localStorage) === 'object') {
+			if (localStorage.getItem("username")) {
+				$(".sanjiaobtn").show();
+				var usernamearraynew = localStorage.getItem("username");
+				usernamearraynew = usernamearraynew.split(",");
+				var usernamearraynewlength = usernamearraynew.length;
+				showblock.html("");
+				for (var j = 0; j < usernamearraynewlength; j++) {
+					showblock.append("<p><a href='javascript:void(0)' class='showblockname'>" + usernamearraynew[j] + "</a></p>")
+				}
+			}
+		}
+	} catch (err) {
+
+	}
+
+	$(".sanjiaobtn").click(function () {
+		if (showblock.is(":hidden")) {
+			showblock.show();
+		} else {
+			showblock.hide();
+		}
+
+	});
+
+
+	$(".showblockname").live("click", function () {
+		$("#username_1").val($(this).text());
+		showblock.hide();
+	});
+
+	$("#username_1,#password_1").focus(function () {
+		showblock.hide();
+	});
+
+});
+
+
+
+/********三方登录*********/
+function QQLogin() {
+	this.platform = 2;
+}
+
+QQLogin.prototype.register = function () {
+	if (this.isLogin()) {
+		QC.Login.signOut();
+	}
+	var me = this;
+	QC.Login({}, function () {
+		me.getUserInfo();
+	});
+};
+
+/**检查是否已经QQ登录*/
+QQLogin.prototype.isLogin = function () {
+	return QC.Login.check();
+};
+
+/**获取QQ用户信息*/
+QQLogin.prototype.getUserInfo = function () {
+	var me = this;
+	QC.api("get_user_info", {}).error(function () { //失败回调
+		alert("获取用户信息失败！");
+	}).complete(function (c) { //完成请求回调
+		me.nickname = c.data.nickname;
+		me.head = c.data.figureurl_qq_2;
+		me.getToken();
+	});
+};
+
+/**
+ *获取用户Token值并请求三方登录
+ *  */
+QQLogin.prototype.getToken = function () {
+	var me = this;
+	QC.Login.getMe(function (openid, accesstoken) {
+		me.openid = openid;
+		me.accesstoken = accesstoken;
+		requestThirdPartLogin({
+			openid: me.openid,
+			ak: "00000",
+			type: me.platform,
+			token: me.accesstoken,
+			head: me.head,
+			nickname: me.nickname
+		});
+	});
+};
+
+function WeiboLogin() {
+	this.platform = 3;
+}
+
+WeiboLogin.prototype.isLogin = function () {
+	var status = WB2.checkLogin();
+	return status;
+};
+
+WeiboLogin.prototype.register = function () {
+	if (this.isLogin()) {
+		WB2.logout();
+	}
+	var me = this;
+	$("#weibo_login").click(function () {
+		WB2.login(function () {
+			me.getUserInfo();
+		});
+	});
+};
+
+WeiboLogin.prototype.getUserInfo = function () {
+	var oauthData = WB2.oauthData;
+	this.accesstoken = oauthData.access_token;
+	this.openid = oauthData.uid;
+	var me = this;
+	WB2.anyWhere(function (W) {
+		//数据交互
+		W.parseCMD('/users/show.json', function (oResult, bStatus) {
+			if (bStatus) {
+				requestThirdPartLogin({
+					openid: me.openid,
+					ak: "00000",
+					type: me.platform,
+					token: me.accesstoken,
+					head: oResult.avatar_large,
+					nickname: oResult.screen_name,
+				});
+			}
+		}, {
+			uid: me.openid
+		}, { 
+			method: 'get'
+		});
+	});
+};
+
+WeiboLogin.prototype.getToken = function () {
+
+};
+
+/**
+ *請求三方登錄
+ *  */
+function requestThirdPartLogin(params) {
+	console.log("开始请求三方认证");
+	var gal = new GalHttpRequest(config_url.thirdpart_auth, params);
+	gal.requestFromNet({
+		succeed: login_succeed,
+		error: function (data) {
+			login_failed(data, params);
+		}
+	});
+};
+
+/**
+ *三方登录成功
+ *  */
+function login_succeed(data) {
+	console.log("请求三方认证成功");
+	console.log(data);
+	alert("授权成功");
+
+	window.location.href = "mycenter.html";
+	//把登录成功的信息本地存储
+	try {
+		if (typeof (window.localStorage) === 'object') {
+			localStorage.setItem("userinfo_currect", JSON.stringify(data));
+			var userinfo_name = JSON.parse(localStorage.getItem("userinfo_currect")).username;
+			if (localStorage.getItem("username")) {
+				var usernamearraynew = localStorage.getItem("username");
+				usernamearraynew = usernamearraynew.split(",");
+				var biaoshifu = false;
+				$.each(usernamearraynew, function (i, n) {
+					if (n == userinfo_name) {
+						biaoshifu = true;
+					}
+				});
+				if (!biaoshifu) {
+					usernamearraynew.unshift(userinfo_name);
+				}
+				//登录成功的用户名数组
+				localStorage.setItem("username", usernamearraynew);
+			} else {
+				localStorage.setItem("username", userinfo_name);
+			}
+			//登陆成功跳转到个人中心
+			window.location.href = "mycenter.html";
+		}
+	} catch (err) {
+
+	}
+
+};
+
+/**
+ *三方登录失败
+ *  */
+function login_failed(data, thirdpartparams) {
+	if (data && data.status == "1010") { //账户未绑定
+		console.log(data, thirdpartparams);
+		alert("账户未绑定");
+		try {
+			localStorage.setItem("thirdpartinfo", JSON.stringify(thirdpartparams));
+			window.location.href = "thirdpartysignon.html";
+		} catch (e) {}
+	} else {
+		alert("授权失败");
+	}
+};
+/********三方登录*********/

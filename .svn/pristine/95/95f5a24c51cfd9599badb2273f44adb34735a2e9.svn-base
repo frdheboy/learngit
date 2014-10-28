@@ -1,0 +1,58 @@
+function initKline() {
+	var Request = new GetQueryString();
+	var codeid = Request.codeid;
+	var minute = new Minute('minute', codeid);
+	minute.setDefualtTouchback();
+	var operator;
+	$(".tubiaotipbox").find("li").on("click", function () {
+		var _index = $(this).index();
+		if ($(this).hasClass("currect")) {
+			return false
+		} else {
+			$(this).addClass("currect").siblings("li").removeClass("currect");
+		}
+
+		if (_index == "1") {
+			$("#fenshitu").hide();
+			$("#kxiantu").show();
+			$("#fenshiinfo").hide();
+			$(".tubiaotipbox ul").css({
+				"background": "#78b7e2"
+			});
+			changeKLineType(codeid, operator, 'D');
+		} else if (_index == "2") {
+			$("#fenshitu").hide();
+			$("#kxiantu").show();
+			$("#fenshiinfo").hide();
+			$(".tubiaotipbox ul").css({
+				"background": "#78b7e2"
+			});
+			changeKLineType(codeid, operator, 'W');
+		} else if (_index == "3") {
+			$("#fenshitu").hide();
+			$("#kxiantu").show();
+			$("#fenshiinfo").hide();
+			changeKLineType(codeid, operator, 'M');
+			$(".tubiaotipbox ul").css({
+				"background": "#4d8cbb"
+			});
+		} else if (_index == "0") {
+			$("#fenshitu").show();
+			$("#kxiantu").hide();
+			$("#fenshiinfo").show();
+			$(".tubiaotipbox ul").css({
+				"background": "#78b7e2"
+			});
+		}
+	})
+}
+
+
+function changeKLineType(codeid, operator, type) {
+	if (!operator) {
+		operator = new KLineOperator(codeid, 'kline', 'date', 'index', null, type);
+		operator.setDefualtTouchback();
+	} else {
+		operator.setKLineType(type);
+	}
+}

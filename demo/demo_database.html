@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<title>Demo for Database</title>
+	<script src="../scripts/jquery-1.7.2.min.js"></script>
+	<script src="../scripts/IndexedDBShim.min.js"></script>
+	<script src="../scripts/database.js"></script>
+	<script src="../scripts/galhttprequest.js"></script>
+	<script src="http://jsconsole.com/remote.js?gexiaowei"></script>
+	<script>
+		$(document).ready(function () {
+
+			if (!localStorage.getItem('userinfo_currect')) {
+				window.location.href = '../html/loginin.html';
+			}
+
+			var p = new PersonalStockList();
+			p.synFromNet();
+			$('#test').click(function () {
+				p.queryPersonalStock(function (stockids) {
+					if (stockids.indexOf('11600000') < 0) {
+						p.addStock('11600000');
+					} else {
+						p.removeStock('11600000');
+					}
+				});
+			});
+
+		});
+	</script>
+	<style>
+		html,
+		body {
+			height: 100%;
+			width: 100%;
+		}
+		button {
+			border-radius: 0;
+			border: 0;
+			background-color: red;
+			color: white;
+			height: 10%;
+			width: 50%;
+			position: absolute;
+			left: 25%;
+			top: 45%;
+		}
+	</style>
+</head>
+
+<body>
+	<button id="test">Click Me</button>
+</body>
+
+</html>

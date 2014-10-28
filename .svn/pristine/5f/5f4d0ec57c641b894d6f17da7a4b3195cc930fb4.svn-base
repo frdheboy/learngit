@@ -1,0 +1,103 @@
+.m_content {
+    float: left;
+    width: 100%;
+    border-top: 2px solid #086dae;
+}
+
+.m_content ul {
+    width: 100%;
+    float: left;
+}
+
+.m_content ul li {
+    width: 25%;
+    float: left;
+}
+
+.m_content ul li a img {
+    width: 56%;
+    margin-left: 22%;
+    float: left;
+}
+
+/*CSS3判断响应式布局*/
+/*宽度小于480的样式*/
+@media all and (max-width: 480px) {
+    .m_content p {
+        width: 100%;
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+        text-indent: 10px;
+        text-align: left;
+        background-color: #e9eaec;
+    }
+
+    .m_content ul li a {
+        padding-top: 5px;
+        display: block;
+        width: 99%;
+        border-right: 1px solid #e9eaec;
+        border-bottom: 1px solid #e9eaec;
+        float: left;
+        background-color: #FFFFFF;
+        padding-bottom: 10px;
+    }
+
+    .m_content ul li a span {
+        float: left;
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        color: #5a5a5a;
+        line-height: 25px;
+
+    }
+}
+
+/*宽度在大于480（包括480）的样式*/
+@media all and (min-width: 480px) {
+    .m_content p {
+        width: 100%;
+        float: left;
+        height: 50px;
+        line-height: 50px;
+        font-size: 26px;
+        text-indent: 10px;
+        text-align: left;
+        background-color: #e9eaec;
+    }
+
+    .m_content ul li a {
+        padding-top: 5px;
+        display: block;
+        width: 98%;
+        border-right: 2px solid #e9eaec;
+        border-bottom: 2px solid #e9eaec;
+        float: left;
+        background-color: #FFFFFF;
+
+    }
+
+    .m_content ul li a span {
+        float: left;
+        display: block;
+        width: 100%;
+        font-size: 22px;
+        color: #5a5a5a;
+        line-height: 30px;
+        padding-bottom: 15px;
+    }
+}
+
+/*宽度大于640（包括640）样式*/
+/*@media all and (min-width: 640px) {*/
+
+/*}*/
+
+/*横向样式*/
+@media screen and (orientation: landscape) {
+
+}
+

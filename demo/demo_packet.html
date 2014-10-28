@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Package Demo</title>
+	<script src="../scripts/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../scripts/galhttprequest.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function () {
+			var g = new GalHttpRequest('http://192.168.1.151:8080/news/newsrest/info/channellist/1/1/1', {});
+			g.requestFromNet({
+				succeed: function (data) {
+					console.log(data)
+				},
+				error: function (error) {
+					console.log(error)
+				}
+			});
+
+		});
+	</script>
+</head>
+
+<body>
+	<input type="text" id="num" value="80000000000" />
+	<button id="cal">计算</button>
+</body>
+
+</html>

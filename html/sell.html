@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+	<title>模拟炒股WAP模拟炒股_卖出</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../styles/common.css" />
+	<link rel="stylesheet" href="../styles/trade.css" />
+	<link rel="stylesheet" href="../styles/powerange.css">
+	<script src="../scripts/jquery-1.7.2.min.js"></script>
+	<script src="../scripts/galhttprequest.js"></script>
+	<script src="../scripts/trade.js"></script>
+	<script src="../scripts/common.js"></script>
+	<script src="../scripts/powerange.min.js"></script>
+	<script>
+		var max = 0,
+			initVals, param, stockcode, s;
+		$(document).ready(function () {
+			param = new GetQueryString(),
+			stockcode = param.stockcode,
+			s = new StockMarketPriceTrade();
+			loadRanger();
+			s.queryStockInfo4sell(stockcode, function (data) {
+				outputReslut(data);
+			});
+			bindEvent();
+		});
+
+		function bindEvent() {
+			$('#buy_button').click(function () {
+				s.sell($("#sellnum").val(), function (reslut) {
+					alert('委托成功');
+					s.queryStockInfo4sell(stockcode, function (data) {
+						outputReslut(data);
+					});
+				});
+			})
+			$('#stockinfo').click(function () {
+				location.href = 'holdstock.html';
+			})
+			$("#sellnum").keydown(function (e) {
+				// Allow: backspace, delete, tab, escape, enter and .
+				if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+					// Allow: Ctrl+A
+					(e.keyCode == 65 && e.ctrlKey === true) ||
+					// Allow: home, end, left, right
+					(e.keyCode >= 35 && e.keyCode <= 39)) {
+					// let it happen, don't do anything
+					return;
+				}
+				// Ensure that it is a number and stop the keypress
+				if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+					e.preventDefault();
+				}
+			});
+			$('#sellnum').keyup(function () {
+				var text = $("#sellnum").val();
+				if (text.trim() === '') {
+					text = '0';
+					$("#sellnum").val(text);
+				}
+				var num = parseInt(text, 10);
+				if (num > max) {
+					num = max;
+					$("#sellnum").val(num);
+				}
+				initVals.setValue(num, max);
+				initVals.mouse.obj.setStart(num);
+			});
+		}
+
+		/**
+		 * 输出网络请求结果
+		 * @param {Object} reslut 输出结果
+		 */
+		function outputReslut(reslut) {
+			var close = reslut.lastClosePrice;
+			max = parseInt(reslut.sellAble, 10);
+			$('#sellnum').val(reslut.sellAble);
+			$('#stockcode').text(reslut.stockCode)
+			$('#stockname').text(reslut.stockName)
+			setValue($('#saleprice'), reslut.salePrice, close);
+			setValue($('#uplimit'), reslut.upLimit, close);
+			setValue($('#highprice'), reslut.highPrice, close);
+			setValue($('#downlimit'), reslut.salePrice, close);
+			setValue($('#lowprice'), reslut.lowPrice, close);
+			$('#sellable').text(reslut.sellAble);
+			$('#stockholds').text(reslut.stockHolds);
+			initVals.options.max = reslut.sellAble;
+			initVals.setRange(0, reslut.sellAble);
+			initVals.mouse.obj.setStart(reslut.sellAble);
+		}
+
+		/**
+		 * 设置结果
+		 * @param {Object} el    控件
+		 * @param {Number} price 价格
+		 * @param {Number} close 昨收价
+		 */
+		function setValue(el, price, close) {
+			var style;
+			if (price > close) {
+				style = 'up';
+			} else if (price < close) {
+				style = 'down';
+			}
+			el.removeClass();
+			el.addClass(style);
+			el.text(price);
+		}
+
+		/**
+		 * 加载滑动条
+		 */
+		function loadRanger() {
+			var vals = document.querySelector('.js-min-max-start');
+			initVals = new Powerange(vals, {
+				callback: function () {
+					$('#sellnum').val(vals.value);
+				},
+				min: 0,
+				max: 1,
+				start: 1
+			});
+		}
+	</script>
+
+</head>
+
+<body>
+	<div class="main">
+		<!--头部共用搜索框 begin-->
+		<div class="header">&nbsp;</div>
+		<!--头部共用搜索框 end-->
+		<!--面包屑 begin-->
+		<div class="crumbs">
+			<p><a href="javascript:void (0)">首页</a>&gt;<a href="javascript:void (0)">模拟炒股</a>&gt;<a href="javascript:void (0)">卖出</a>
+			</p>
+		</div>
+		<!--面包屑 end-->
+		<!--模拟炒股 begin-->
+		<div class="m_content">
+			<div class="buy_main">
+				<div class="buy_main_01">
+					<p>股票代码</p>
+					<div id="stockinfo"><span id="stockcode">--</span><span id="stockname" class="proname">--</span>
+					</div>
+				</div>
+				<div class="buy_main_02">
+					<p>卖出数量</p>
+					<input id="sellnum" type="text" value="--" />
+				</div>
+				<div class="buy_slider">
+					<div class="slider-wrapper">
+						<input type="text" id="a" class="js-min-max-start" />
+					</div>
+					<div id="buy_button" class="buy_button">
+						卖出
+					</div>
+				</div>
+
+				<div class="buyinfolist">
+					<ul>
+						<li>
+							<p>最新：<span id="saleprice">--</span>
+							</p>
+							<p>涨停：<span id="uplimit">--</span>
+							</p>
+						</li>
+						<li>
+							<p>最高：<span id="highprice">--</span>
+							</p>
+							<p>跌停：<span id="downlimit">--</span>
+							</p>
+						</li>
+						<li>
+							<p>最低：<span id="lowprice">--</span>
+							</p>
+
+							<p>可卖：<span id="sellable">--</span>
+							</p>
+						</li>
+						<li id="buyinfolistlast">
+							<p>持股数：<span id="stockholds">--</span>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--模拟炒股 end-->
+	</div>
+
+</body>
+
+</html>

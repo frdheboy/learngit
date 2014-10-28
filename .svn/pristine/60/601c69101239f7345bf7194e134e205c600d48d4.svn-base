@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../styles/kline.css">
+	<script src="../scripts/jquery-1.7.2.min.js"></script>
+	<script src="../scripts/galhttprequest.js"></script>
+	<script>
+		$(document).ready(function () {
+			var g = new GalHttpRequest(config_url.socketinfo, {
+				code: '11600000'
+			});
+			g.requestPacketFromNet({
+				succeed: function (data) {
+					console.log(data);
+					if (data.top5quotation[0]) {
+						var top5quotation = data.top5quotation[0];
+						$('#sell5').text(top5quotation.sellprice5.toFixed(2));
+						$('#sell4').text(top5quotation.sellprice4.toFixed(2));
+						$('#sell3').text(top5quotation.sellprice3.toFixed(2));
+						$('#sell2').text(top5quotation.sellprice2.toFixed(2));
+						$('#sell1').text(top5quotation.sellprice1.toFixed(2));
+						$('#sell5amount').text(top5quotation.sellamount5);
+						$('#sell4amount').text(top5quotation.sellamount4);
+						$('#sell3amount').text(top5quotation.sellamount3);
+						$('#sell2amount').text(top5quotation.sellamount2);
+						$('#sell1amount').text(top5quotation.sellamount1);
+						$('#buy1').text(top5quotation.buyprice1.toFixed(2));
+						$('#buy2').text(top5quotation.buyprice2.toFixed(2));
+						$('#buy3').text(top5quotation.buyprice3.toFixed(2));
+						$('#buy4').text(top5quotation.buyprice4.toFixed(2));
+						$('#buy5').text(top5quotation.buyprice5.toFixed(2));
+						$('#buy5amount').text(top5quotation.buyamount5);
+						$('#buy4amount').text(top5quotation.buyamount4);
+						$('#buy3amount').text(top5quotation.buyamount3);
+						$('#buy2amount').text(top5quotation.buyamount2);
+						$('#buy1amount').text(top5quotation.buyamount1);
+					}
+				}
+			});
+		});
+	</script>
+	<title>五档行情</title>
+</head>
+
+<body>
+	<div class="fivetrade">
+		<div class="tradeinfo">
+			<div class="mark">
+				⑤
+			</div>
+			<div id="sell5" class="price">
+				--
+			</div>
+			<div id="sell5amount" class="amount">
+				--
+			</div>
+		</div>
+		<div class="tradeinfo">
+			<div class="mark">
+				④
+			</div>
+			<div id="sell4" class="price">
+				--
+			</div>
+			<div id="sell4amount" class="amount">
+				--
+			</div>
+
+		</div>
+		<div class="tradeinfo">
+			<div class="mark">
+				③
+			</div>
+			<div id="sell3" class="price">
+				--
+			</div>
+			<div id="sell3amount" class="amount">
+				--
+			</div>
+		</div>
+		<div class="tradeinfo">
+			<div class="mark">
+				②
+			</div>
+			<div id="sell2" class="price">
+				--
+			</div>
+			<div id="sell2amount" class="amount">
+				--
+			</div>
+		</div>
+		<div class="tradeinfo">
+			<div class="mark">
+				①
+			</div>
+			<div id="sell1" class="price">
+				--
+			</div>
+			<div id="sell1amount" class="amount">
+				--
+			</div>
+		</div>
+		<div class="tradeinfo">
+			<div class="mark">
+				①
+			</div>
+			<div id="buy1" class="price">
+				--
+			</div>
+			<div id="buy1amount" class="amount">
+				--
+			</div>
+		</div>
+		<div class="tradeinfo">
+			<div class="mark">
+				②
+			</div>
+			<div id="buy2" class="price">
+				--
+			</div>
+			<div id="buy2amount" class="amount">
+				--
+			</div>
+		</div>
+		<div class="tradeinfo">
+			<div class="mark">
+				③
+			</div>
+			<div id="buy3" class="price">
+				--
+			</div>
+			<div id="buy3amount" class="amount">
+				--
+			</div>
+		</div>
+		<div class="tradeinfo">
+			<div class="mark">
+				④
+			</div>
+			<div id="buy4" class="price">
+				--
+			</div>
+			<div id="buy4amount" class="amount">
+				--
+			</div>
+		</div>
+		<div class="tradeinfo">
+			<div class="mark">
+				⑤
+			</div>
+			<div id="buy5" class="price">
+				--
+			</div>
+			<div id="buy5amount" class="amount">
+				--
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
